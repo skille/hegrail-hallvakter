@@ -1,6 +1,7 @@
 name: Scrape Bookings Hourly
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '45 * * * *' # Runs every hour at minute 45
 
