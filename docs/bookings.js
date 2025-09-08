@@ -79,6 +79,8 @@ function renderPage() {
   const timelineWidth = 100; // percent width for responsive design
       let blocks = [];
       // Build occupied blocks
+  const minGap = 1/60; // 1 minute gap between bookings
+      let lastEnd = null;
       bookings.forEach(b => {
         const startHour = parseInt(b.start.slice(11,13), 10);
         const startMin = parseInt(b.start.slice(14,16), 10);
@@ -102,7 +104,7 @@ function renderPage() {
           const left = ((h - timelineStart) / (timelineEnd - timelineStart)) * 100;
           style = `position:absolute;left:${left}%;transform:translateX(-50%);font-size:0.8em;`;
         }
-        timelineLabels += `<span style="${style}">${h.toString().padStart(2,'0')}:00</span>`;
+  timelineLabels += `<span style="${style}">${h.toString().padStart(2,'0')}</span>`;
       }
       timelineLabels += '</div>';
       let timelineHtml = timelineLabels;
