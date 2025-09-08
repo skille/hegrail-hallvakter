@@ -28,6 +28,6 @@ jobs:
 
       - name: Commit and push updated bookings
         run: |
-          git add ./data/bookings/*.json
+          git add ./docs/bookings/*.json
           git commit -m "Update bookings data [skip ci]" || echo "No changes to commit"
           git push
