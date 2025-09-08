@@ -3,12 +3,6 @@ name: Scrape Bookings Hourly
 on:
   schedule:
     - cron: '45 * * * *' # Runs every hour at minute 45
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'data/bookings/**'
 
 jobs:
   scrape:
