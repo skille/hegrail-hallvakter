@@ -86,10 +86,14 @@ function renderPage() {
         const startMin = parseInt(b.start.slice(14,16), 10);
         const endHour = parseInt(b.end.slice(11,13), 10);
         const endMin = parseInt(b.end.slice(14,16), 10);
-        const start = Math.max(timelineStart, startHour + startMin/60);
-        const end = Math.min(timelineEnd, endHour + endMin/60);
+        let start = Math.max(timelineStart, startHour + startMin/60);
+        let end = Math.min(timelineEnd, endHour + endMin/60);
+        if (lastEnd !== null && start < lastEnd + minGap) {
+          start = lastEnd + minGap;
+        }
         if (end > start) {
           blocks.push({start, end, title: b.title || '', info: `${b.start.slice(11,16)} - ${b.end.slice(11,16)}`});
+          lastEnd = end;
         }
       });
       // Build timeline HTML
