@@ -76,7 +76,7 @@ function renderPage() {
       // Timeline logic
   const timelineStart = 7; // 07:00
   const timelineEnd = 22; // 22:00
-  const timelineWidth = 650; // px (better fit for container)
+  const timelineWidth = 100; // percent width for responsive design
       let blocks = [];
       // Build occupied blocks
       bookings.forEach(b => {
@@ -91,29 +91,29 @@ function renderPage() {
         }
       });
       // Build timeline HTML
-      let timelineLabels = '<div class="timeline-labels" style="position:relative;width:' + timelineWidth + 'px;margin-bottom:18px;">';
+      let timelineLabels = '<div class="timeline-labels" style="position:relative;width:100%;margin-bottom:18px;">';
       for (let h = timelineStart; h <= timelineEnd; h++) {
         let style = '';
         if (h === timelineStart) {
-          style = `position:absolute;left:0px;font-size:0.8em;text-align:left;`;
+          style = `position:absolute;left:0;font-size:0.8em;text-align:left;`;
         } else if (h === timelineEnd) {
-          style = `position:absolute;right:0px;font-size:0.8em;text-align:right;`;
+          style = `position:absolute;right:0;font-size:0.8em;text-align:right;`;
         } else {
-          const left = ((h - timelineStart) / (timelineEnd - timelineStart)) * (timelineWidth - 1);
-          style = `position:absolute;left:${left}px;transform:translateX(-50%);font-size:0.8em;`;
+          const left = ((h - timelineStart) / (timelineEnd - timelineStart)) * 100;
+          style = `position:absolute;left:${left}%;transform:translateX(-50%);font-size:0.8em;`;
         }
         timelineLabels += `<span style="${style}">${h.toString().padStart(2,'0')}:00</span>`;
       }
       timelineLabels += '</div>';
       let timelineHtml = timelineLabels;
-      timelineHtml += `<div class="timeline" style="position:relative;width:${timelineWidth}px;height:32px;background:#fff;border:1px solid #ccc;border-radius:6px;margin-bottom:8px;">`;
+      timelineHtml += `<div class="timeline" style="position:relative;width:100%;height:32px;background:#fff;border:1px solid #ccc;border-radius:6px;margin-bottom:8px;">`;
       // No vertical 15-min lines
       // Add occupied blocks with mouse-over tooltip
       blocks.forEach(block => {
-        const left = ((block.start - timelineStart) / (timelineEnd - timelineStart)) * timelineWidth;
-        const width = ((block.end - block.start) / (timelineEnd - timelineStart)) * timelineWidth;
+        const left = ((block.start - timelineStart) / (timelineEnd - timelineStart)) * 100;
+        const width = ((block.end - block.start) / (timelineEnd - timelineStart)) * 100;
         const tooltip = `Fra: ${block.info.split(' - ')[0]}\nTil: ${block.info.split(' - ')[1]}\n${block.title}`;
-        timelineHtml += `<div class="timeline-block" style="position:absolute;left:${left}px;width:${width}px;height:32px;background:#e74c3c;border-radius:6px;z-index:2;" title="${tooltip}"></div>`;
+        timelineHtml += `<div class="timeline-block" style="position:absolute;left:${left}%;width:${width}%;height:32px;background:#e74c3c;border-radius:6px;z-index:2;" title="${tooltip}"></div>`;
       });
       timelineHtml += `</div>`;
       // Room label and timeline only
