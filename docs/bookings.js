@@ -11,18 +11,21 @@ let selectedDate = new Date();
 
 function getWeekStart(date) {
   const d = new Date(date);
-  d.setDate(d.getDate() - d.getDay()); // Sunday as start
+  // Week starts on Monday
+  const offset = ((d.getDay() + 6) % 7);
+  d.setDate(d.getDate() - offset);
   d.setHours(0,0,0,0);
   return d;
 }
 
 function getWeekNumber(date) {
-  // ISO week number, Monday as first day
-  const tempDate = new Date(date.getTime());
-  tempDate.setHours(0, 0, 0, 0);
-  tempDate.setDate(tempDate.getDate() + 4 - (tempDate.getDay() || 7));
-  const yearStart = new Date(tempDate.getFullYear(), 0, 1);
-  const weekNo = Math.ceil((((tempDate - yearStart) / 86400000) + 1) / 7);
+  // ISO week number, week starts on Monday
+  const d = new Date(date);
+  d.setHours(0, 0, 0, 0);
+  // Set to nearest Thursday: current date + 4 - current day number (Monday=1, Sunday=7)
+  d.setDate(d.getDate() + 4 - ((d.getDay() || 7)));
+  const yearStart = new Date(d.getFullYear(), 0, 1);
+  const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
   return weekNo;
 }
 
@@ -31,7 +34,8 @@ function formatDate(date) {
 }
 
 function loadBookings(weekStartStr) {
-  fetch(getBookingsPath(new Date(weekStartStr)))
+  const now = new Date();
+  fetch(getBookingsPath(now))
     .then(res => res.json())
     .then(data => {
       window.bookingsData = data;
