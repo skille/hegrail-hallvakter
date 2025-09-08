@@ -1,7 +1,11 @@
 // bookings.js
 // All user-facing text is in Norwegian. Coding and comments in English.
 
-const bookingsFolder = './bookings/';
+function getBookingsPath(date) {
+  const year = date.getFullYear();
+  const weekNumber = getWeekNumber(date);
+  return `bookings/${year}/week-${weekNumber}.json`;
+}
 const weekStart = getWeekStart(new Date());
 let selectedDate = new Date();
 
@@ -12,12 +16,22 @@ function getWeekStart(date) {
   return d;
 }
 
+function getWeekNumber(date) {
+  // ISO week number, Monday as first day
+  const tempDate = new Date(date.getTime());
+  tempDate.setHours(0, 0, 0, 0);
+  tempDate.setDate(tempDate.getDate() + 4 - (tempDate.getDay() || 7));
+  const yearStart = new Date(tempDate.getFullYear(), 0, 1);
+  const weekNo = Math.ceil((((tempDate - yearStart) / 86400000) + 1) / 7);
+  return weekNo;
+}
+
 function formatDate(date) {
   return date.toISOString().slice(0,10);
 }
 
 function loadBookings(weekStartStr) {
-  fetch(`${bookingsFolder}${weekStartStr}.json`)
+  fetch(getBookingsPath(new Date(weekStartStr)))
     .then(res => res.json())
     .then(data => {
       window.bookingsData = data;

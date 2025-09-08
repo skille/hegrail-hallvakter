@@ -64,8 +64,10 @@ foreach ($resource in $resources) {
 }
 
 # Define file path based on week start date
-$weekStartStr = $weekBookings.weekStart.ToString('yyyy-MM-dd')
-$savePath = "./docs/bookings/$weekStartStr.json"
+$year = $weekBookings.weekStart.ToString('yyyy')
+$weekNumber = [System.Globalization.CultureInfo]::InvariantCulture.Calendar.GetWeekOfYear($weekBookings.weekStart, [System.Globalization.CalendarWeekRule]::FirstFourDayWeek, [DayOfWeek]::Monday)
+$fileName = "week-{0}.json" -f $weekNumber
+$savePath = "./docs/bookings/$year/$fileName"
 
 # Ensure output directory exists
 New-Item -ItemType Directory -Force -Path (Split-Path $savePath) | Out-Null
