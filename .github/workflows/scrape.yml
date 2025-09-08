@@ -1,0 +1,31 @@
+name: Scrape Bookings Hourly
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour at minute 0
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up PowerShell
+        uses: actions/setup-powershell@v2
+
+      - name: Run scrape script
+        shell: pwsh
+        run: pwsh ./scripts/scrape.ps1
+
+      - name: Configure git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push updated bookings
+        run: |
+          git add ./data/bookings/*.json
+          git commit -m "Update bookings data [skip ci]" || echo "No changes to commit"
+          git push

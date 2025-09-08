@@ -1,0 +1,66 @@
+[
+    {
+        "resourceName": "Hegra Idrettshall",
+        "parts": [
+            {
+                "partId": 0,
+                "partName": "Hele hallen"
+            },
+            {
+                "partId": 1,
+                "partName": "1/3 Hallen"
+            },
+            {
+                "partId": 2,
+                "partName": "2/3 Hallen"
+            }
+        ],
+        "resourceId": 632
+    },
+    {
+        "resourceName": "Squashbaner",
+        "parts": [
+            {
+                "partId": 0,
+                "partName": "Squashbane 1"
+            },
+            {
+                "partId": 1,
+                "partName": "Squashbane 2"
+            }
+        ],
+        "resourceId": 710
+    },
+    {
+        "resourceName": "Møterom / Kjøkken",
+        "parts": [
+            {
+                "partId": 0,
+                "partName": "Møterom / Kjøkken"
+            }
+        ],
+        "resourceId": 723
+    },
+    {
+        "resourceName": "Garderober",
+        "parts": [
+            {
+                "partId": 0,
+                "partName": "Garderobe 1"
+            },
+            {
+                "partId": 1,
+                "partName": "Garderobe 2"
+            },
+            {
+                "partId": 2,
+                "partName": "Garderobe 3"
+            },
+            {
+                "partId": 3,
+                "partName": "Garderobe 4"
+            }
+        ],
+        "resourceId": 2857
+    }
+]
