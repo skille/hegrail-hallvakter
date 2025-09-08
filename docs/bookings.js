@@ -1,7 +1,7 @@
 // bookings.js
 // All user-facing text is in Norwegian. Coding and comments in English.
 
-const bookingsFolder = '../data/bookings/';
+const bookingsFolder = './bookings/';
 const weekStart = getWeekStart(new Date());
 let selectedDate = new Date();
 

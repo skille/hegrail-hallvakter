@@ -65,7 +65,7 @@ foreach ($resource in $resources) {
 
 # Define file path based on week start date
 $weekStartStr = $weekBookings.weekStart.ToString('yyyy-MM-dd')
-$savePath = "./data/bookings/$weekStartStr.json"
+$savePath = "./docs/bookings/$weekStartStr.json"
 
 # Ensure output directory exists
 New-Item -ItemType Directory -Force -Path (Split-Path $savePath) | Out-Null
