@@ -50,8 +50,10 @@ function loadBookings(weekStartStr) {
 function renderPage() {
   const data = window.bookingsData;
   if (!data) return;
-  const dateStr = formatDate(selectedDate);
-  document.getElementById('selected-date').innerText = dateStr;
+  const weekday = selectedDate.toLocaleDateString('no-NO', { weekday: 'long' });
+  const dateStrDisplay = selectedDate.toLocaleDateString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' });
+  const dateStr = formatDate(selectedDate); // ISO format for filtering
+  document.getElementById('selected-date').innerText = `${weekday} ${dateStrDisplay}`;
 
   // Overview: show first occupied time and last available time
   let overviewHtml = '';
