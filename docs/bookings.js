@@ -66,28 +66,7 @@ function renderPage() {
   const dateStr = formatDate(selectedDate); // ISO format for filtering
   document.getElementById('selected-date').innerText = `${weekday} ${dateStrDisplay}`;
 
-  // Overview: show first occupied time and last available time
-  let overviewHtml = '';
-  data.buildings.forEach(building => {
-    building.rooms.forEach(room => {
-      const bookings = room.bookings.filter(b => b.start.startsWith(dateStr));
-      // Only consider bookings with id (occupied)
-      const occupiedBookings = bookings.filter(b => b.id);
-      if (occupiedBookings.length > 0) {
-        const sorted = occupiedBookings.sort((a,b) => new Date(a.start) - new Date(b.start));
-        const firstOccupied = sorted[0];
-        const lastOccupied = sorted[sorted.length-1];
-        overviewHtml += `<div><strong>${building.buildingName} - ${room.roomName}</strong>: ${firstOccupied.start.slice(11,16)} - ${lastOccupied.end.slice(11,16)}</div>`;
-      } else {
-        overviewHtml += `<div><strong>${building.buildingName} - ${room.roomName}</strong>: Ledig hele dagen</div>`;
-      }
-    });
-  });
-  document.getElementById('overview').innerHTML = overviewHtml;
-
-  // Details: graphical timeline for each room, 07:00-22:00
-  let detailsHtml = '';
-  // Assign a color per building
+  // Assign a color per building (move to top so both sections use it)
   const buildingColors = [
     '#e74c3c', // rød
     '#3498db', // blå
@@ -100,6 +79,36 @@ function renderPage() {
     '#95a5a6', // grå
     '#2ecc71'  // lys grønn
   ];
+
+  // Overview: show first occupied time and last available time
+  let overviewHtml = '<div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">';
+  data.buildings.forEach((building, bIdx) => {
+    const color = buildingColors[bIdx % buildingColors.length];
+    // Gather all bookings for all rooms in this building for the selected date
+    let allBookings = [];
+    building.rooms.forEach(room => {
+      const bookings = room.bookings.filter(b => b.start.startsWith(dateStr) && b.id);
+      allBookings = allBookings.concat(bookings);
+    });
+    let boxHtml = `<div style="background:${color};color:#fff;padding:18px 12px;border-radius:10px;min-width:180px;flex:1 1 180px;max-width:220px;box-shadow:0 2px 8px #0002;display:flex;flex-direction:column;align-items:center;">`;
+    boxHtml += `<div style="font-size:1.1em;font-weight:bold;margin-bottom:8px;">${building.buildingName}</div>`;
+    if (allBookings.length > 0) {
+      const sorted = allBookings.sort((a,b) => new Date(a.start) - new Date(b.start));
+      const firstOccupied = sorted[0];
+      const lastOccupied = sorted[sorted.length-1];
+      boxHtml += `<div>Første: <span style="font-weight:bold;">${firstOccupied.start.slice(11,16)}</span></div>`;
+      boxHtml += `<div>Siste: <span style="font-weight:bold;">${lastOccupied.end.slice(11,16)}</span></div>`;
+    } else {
+      boxHtml += `<div style="margin-top:8px;">Ledig hele dagen</div>`;
+    }
+    boxHtml += '</div>';
+    overviewHtml += boxHtml;
+  });
+  overviewHtml += '</div>';
+  document.getElementById('overview').innerHTML = overviewHtml;
+
+  // Details: graphical timeline for each room, 07:00-22:00
+  let detailsHtml = '';
   data.buildings.forEach((building, bIdx) => {
     const color = buildingColors[bIdx % buildingColors.length];
     building.rooms.forEach(room => {
@@ -123,7 +132,13 @@ function renderPage() {
           start = lastEnd + minGap;
         }
         if (end > start) {
-          blocks.push({start, end, title: b.title || '', info: `${b.start.slice(11,16)} - ${b.end.slice(11,16)}`});
+          blocks.push({
+            start,
+            end,
+            title: b.title || '',
+            info: `${b.start.slice(11,16)} - ${b.end.slice(11,16)}`,
+            renterName: b.renterName || ''
+          });
           lastEnd = end;
         }
       });
@@ -149,12 +164,14 @@ function renderPage() {
       blocks.forEach(block => {
         const left = ((block.start - timelineStart) / (timelineEnd - timelineStart)) * 100;
         const width = ((block.end - block.start) / (timelineEnd - timelineStart)) * 100;
-        const tooltip = `Fra: ${block.info.split(' - ')[0]}\nTil: ${block.info.split(' - ')[1]}\n${block.title}`;
-        timelineHtml += `<div class="timeline-block" style="position:absolute;left:${left}%;width:${width}%;height:32px;background:${color};border-radius:6px;z-index:2;" title="${tooltip}"></div>`;
+        let tooltip = `Fra: ${block.info.split(' - ')[0]}\nTil: ${block.info.split(' - ')[1]}`;
+        if (block.title) tooltip += `\n${block.title}`;
+        if (block.renterName) tooltip += `\nLeietaker: ${block.renterName}`;
+        timelineHtml += `<div class=\"timeline-block\" style=\"position:absolute;left:${left}%;width:${width}%;height:32px;background:${color};border-radius:6px;z-index:2;\" title=\"${tooltip}\"></div>`;
       });
       timelineHtml += `</div>`;
       // Room label and timeline only
-      detailsHtml += `<div class="booking"><span class="room" style="color:${color};font-weight:bold;">${building.buildingName} - ${room.roomName}</span><br>${timelineHtml}</div>`;
+  detailsHtml += `<div class=\"booking\"><span class=\"room\" style=\"color:${color};font-weight:bold;\">${room.roomName}</span><br>${timelineHtml}</div>`;
     });
   });
   document.getElementById('details').innerHTML = detailsHtml || 'Ingen bookinger.';
