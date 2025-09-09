@@ -51,7 +51,8 @@ foreach ($resource in $resources) {
         }
 
         # Add each event to the room's bookings
-        foreach ($event in $response.MonthOrWeek.Events) {
+        # Skip the first event as the API returns a placeholder from date start until full hour the API request is made
+        foreach ($event in $response.MonthOrWeek.Events | Select-Object -Skip 1) {
             $room.bookings.Add($event)
         }
 
