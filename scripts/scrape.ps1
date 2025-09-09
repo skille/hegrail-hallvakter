@@ -42,8 +42,8 @@ foreach ($resource in $resources) {
             $response = Invoke-RestMethod -Uri $url
 
             # Add each event to the room's bookings
-            foreach ($event in $response.MonthOrWeek.Events) {
-                $room.bookings.Add($event)
+            foreach ($bookingEvent in $response.MonthOrWeek.Events) {
+                $room.bookings.Add($bookingEvent)
             }
         } catch {
             Write-Warning "Failed to fetch bookings for room '$($part.partName)' in building '$($resource.resourceName)': $($_.Exception.Message)"
@@ -52,8 +52,8 @@ foreach ($resource in $resources) {
 
         # Add each event to the room's bookings
         # Skip the first event as the API returns a placeholder from date start until full hour the API request is made
-        foreach ($event in $response.MonthOrWeek.Events | Select-Object -Skip 1) {
-            $room.bookings.Add($event)
+        foreach ($bookingEvent in $response.MonthOrWeek.Events | Select-Object -Skip 1) {
+            $room.bookings.Add($bookingEvent)
         }
 
         # Add room to building
