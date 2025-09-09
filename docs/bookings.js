@@ -9,7 +9,6 @@ function getBookingsPath(date) {
 
 const weekStart = getWeekStart(new Date());
 let selectedDate = new Date();
-let detailsView = false; // Track current view mode
 
 function getWeekStart(date) {
   const d = new Date(date);
@@ -163,6 +162,9 @@ function changeDate(offset) {
     renderPage();
   }
 }
+
+document.getElementById('prev-day').onclick = () => changeDate(-1);
+document.getElementById('next-day').onclick = () => changeDate(1);
 
 document.addEventListener('DOMContentLoaded', () => {
   selectedDate = new Date();
