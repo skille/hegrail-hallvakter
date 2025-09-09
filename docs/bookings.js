@@ -18,7 +18,7 @@ let selectedDate = new Date();
 /**
  * Calculates the ISO week number for a given date.
  * The ISO week starts on Monday and the first week of the year is the one that contains the first Thursday.
- */
+*/
 function getWeekNumber(date) {
   const d = new Date(date);
   d.setHours(0, 0, 0, 0);
@@ -29,7 +29,7 @@ function getWeekNumber(date) {
 }
 
 function formatDate(date) {
-  return date.toISOString().slice(0,10);
+  return date.toISOString().slice(0, 10);
 }
 
 function loadBookings(weekStartStr) {
@@ -91,11 +91,11 @@ function renderPage() {
     let boxHtml = `<div style="background:${color};color:#fff;padding:18px 12px;border-radius:10px;min-width:180px;flex:1 1 180px;max-width:220px;box-shadow:0 2px 8px #0002;display:flex;flex-direction:column;align-items:center;">`;
     boxHtml += `<div style="font-size:1.1em;font-weight:bold;margin-bottom:8px;">${building.buildingName}</div>`;
     if (allBookings.length > 0) {
-      const sorted = allBookings.sort((a,b) => new Date(a.start) - new Date(b.start));
+      const sorted = allBookings.sort((a, b) => new Date(a.start) - new Date(b.start));
       const firstOccupied = sorted[0];
-      const lastOccupied = sorted[sorted.length-1];
-  boxHtml += `<div>Første: <span style="font-weight:bold;">${formatTime(firstOccupied.start)}</span></div>`;
-  boxHtml += `<div>Siste: <span style="font-weight:bold;">${formatTime(lastOccupied.end)}</span></div>`;
+      const lastOccupied = sorted[sorted.length - 1];
+      boxHtml += `<div>Første: <span style="font-weight:bold;">${formatTime(firstOccupied.start)}</span></div>`;
+      boxHtml += `<div>Siste: <span style="font-weight:bold;">${formatTime(lastOccupied.end)}</span></div>`;
     } else {
       boxHtml += `<div style="margin-top:8px;">Ledig hele dagen</div>`;
     }
@@ -117,15 +117,15 @@ function renderPage() {
       const timelineWidth = 100; // percent width for responsive design
       let blocks = [];
       // Build occupied blocks
-      const minGap = 1/60; // 1 minute gap between bookings
+      const minGap = 1 / 60; // 1 minute gap between bookings
       let lastEnd = null;
       bookings.forEach(b => {
-        const startHour = parseInt(b.start.slice(11,13), 10);
-        const startMin = parseInt(b.start.slice(14,16), 10);
-        const endHour = parseInt(b.end.slice(11,13), 10);
-        const endMin = parseInt(b.end.slice(14,16), 10);
-        let start = Math.max(timelineStart, startHour + startMin/60);
-        let end = Math.min(timelineEnd, endHour + endMin/60);
+        const startHour = parseInt(b.start.slice(11, 13), 10);
+        const startMin = parseInt(b.start.slice(14, 16), 10);
+        const endHour = parseInt(b.end.slice(11, 13), 10);
+        const endMin = parseInt(b.end.slice(14, 16), 10);
+        let start = Math.max(timelineStart, startHour + startMin / 60);
+        let end = Math.min(timelineEnd, endHour + endMin / 60);
         if (lastEnd !== null && start < lastEnd + minGap) {
           start = lastEnd + minGap;
         }
@@ -152,7 +152,7 @@ function renderPage() {
           const left = ((h - timelineStart) / (timelineEnd - timelineStart)) * 100;
           style = `position:absolute;left:${left}%;transform:translateX(-50%);font-size:0.8em;`;
         }
-        timelineLabels += `<span style="${style}">${h.toString().padStart(2,'0')}</span>`;
+        timelineLabels += `<span style="${style}">${h.toString().padStart(2, '0')}</span>`;
       }
       timelineLabels += '</div>';
       let timelineHtml = timelineLabels;
@@ -169,7 +169,7 @@ function renderPage() {
       });
       timelineHtml += `</div>`;
       // Room label and timeline only
-  detailsHtml += `<div class=\"booking\"><span class=\"room\" style=\"color:${color};font-weight:bold;\">${room.roomName}</span><br>${timelineHtml}</div>`;
+      detailsHtml += `<div class=\"booking\"><span class=\"room\" style=\"color:${color};font-weight:bold;\">${room.roomName}</span><br>${timelineHtml}</div>`;
     });
   });
   document.getElementById('details').innerHTML = detailsHtml || 'Ingen bookinger.';
@@ -177,23 +177,23 @@ function renderPage() {
 
 function changeDate(offset) {
   // Use weekStart and weekEnd from loaded data for navigation boundaries
-    // Use weekStart and weekEnd from loaded data for navigation boundaries
-    const data = window.bookingsData;
-    if (!data) return;
-    // Compare only date part (YYYY-MM-DD)
-    function toDateOnly(d) {
-      return new Date(d.getFullYear(), d.getMonth(), d.getDate());
-    }
-    const currentWeekStart = toDateOnly(new Date(data.weekStart));
-    const currentWeekEnd = toDateOnly(new Date(data.weekEnd));
-    const newDate = new Date(selectedDate);
-    newDate.setDate(newDate.getDate() + offset);
-    const newDateOnly = toDateOnly(newDate);
-    // Restrict navigation to current week only (inclusive)
-    if (newDateOnly >= currentWeekStart && newDateOnly <= currentWeekEnd) {
-      selectedDate = newDate;
-      renderPage();
-    }
+  // Use weekStart and weekEnd from loaded data for navigation boundaries
+  const data = window.bookingsData;
+  if (!data) return;
+  // Compare only date part (YYYY-MM-DD)
+  function toDateOnly(d) {
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  }
+  const currentWeekStart = toDateOnly(new Date(data.weekStart));
+  const currentWeekEnd = toDateOnly(new Date(data.weekEnd));
+  const newDate = new Date(selectedDate);
+  newDate.setDate(newDate.getDate() + offset);
+  const newDateOnly = toDateOnly(newDate);
+  // Restrict navigation to current week only (inclusive)
+  if (newDateOnly >= currentWeekStart && newDateOnly <= currentWeekEnd) {
+    selectedDate = newDate;
+    renderPage();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
