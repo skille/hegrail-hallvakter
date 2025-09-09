@@ -18,12 +18,8 @@ let selectedDate = new Date();
 /**
  * Calculates the ISO week number for a given date.
  * The ISO week starts on Monday and the first week of the year is the one that contains the first Thursday.
- *
- * @param {Date|string|number} date - The date to calculate the week number for. Can be a Date object, a date string, or a timestamp.
- * @returns {number} The ISO week number (1-53).
  */
 function getWeekNumber(date) {
-  // Robust ISO week number calculation (Monday as first day)
   const d = new Date(date);
   d.setHours(0, 0, 0, 0);
   d.setDate(d.getDate() + 4 - (d.getDay() || 7));
