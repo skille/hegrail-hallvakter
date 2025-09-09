@@ -11,12 +11,18 @@ function getBookingsPath(date) {
 let weekStart = null;
 let selectedDate = new Date();
 
+/**
+ * Calculates the ISO week number for a given date.
+ * The ISO week starts on Monday and the first week of the year is the one that contains the first Thursday.
+ *
+ * @param {Date|string|number} date - The date to calculate the week number for. Can be a Date object, a date string, or a timestamp.
+ * @returns {number} The ISO week number (1-53).
+ */
 function getWeekNumber(date) {
-  // ISO week number, week starts on Monday
+  // Robust ISO week number calculation (Monday as first day)
   const d = new Date(date);
   d.setHours(0, 0, 0, 0);
-  // Set to nearest Thursday: current date + 4 - current day number (Monday=1, Sunday=7)
-  d.setDate(d.getDate() + 4 - ((d.getDay() || 7)));
+  d.setDate(d.getDate() + 4 - (d.getDay() || 7));
   const yearStart = new Date(d.getFullYear(), 0, 1);
   const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
   return weekNo;
