@@ -1,3 +1,7 @@
+function formatTime(dateStr) {
+  // Accepts ISO string, returns HH:mm in 24-hour format
+  return new Date(dateStr).toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit', hour12: false });
+}
 let detailsView = false; // false = overview, true = details
 // bookings.js
 // All user-facing text is in Norwegian. Coding and comments in English.
@@ -94,8 +98,8 @@ function renderPage() {
       const sorted = allBookings.sort((a,b) => new Date(a.start) - new Date(b.start));
       const firstOccupied = sorted[0];
       const lastOccupied = sorted[sorted.length-1];
-      boxHtml += `<div>Første: <span style="font-weight:bold;">${firstOccupied.start.slice(11,16)}</span></div>`;
-      boxHtml += `<div>Siste: <span style="font-weight:bold;">${lastOccupied.end.slice(11,16)}</span></div>`;
+  boxHtml += `<div>Første: <span style="font-weight:bold;">${formatTime(firstOccupied.start)}</span></div>`;
+  boxHtml += `<div>Siste: <span style="font-weight:bold;">${formatTime(lastOccupied.end)}</span></div>`;
     } else {
       boxHtml += `<div style="margin-top:8px;">Ledig hele dagen</div>`;
     }
@@ -134,7 +138,7 @@ function renderPage() {
             start,
             end,
             title: b.title || '',
-            info: `${b.start.slice(11,16)} - ${b.end.slice(11,16)}`,
+            info: `${formatTime(b.start)} - ${formatTime(b.end)}`,
             renterName: b.renterName || ''
           });
           lastEnd = end;
