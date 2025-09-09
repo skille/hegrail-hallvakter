@@ -6,8 +6,10 @@ function getBookingsPath(date) {
   const weekNumber = getWeekNumber(date);
   return `bookings/${year}/week-${weekNumber}.json`;
 }
+
 const weekStart = getWeekStart(new Date());
 let selectedDate = new Date();
+let detailsView = false; // Track current view mode
 
 function getWeekStart(date) {
   const d = new Date(date);
@@ -76,16 +78,30 @@ function renderPage() {
 
   // Details: graphical timeline for each room, 07:00-22:00
   let detailsHtml = '';
-  data.buildings.forEach(building => {
+  // Assign a color per building
+  const buildingColors = [
+    '#e74c3c', // rød
+    '#3498db', // blå
+    '#27ae60', // grønn
+    '#f1c40f', // gul
+    '#9b59b6', // lilla
+    '#e67e22', // oransje
+    '#1abc9c', // turkis
+    '#34495e', // mørk blå
+    '#95a5a6', // grå
+    '#2ecc71'  // lys grønn
+  ];
+  data.buildings.forEach((building, bIdx) => {
+    const color = buildingColors[bIdx % buildingColors.length];
     building.rooms.forEach(room => {
       const bookings = room.bookings.filter(b => b.start.startsWith(dateStr) && b.id);
       // Timeline logic
-  const timelineStart = 7; // 07:00
-  const timelineEnd = 22; // 22:00
-  const timelineWidth = 100; // percent width for responsive design
+      const timelineStart = 7; // 07:00
+      const timelineEnd = 22; // 22:00
+      const timelineWidth = 100; // percent width for responsive design
       let blocks = [];
       // Build occupied blocks
-  const minGap = 1/60; // 1 minute gap between bookings
+      const minGap = 1/60; // 1 minute gap between bookings
       let lastEnd = null;
       bookings.forEach(b => {
         const startHour = parseInt(b.start.slice(11,13), 10);
@@ -114,7 +130,7 @@ function renderPage() {
           const left = ((h - timelineStart) / (timelineEnd - timelineStart)) * 100;
           style = `position:absolute;left:${left}%;transform:translateX(-50%);font-size:0.8em;`;
         }
-  timelineLabels += `<span style="${style}">${h.toString().padStart(2,'0')}</span>`;
+        timelineLabels += `<span style="${style}">${h.toString().padStart(2,'0')}</span>`;
       }
       timelineLabels += '</div>';
       let timelineHtml = timelineLabels;
@@ -125,11 +141,11 @@ function renderPage() {
         const left = ((block.start - timelineStart) / (timelineEnd - timelineStart)) * 100;
         const width = ((block.end - block.start) / (timelineEnd - timelineStart)) * 100;
         const tooltip = `Fra: ${block.info.split(' - ')[0]}\nTil: ${block.info.split(' - ')[1]}\n${block.title}`;
-        timelineHtml += `<div class="timeline-block" style="position:absolute;left:${left}%;width:${width}%;height:32px;background:#e74c3c;border-radius:6px;z-index:2;" title="${tooltip}"></div>`;
+        timelineHtml += `<div class="timeline-block" style="position:absolute;left:${left}%;width:${width}%;height:32px;background:${color};border-radius:6px;z-index:2;" title="${tooltip}"></div>`;
       });
       timelineHtml += `</div>`;
       // Room label and timeline only
-      detailsHtml += `<div class="booking"><span class="room">${building.buildingName} - ${room.roomName}</span><br>${timelineHtml}</div>`;
+      detailsHtml += `<div class="booking"><span class="room" style="color:${color};font-weight:bold;">${building.buildingName} - ${room.roomName}</span><br>${timelineHtml}</div>`;
     });
   });
   document.getElementById('details').innerHTML = detailsHtml || 'Ingen bookinger.';
@@ -147,9 +163,6 @@ function changeDate(offset) {
     renderPage();
   }
 }
-
-document.getElementById('prev-day').onclick = () => changeDate(-1);
-document.getElementById('next-day').onclick = () => changeDate(1);
 
 document.addEventListener('DOMContentLoaded', () => {
   selectedDate = new Date();
