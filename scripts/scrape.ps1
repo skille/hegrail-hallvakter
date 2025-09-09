@@ -6,6 +6,7 @@ $currentDate = Get-Date
 
 # Define URL template
 $baseScheduleUrl = 'https://www.bookup.no/api/public/schedule/{0}/reference/{1}/dateinweek/{2}/part/{3}'
+$baseContractUrl = 'https://www.bookup.no/api/public/contract/{0}/reference/{1}/date/{2}'
 
 # Build the bookings structure: week -> buildings -> rooms -> bookings
 $weekBookings = [PSCustomObject]@{
@@ -13,6 +14,9 @@ $weekBookings = [PSCustomObject]@{
     weekEnd   = $currentDate.Date.AddDays(6 - (([int]$currentDate.DayOfWeek + 6) % 7)) # Ensure week ends on Sunday
     buildings = [System.Collections.Generic.List[object]]::new()
 }
+
+# Hashtable to track contracts already fetched (to avoid redundant API calls)
+$fetchedContracts = [hashtable]::new()
 
 # Iterate over each resource (building)
 foreach ($resource in $resources) {
@@ -39,12 +43,53 @@ foreach ($resource in $resources) {
         
         # Fetch bookings for the room with error handling
         try {
+            Write-Output "Fetching bookings for room '$($part.partName)' in building '$($resource.resourceName)' from URL: $url"
             $response = Invoke-RestMethod -Uri $url
-            
+
+            # Parse agendaMinTime and agendaMaxTime as TimeSpan
+            $agendaMin = [TimeSpan]::Parse($response.MonthOrWeek.agendaMinTime)
+            $agendaMax = [TimeSpan]::Parse($response.MonthOrWeek.agendaMaxTime)
+
+
             # Add each event to the room's bookings
-            # Skip the first event as the API returns a placeholder from date start until full hour the API request is made
-            foreach ($bookingEvent in $response.MonthOrWeek.Events | Select-Object -Skip 1) {
-                $room.bookings.Add($bookingEvent)
+            foreach ($bookingEvent in $response.MonthOrWeek.Events | Select-Object -Skip 3) {
+                # Filter for valid booking events with an ID, events in the range of agendaMinTime and agendaMaxTime
+    
+                #$room.bookings.Add($bookingEvent)
+                # Filter for valid booking events with an ID, events in the range of agendaMinTime and agendaMaxTime
+                if ($bookingEvent.id -and ($bookingEvent.start.TimeOfDay -ge $agendaMin) -and ($bookingEvent.end.TimeOfDay -le $agendaMax)) {
+
+                    # Fetch contract details if not already fetched
+                    if ($fetchedContracts.ContainsKey($bookingEvent.id)) {
+                        # If contract details already fetched, reuse them
+                    } else {
+                        # Fetch contract details for the booking event
+
+                        # Construct the contract URL
+                        $baseContractUrlFormatted = [string]::Format($baseContractUrl, $bookingEvent.id, $randomRef, $currentDate.ToString('dd.MM.yyyy'))
+                        try {
+                            Write-Output "Fetching contract details for booking ID '$($bookingEvent.id)' from URL: $baseContractUrlFormatted"
+                            $contractResponse = Invoke-RestMethod -Uri $baseContractUrlFormatted
+                            $fetchedContracts[$bookingEvent.id] = $contractResponse
+                        } catch {
+                            Write-Warning "Failed to fetch contract details for booking ID '$($bookingEvent.id)': $($_.Exception.Message)"
+                            $fetchedContracts[$bookingEvent.id] = $null
+                        }
+                    }
+                    # Create a new custom object with booking event and its contract details
+                    $bookingRecord = [PSCustomObject]@{
+                        start       = $bookingEvent.start
+                        end         = $bookingEvent.end
+                        id          = $bookingEvent.id
+                        color       = $bookingEvent.color
+                        borderColor = $bookingEvent.borderColor
+                        title       = $fetchedContracts[$bookingEvent.id]?.title
+                        renterName  = $fetchedContracts[$bookingEvent.id]?.renterName
+                        partNr      = $fetchedContracts[$bookingEvent.id]?.partNr
+                        partLabel   = $fetchedContracts[$bookingEvent.id]?.partLabel
+                    }
+                    $room.bookings.Add($bookingRecord)
+                }
             }
 
         } catch {
