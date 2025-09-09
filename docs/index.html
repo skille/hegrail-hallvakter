@@ -15,10 +15,17 @@
       <span id="selected-date"></span>
       <button id="next-day">Neste &gt;</button>
     </div>
-    <h2>Første og siste bookingtid</h2>
-    <div id="overview"></div>
-    <h2>Alle bookinger for valgt dato</h2>
-    <div id="details"></div>
+    <div id="view-toggle" style="margin: 1em 0;">
+      <button id="toggle-view">Vis detaljer</button>
+    </div>
+    <div id="overview-section">
+      <h2>Første og siste bookingtid</h2>
+      <div id="overview"></div>
+    </div>
+    <div id="details-section" style="display:none;">
+      <h2>Alle bookinger for valgt dato</h2>
+      <div id="details"></div>
+    </div>
   </div>
   <script src="bookings.js"></script>
 </body>

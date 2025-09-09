@@ -1,3 +1,4 @@
+let detailsView = false; // false = overview, true = details
 // bookings.js
 // All user-facing text is in Norwegian. Coding and comments in English.
 
@@ -49,6 +50,15 @@ function loadBookings(weekStartStr) {
 }
 
 function renderPage() {
+  // Show/hide sections based on detailsView
+  var overviewSection = document.getElementById('overview-section');
+  var detailsSection = document.getElementById('details-section');
+  var toggleBtn = document.getElementById('toggle-view');
+  if (overviewSection && detailsSection && toggleBtn) {
+    overviewSection.style.display = detailsView ? 'none' : '';
+    detailsSection.style.display = detailsView ? '' : 'none';
+    toggleBtn.innerText = detailsView ? 'Vis oversikt' : 'Vis detaljer';
+  }
   const data = window.bookingsData;
   if (!data) return;
   const weekday = selectedDate.toLocaleDateString('no-NO', { weekday: 'long' });
@@ -151,22 +161,33 @@ function renderPage() {
 }
 
 function changeDate(offset) {
-  const currentWeekStart = getWeekStart(new Date());
-  const currentWeekEnd = new Date(currentWeekStart);
-  currentWeekEnd.setDate(currentWeekEnd.getDate() + 6);
-  const newDate = new Date(selectedDate);
-  newDate.setDate(newDate.getDate() + offset);
-  // Restrict navigation to current week only
-  if (newDate >= currentWeekStart && newDate <= currentWeekEnd) {
-    selectedDate = newDate;
-    renderPage();
-  }
+  // Use weekStart and weekEnd from loaded data for navigation boundaries
+    // Use weekStart and weekEnd from loaded data for navigation boundaries
+    const data = window.bookingsData;
+    if (!data) return;
+    // Compare only date part (YYYY-MM-DD)
+    function toDateOnly(d) {
+      return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    }
+    const currentWeekStart = toDateOnly(new Date(data.weekStart));
+    const currentWeekEnd = toDateOnly(new Date(data.weekEnd));
+    const newDate = new Date(selectedDate);
+    newDate.setDate(newDate.getDate() + offset);
+    const newDateOnly = toDateOnly(newDate);
+    // Restrict navigation to current week only (inclusive)
+    if (newDateOnly >= currentWeekStart && newDateOnly <= currentWeekEnd) {
+      selectedDate = newDate;
+      renderPage();
+    }
 }
-
-document.getElementById('prev-day').onclick = () => changeDate(-1);
-document.getElementById('next-day').onclick = () => changeDate(1);
 
 document.addEventListener('DOMContentLoaded', () => {
   selectedDate = new Date();
   loadBookings(formatDate(weekStart));
+  document.getElementById('prev-day').onclick = () => changeDate(-1);
+  document.getElementById('next-day').onclick = () => changeDate(1);
+  document.getElementById('toggle-view').onclick = () => {
+    detailsView = !detailsView;
+    renderPage();
+  };
 });
