@@ -40,20 +40,16 @@ foreach ($resource in $resources) {
         # Fetch bookings for the room with error handling
         try {
             $response = Invoke-RestMethod -Uri $url
-
+            
             # Add each event to the room's bookings
-            foreach ($bookingEvent in $response.MonthOrWeek.Events) {
+            # Skip the first event as the API returns a placeholder from date start until full hour the API request is made
+            foreach ($bookingEvent in $response.MonthOrWeek.Events | Select-Object -Skip 1) {
                 $room.bookings.Add($bookingEvent)
             }
+
         } catch {
             Write-Warning "Failed to fetch bookings for room '$($part.partName)' in building '$($resource.resourceName)': $($_.Exception.Message)"
             # Optionally, you can continue or add a placeholder/error object to $room.bookings
-        }
-
-        # Add each event to the room's bookings
-        # Skip the first event as the API returns a placeholder from date start until full hour the API request is made
-        foreach ($bookingEvent in $response.MonthOrWeek.Events | Select-Object -Skip 1) {
-            $room.bookings.Add($bookingEvent)
         }
 
         # Add room to building
@@ -67,7 +63,7 @@ foreach ($resource in $resources) {
 # Define file path based on week start date
 $year = $weekBookings.weekStart.ToString('yyyy')
 $weekNumber = [System.Globalization.CultureInfo]::InvariantCulture.Calendar.GetWeekOfYear($weekBookings.weekStart, [System.Globalization.CalendarWeekRule]::FirstFourDayWeek, [DayOfWeek]::Monday)
-$fileName = "week-{0}.json" -f $weekNumber
+$fileName = 'week-{0}.json' -f $weekNumber
 $savePath = "./docs/bookings/$year/$fileName"
 
 # Ensure output directory exists
