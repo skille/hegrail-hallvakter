@@ -8,17 +8,8 @@ function getBookingsPath(date) {
   return `bookings/${year}/week-${weekNumber}.json`;
 }
 
-const weekStart = getWeekStart(new Date());
+let weekStart = null;
 let selectedDate = new Date();
-
-function getWeekStart(date) {
-  const d = new Date(date);
-  // Week starts on Monday
-  const offset = ((d.getDay() + 6) % 7);
-  d.setDate(d.getDate() - offset);
-  d.setHours(0,0,0,0);
-  return d;
-}
 
 function getWeekNumber(date) {
   // ISO week number, week starts on Monday
@@ -36,11 +27,12 @@ function formatDate(date) {
 }
 
 function loadBookings(weekStartStr) {
-  const now = new Date();
-  fetch(getBookingsPath(now))
+  // Load using selectedDate, but weekStart will be set from JSON
+  fetch(getBookingsPath(selectedDate))
     .then(res => res.json())
     .then(data => {
       window.bookingsData = data;
+      weekStart = new Date(data.weekStart);
       renderPage();
     })
     .catch(() => {
@@ -200,7 +192,7 @@ function changeDate(offset) {
 
 document.addEventListener('DOMContentLoaded', () => {
   selectedDate = new Date();
-  loadBookings(formatDate(weekStart));
+  loadBookings();
   document.getElementById('prev-day').onclick = () => changeDate(-1);
   document.getElementById('next-day').onclick = () => changeDate(1);
   document.getElementById('toggle-view').onclick = () => {
