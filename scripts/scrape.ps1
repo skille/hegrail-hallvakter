@@ -5,7 +5,7 @@ $resources = Get-Content -Raw -Path './data/resources.json' -Encoding utf8 | Con
 $currentDate = Get-Date
 
 # Define URL template
-$baseUrl = 'https://www.bookup.no/api/public/schedule/{0}/reference/{1}/dateinweek/{2}/part/{3}'
+$baseScheduleUrl = 'https://www.bookup.no/api/public/schedule/{0}/reference/{1}/dateinweek/{2}/part/{3}'
 
 # Build the bookings structure: week -> buildings -> rooms -> bookings
 $weekBookings = [PSCustomObject]@{
@@ -35,7 +35,7 @@ foreach ($resource in $resources) {
         $randomRef = -join ((97..122) | Get-Random -Count 9 | % { [char]$_ })
         
         # Construct the URL
-        $url = [string]::Format($baseUrl, $resource.resourceId, $randomRef, $currentDate.ToString('dd.MM.yyyy'), $part.partId)
+        $url = [string]::Format($baseScheduleUrl, $resource.resourceId, $randomRef, $currentDate.ToString('dd.MM.yyyy'), $part.partId)
         
         # Fetch bookings for the room with error handling
         try {
