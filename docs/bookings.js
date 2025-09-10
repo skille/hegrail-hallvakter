@@ -133,23 +133,84 @@ function renderDetails(data, dateStr, buildingIdxs) {
   return detailsHtml;
 }
 
+let activeBookingPopup = null;
+
 function renderRoomTimeline(room, bookings, color) {
   const timelineStart = 8; // 08:00
   const timelineEnd = 22; // 22:00
   const blocks = getTimelineBlocks(bookings, timelineStart, timelineEnd);
   const timelineLabels = buildTimelineLabels(timelineStart, timelineEnd);
   let timelineHtml = timelineLabels;
-  timelineHtml += `<div class="timeline" style="position:relative;width:100%;height:32px;background:#fff;border:1px solid #ccc;border-radius:6px;margin-bottom:8px;">`;
-  blocks.forEach(block => {
+  timelineHtml += `<div class=\"timeline\" style=\"position:relative;width:100%;height:32px;background:#fff;border:1px solid #ccc;border-radius:6px;margin-bottom:8px;\">`;
+  blocks.forEach((block, idx) => {
     const left = ((block.start - timelineStart) / (timelineEnd - timelineStart)) * 100;
     const width = ((block.end - block.start) / (timelineEnd - timelineStart)) * 100;
-    let tooltip = `Fra: ${block.info.split(' - ')[0]}\nTil: ${block.info.split(' - ')[1]}`;
-    if (block.title) tooltip += `\n${block.title}`;
-    if (block.renterName) tooltip += `\nLeietaker: ${block.renterName}`;
-    timelineHtml += `<div class=\"timeline-block\" style=\"position:absolute;left:${left}%;width:${width}%;height:32px;background:${color};border-radius:6px;z-index:2;\" title=\"${tooltip}\"></div>`;
+    // Add click handler to show popup
+    timelineHtml += `<div class=\"timeline-block\" style=\"position:absolute;left:${left}%;width:${width}%;height:32px;background:${color};border-radius:6px;z-index:2;cursor:pointer;\" onclick=\"showBookingPopup(event, '${escapeBookingInfo(block)}')\"></div>`;
   });
   timelineHtml += `</div>`;
   return `<div class=\"booking\"><span class=\"room\" style=\"color:${color};font-weight:bold;\">${room.roomName}</span><br>${timelineHtml}</div>`;
+}
+
+function escapeBookingInfo(block) {
+  // Escape quotes and newlines for safe HTML attribute
+  let info = `Fra: ${block.info.split(' - ')[0]}<br>Til: ${block.info.split(' - ')[1]}`;
+  if (block.title) info += `<br>${block.title}`;
+  if (block.renterName) info += `<br>Leietaker: ${block.renterName}`;
+  return info.replace(/'/g, "&#39;").replace(/\n/g, '<br>');
+}
+
+function showBookingPopup(e, infoHtml) {
+  removeBookingPopup();
+  const popup = document.createElement('div');
+  popup.className = 'booking-popup';
+  popup.innerHTML = infoHtml;
+  popup.style.position = 'fixed';
+  popup.style.zIndex = '9999';
+  popup.style.background = '#fff';
+  popup.style.color = '#222';
+  popup.style.border = '1px solid #ccc';
+  popup.style.borderRadius = '8px';
+  popup.style.boxShadow = '0 2px 12px #0003';
+  popup.style.padding = '14px 18px';
+  popup.style.fontSize = '1em';
+  popup.style.maxWidth = '80vw';
+  // Calculate position
+  const x = (e.touches ? e.touches[0].clientX : e.clientX) + 10;
+  const y = (e.touches ? e.touches[0].clientY : e.clientY) + 10;
+  popup.style.left = x + 'px';
+  popup.style.top = y + 'px';
+  document.body.appendChild(popup);
+  activeBookingPopup = popup;
+  // Adjust position if out of viewport
+  setTimeout(() => {
+    const rect = popup.getBoundingClientRect();
+    let newLeft = rect.left;
+    let newTop = rect.top;
+    if (rect.right > window.innerWidth) {
+      newLeft = window.innerWidth - rect.width - 10;
+      popup.style.left = newLeft + 'px';
+    }
+    if (rect.bottom > window.innerHeight) {
+      newTop = window.innerHeight - rect.height - 10;
+      popup.style.top = newTop + 'px';
+    }
+    document.addEventListener('mousedown', handlePopupDismiss, { once: true });
+    document.addEventListener('touchstart', handlePopupDismiss, { once: true });
+  }, 0);
+}
+
+function removeBookingPopup() {
+  if (activeBookingPopup) {
+    activeBookingPopup.remove();
+    activeBookingPopup = null;
+  }
+}
+
+function handlePopupDismiss(e) {
+  if (activeBookingPopup && !activeBookingPopup.contains(e.target)) {
+    removeBookingPopup();
+  }
 }
 
 function getTimelineBlocks(bookings, timelineStart, timelineEnd) {

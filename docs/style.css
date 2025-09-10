@@ -53,6 +53,19 @@ h2 {
 .booking .time {
   color: #2980b9;
 }
+.booking-popup {
+  transition: opacity 0.2s;
+  box-shadow: 0 2px 12px #0003;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #222;
+  padding: 14px 18px;
+  font-size: 1em;
+  max-width: 80vw;
+  position: fixed;
+  z-index: 9999;
+}
 @media (max-width: 600px) {
   .container {
     padding: 0 4px;
