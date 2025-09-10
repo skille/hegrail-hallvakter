@@ -9,15 +9,13 @@
 </head>
 <body>
   <div class="container">
-    <div style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;margin-top:32px;margin-bottom:32px;">
-      <div style="flex:1;display:flex;flex-direction:column;align-items:center;">
-        <h1>Hegrahallen - Bookingoversikt</h1>
-        <div>Bookingoversikt for hallvakter i Hegra IL. Data fra bookup.no.</div>
-        <div style="display:flex;align-items:center;gap:24px;margin-top:18px;">
-          <button id="prev-day">&lt; Forrige</button>
-          <span id="selected-date"></span>
-          <button id="next-day">Neste &gt;</button>
-        </div>
+    <div style="display:flex;flex-direction:column;align-items:center;margin-top:32px;margin-bottom:16px;">
+      <h1 style="margin:0;white-space:nowrap;">Hegrahallen</h1>
+      <div style="margin-bottom:8px;">Bookingoversikt for hallvakter i Hegra IL.</div>
+      <div style="display:flex;align-items:center;gap:24px;margin-top:18px;">
+        <button id="prev-day">&lt; Forrige</button>
+        <span id="selected-date"></span>
+        <button id="next-day">Neste &gt;</button>
       </div>
     </div>
     <div id="overview-section">
@@ -29,6 +27,11 @@
       <div id="details"></div>
     </div>
   </div>
+  <footer style="width:100%;display:flex;justify-content:center;align-items:center;margin-top:32px;margin-bottom:8px;">
+    <div style="background:#fff;border-radius:10px;padding:12px 24px;box-shadow:0 2px 8px #0001;font-size:1em;color:#555;max-width:480px;text-align:center;">
+      Data fra bookup.no.
+    </div>
+  </footer>
   <script src="bookings.js"></script>
 </body>
 </html>
