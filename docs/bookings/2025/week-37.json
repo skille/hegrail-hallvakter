@@ -866,6 +866,17 @@
           "roomName": "Møterom / Kjøkken",
           "bookings": [
             {
+              "start": "2025-09-09T07:00:00",
+              "end": "2025-09-09T14:30:00",
+              "id": "1151154",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra Ungdomsskole v/ K.Hegre",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2025-09-10T08:00:00",
               "end": "2025-09-10T11:00:00",
               "id": "1241575",
