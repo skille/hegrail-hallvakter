@@ -10,6 +10,7 @@ $baseContractUrl = 'https://www.bookup.no/api/public/contract/{0}/reference/{1}/
 
 # Build the bookings structure: week -> buildings -> rooms -> bookings
 $weekBookings = [PSCustomObject]@{
+    lastUpdate = $currentDate
     weekStart = $currentDate.Date.AddDays( - (([int]$currentDate.DayOfWeek + 6) % 7)) # Ensure week starts on Monday
     weekEnd   = $currentDate.Date.AddDays(6 - (([int]$currentDate.DayOfWeek + 6) % 7)) # Ensure week ends on Sunday
     buildings = [System.Collections.Generic.List[object]]::new()
