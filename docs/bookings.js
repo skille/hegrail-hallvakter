@@ -153,7 +153,7 @@ function renderRoomTimeline(room, bookings, color) {
 }
 
 function getTimelineBlocks(bookings, timelineStart, timelineEnd) {
-  const minGap = 1 / 60; // 1 minute gap between bookings
+  const minGap = 3 / 60; // 3 minute gap between bookings
   let lastEnd = null;
   let blocks = [];
   bookings.forEach(b => {
