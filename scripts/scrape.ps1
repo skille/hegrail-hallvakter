@@ -36,7 +36,7 @@ foreach ($resource in $resources) {
         }
 
         # Generate a random reference string
-        $randomRef = -join ((97..122) | Get-Random -Count 9 | % { [char]$_ })
+        $randomRef = -join ((97..122) | Get-Random -Count 9 | ForEach-Object { [char]$_ })
         
         # Construct the URL
         $url = [string]::Format($baseScheduleUrl, $resource.resourceId, $randomRef, $currentDate.ToString('dd.MM.yyyy'), $part.partId)
@@ -46,50 +46,41 @@ foreach ($resource in $resources) {
             Write-Output "Fetching bookings for room '$($part.partName)' in building '$($resource.resourceName)' from URL: $url"
             $response = Invoke-RestMethod -Uri $url
 
-            # Parse agendaMinTime and agendaMaxTime as TimeSpan
-            $agendaMin = [TimeSpan]::Parse($response.MonthOrWeek.agendaMinTime)
-            $agendaMax = [TimeSpan]::Parse($response.MonthOrWeek.agendaMaxTime)
-
-
             # Add each event to the room's bookings
-            foreach ($bookingEvent in $response.MonthOrWeek.Events | Select-Object -Skip 3) {
-                # Filter for valid booking events with an ID, events in the range of agendaMinTime and agendaMaxTime
-    
-                #$room.bookings.Add($bookingEvent)
-                # Filter for valid booking events with an ID, events in the range of agendaMinTime and agendaMaxTime
-                if ($bookingEvent.id -and ($bookingEvent.start.TimeOfDay -ge $agendaMin) -and ($bookingEvent.end.TimeOfDay -le $agendaMax)) {
+            foreach ($bookingEvent in $response.MonthOrWeek.Events | Where-Object { $_.id }) {
+                # Filter for valid booking events with an ID
+                
+                # Fetch contract details if not already fetched
+                if ($fetchedContracts.ContainsKey($bookingEvent.id)) {
+                    # If contract details already fetched, reuse them
+                } else {
+                    # Fetch contract details for the booking event
 
-                    # Fetch contract details if not already fetched
-                    if ($fetchedContracts.ContainsKey($bookingEvent.id)) {
-                        # If contract details already fetched, reuse them
-                    } else {
-                        # Fetch contract details for the booking event
-
-                        # Construct the contract URL
-                        $baseContractUrlFormatted = [string]::Format($baseContractUrl, $bookingEvent.id, $randomRef, $currentDate.ToString('dd.MM.yyyy'))
-                        try {
-                            Write-Output "Fetching contract details for booking ID '$($bookingEvent.id)' from URL: $baseContractUrlFormatted"
-                            $contractResponse = Invoke-RestMethod -Uri $baseContractUrlFormatted
-                            $fetchedContracts[$bookingEvent.id] = $contractResponse
-                        } catch {
-                            Write-Warning "Failed to fetch contract details for booking ID '$($bookingEvent.id)': $($_.Exception.Message)"
-                            $fetchedContracts[$bookingEvent.id] = $null
-                        }
+                    # Construct the contract URL
+                    $baseContractUrlFormatted = [string]::Format($baseContractUrl, $bookingEvent.id, $randomRef, $currentDate.ToString('dd.MM.yyyy'))
+                    try {
+                        Write-Output "Fetching contract details for booking ID '$($bookingEvent.id)' from URL: $baseContractUrlFormatted"
+                        $contractResponse = Invoke-RestMethod -Uri $baseContractUrlFormatted
+                        $fetchedContracts[$bookingEvent.id] = $contractResponse
+                    } catch {
+                        Write-Warning "Failed to fetch contract details for booking ID '$($bookingEvent.id)': $($_.Exception.Message)"
+                        $fetchedContracts[$bookingEvent.id] = $null
                     }
-                    # Create a new custom object with booking event and its contract details
-                    $bookingRecord = [PSCustomObject]@{
-                        start       = $bookingEvent.start
-                        end         = $bookingEvent.end
-                        id          = $bookingEvent.id
-                        color       = $bookingEvent.color
-                        borderColor = $bookingEvent.borderColor
-                        title       = $fetchedContracts[$bookingEvent.id]?.title
-                        renterName  = $fetchedContracts[$bookingEvent.id]?.renterName
-                        partNr      = $fetchedContracts[$bookingEvent.id]?.partNr
-                        partLabel   = $fetchedContracts[$bookingEvent.id]?.partLabel
-                    }
-                    $room.bookings.Add($bookingRecord)
                 }
+                # Create a new custom object with booking event and its contract details
+                $bookingRecord = [PSCustomObject]@{
+                    start       = $bookingEvent.start
+                    end         = $bookingEvent.end
+                    id          = $bookingEvent.id
+                    color       = $bookingEvent.color
+                    borderColor = $bookingEvent.borderColor
+                    title       = $fetchedContracts[$bookingEvent.id]?.title
+                    renterName  = $fetchedContracts[$bookingEvent.id]?.renterName
+                    partNr      = $fetchedContracts[$bookingEvent.id]?.partNr
+                    partLabel   = $fetchedContracts[$bookingEvent.id]?.partLabel
+                }
+                $room.bookings.Add($bookingRecord)
+                
             }
 
         } catch {
