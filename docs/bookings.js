@@ -14,6 +14,7 @@ function getBookingsPath(date) {
 let weekStart = null;
 let selectedDate = new Date();
 let filteredBuildingIdxs = []; // array of selected building indices
+let userClearedFilter = false;
 
 /**
  * Calculates the ISO week number for a given date.
@@ -68,8 +69,8 @@ function renderPage() {
   const weekday = selectedDate.toLocaleDateString('no-NO', { weekday: 'long' });
   const dateStrDisplay = selectedDate.toLocaleDateString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' });
   const dateStr = formatDate(selectedDate); // ISO format for filtering
-  // Always preselect buildings with bookings if filter is empty (except if user deselected all)
-  if (filteredBuildingIdxs.length === 0) {
+  // Only preselect buildings with bookings if filter is empty AND user did not clear filter AND not previously cleared for this date
+  if (filteredBuildingIdxs.length === 0 && !userClearedFilter) {
     filteredBuildingIdxs = getBuildingsWithBookings(data, dateStr);
   }
   const hasAnyBooking = filteredBuildingIdxs.length > 0;
@@ -211,10 +212,12 @@ function changeDate(offset) {
   const newDateOnly = toDateOnly(newDate);
   if (newDateOnly >= currentWeekStart && newDateOnly <= currentWeekEnd) {
     selectedDate = newDate;
-    // Always preselect buildings with bookings for new date
-    const dateStr = formatDate(selectedDate);
-    filteredBuildingIdxs = getBuildingsWithBookings(window.bookingsData, dateStr);
-    renderPage();
+  // Reset userClearedFilter on date change
+  userClearedFilter = false;
+  // Always preselect buildings with bookings for new date
+  const dateStr = formatDate(selectedDate);
+  filteredBuildingIdxs = getBuildingsWithBookings(window.bookingsData, dateStr);
+  renderPage();
   }
 }
 
@@ -224,13 +227,20 @@ function toggleBuildingFilter(bIdx) {
     filteredBuildingIdxs.push(bIdx);
   } else {
     filteredBuildingIdxs.splice(idx, 1);
+    // If user manually deselects all buildings, set userClearedFilter
+    if (filteredBuildingIdxs.length === 0) {
+      userClearedFilter = true;
+    }
   }
   renderPage();
 }
 
 function clearFilter() {
-  filteredBuildingIdxs = [];
-  renderPage();
+  if (filteredBuildingIdxs.length > 0) {
+    filteredBuildingIdxs = [];
+    userClearedFilter = true;
+    renderPage();
+  }
 }
 
 function getBuildingsWithBookings(data, dateStr) {
