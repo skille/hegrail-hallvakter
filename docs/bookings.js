@@ -2,7 +2,6 @@ function formatTime(dateStr) {
   // Accepts ISO string, returns HH:mm in 24-hour format
   return new Date(dateStr).toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit', hour12: false });
 }
-let detailsView = false; // false = overview, true = details
 // bookings.js
 // All user-facing text is in Norwegian. Coding and comments in English.
 
@@ -76,11 +75,10 @@ function renderPage() {
 function showHideSections() {
   var overviewSection = document.getElementById('overview-section');
   var detailsSection = document.getElementById('details-section');
-  var toggleBtn = document.getElementById('toggle-view');
-  if (overviewSection && detailsSection && toggleBtn) {
-    overviewSection.style.display = detailsView ? 'none' : '';
-    detailsSection.style.display = detailsView ? '' : 'none';
-    toggleBtn.innerText = detailsView ? 'Vis oversikt' : 'Vis detaljer';
+  // Always show both sections
+  if (overviewSection && detailsSection) {
+    overviewSection.style.display = '';
+    detailsSection.style.display = '';
   }
 }
 
@@ -218,8 +216,4 @@ document.addEventListener('DOMContentLoaded', () => {
   loadBookings();
   document.getElementById('prev-day').onclick = () => changeDate(-1);
   document.getElementById('next-day').onclick = () => changeDate(1);
-  document.getElementById('toggle-view').onclick = () => {
-    detailsView = !detailsView;
-    renderPage();
-  };
 });
