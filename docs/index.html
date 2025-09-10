@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HallvaktOversikt</title>
+  <title>Hallvakter</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <div class="container">
     <div style="display:flex;flex-direction:column;align-items:center;margin-top:32px;margin-bottom:16px;">
-      <h1 style="margin:0;white-space:nowrap;">Hegrahallen</h1>
-      <div style="margin-bottom:8px;">Bookingoversikt for hallvakter i Hegra IL.</div>
+      <h1 style="margin:0;white-space:nowrap;">Hegra IL</h1>
+      <div style="margin-bottom:8px;">Bookingoversikt inneværende uke for hallvakter i Hegrahallen.</div>
       <div style="display:flex;align-items:center;gap:24px;margin-top:18px;">
         <button id="prev-day">&lt; Forrige</button>
         <span id="selected-date"></span>
@@ -19,19 +21,22 @@
       </div>
     </div>
     <div id="overview-section">
-      <h2>Første og siste bookingtid</h2>
+      <h2>Bookinger for valgte dato</h2>
       <div id="overview"></div>
     </div>
     <div id="details-section" style="display:none;">
-      <h2>Alle bookinger for valgt dato</h2>
+      <!-- <h2></h2> -->
       <div id="details"></div>
     </div>
   </div>
   <footer style="width:100%;display:flex;justify-content:center;align-items:center;margin-top:32px;margin-bottom:8px;">
-    <div style="background:#fff;border-radius:10px;padding:12px 24px;box-shadow:0 2px 8px #0001;font-size:1em;color:#555;max-width:480px;text-align:center;">
-      Data fra bookup.no.
+    <div 
+    style="background:#fff;border-radius:10px;padding:12px 24px;box-shadow:0 2px 8px #0001;font-size:1em;color:#555;max-width:480px;text-align:center;">
+      Utviklet av Trond Skille<br>
+      <span id="last-update" style="display:block;text-align:center;color:rgb(189,189,189);font-size:0.95em;margin-top:8px;"></span>
     </div>
   </footer>
   <script src="bookings.js"></script>
 </body>
+
 </html>

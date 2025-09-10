@@ -75,6 +75,15 @@ function renderPage() {
   }
   const hasAnyBooking = filteredBuildingIdxs.length > 0;
   document.getElementById('selected-date').innerText = `${weekday} ${dateStrDisplay}`;
+
+  // Update lastUpdate in footer
+  let lastUpdateElem = document.getElementById('last-update');
+  if (lastUpdateElem && data.lastUpdate) {
+    const dt = new Date(data.lastUpdate);
+  lastUpdateElem.innerHTML = `Datagrunnlag hentet fra <a href=\"https://www.bookup.no/\" target=\"_blank\">bookup.no</a>. <br> Sist oppdatert: ${dt.toLocaleString('no-NO', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}`;
+  }
+
+  // 
   document.getElementById('overview').innerHTML = renderOverview(data, dateStr);
   document.getElementById('details').innerHTML = hasAnyBooking ? renderDetails(data, dateStr, filteredBuildingIdxs) : '';
 }
@@ -272,12 +281,12 @@ function changeDate(offset) {
   const newDateOnly = toDateOnly(newDate);
   if (newDateOnly >= currentWeekStart && newDateOnly <= currentWeekEnd) {
     selectedDate = newDate;
-  // Reset userClearedFilter on date change
-  userClearedFilter = false;
-  // Always preselect buildings with bookings for new date
-  const dateStr = formatDate(selectedDate);
-  filteredBuildingIdxs = getBuildingsWithBookings(window.bookingsData, dateStr);
-  renderPage();
+    // Reset userClearedFilter on date change
+    userClearedFilter = false;
+    // Always preselect buildings with bookings for new date
+    const dateStr = formatDate(selectedDate);
+    filteredBuildingIdxs = getBuildingsWithBookings(window.bookingsData, dateStr);
+    renderPage();
   }
 }
 
