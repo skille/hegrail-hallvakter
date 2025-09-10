@@ -53,3 +53,38 @@ h2 {
 .booking .time {
   color: #2980b9;
 }
+@media (max-width: 600px) {
+  .container {
+    padding: 0 4px;
+  }
+  .header-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .header-row img {
+    margin: 0 0 8px 0;
+    height: 48px;
+  }
+  .header-row h1 {
+    font-size: 1.3em;
+    text-align: center;
+  }
+  #overview-section h2, #details-section h2 {
+    font-size: 1.1em;
+    text-align: center;
+  }
+  #overview {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  .timeline-labels {
+    font-size: 0.9em;
+  }
+  .timeline {
+    height: 24px !important;
+  }
+  .booking {
+    margin-bottom: 18px;
+  }
+}
