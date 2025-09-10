@@ -47,8 +47,33 @@ function loadBookings(weekStartStr) {
     });
 }
 
+
+const buildingColors = [
+  '#e74c3c', // rød
+  '#3498db', // blå
+  '#27ae60', // grønn
+  '#f1c40f', // gul
+  '#9b59b6', // lilla
+  '#e67e22', // oransje
+  '#1abc9c', // turkis
+  '#34495e', // mørk blå
+  '#95a5a6', // grå
+  '#2ecc71'  // lys grønn
+];
+
 function renderPage() {
-  // Show/hide sections based on detailsView
+  showHideSections();
+  const data = window.bookingsData;
+  if (!data) return;
+  const weekday = selectedDate.toLocaleDateString('no-NO', { weekday: 'long' });
+  const dateStrDisplay = selectedDate.toLocaleDateString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' });
+  const dateStr = formatDate(selectedDate); // ISO format for filtering
+  document.getElementById('selected-date').innerText = `${weekday} ${dateStrDisplay}`;
+  document.getElementById('overview').innerHTML = renderOverview(data, dateStr);
+  document.getElementById('details').innerHTML = renderDetails(data, dateStr) || 'Ingen bookinger.';
+}
+
+function showHideSections() {
   var overviewSection = document.getElementById('overview-section');
   var detailsSection = document.getElementById('details-section');
   var toggleBtn = document.getElementById('toggle-view');
@@ -57,122 +82,114 @@ function renderPage() {
     detailsSection.style.display = detailsView ? '' : 'none';
     toggleBtn.innerText = detailsView ? 'Vis oversikt' : 'Vis detaljer';
   }
-  const data = window.bookingsData;
-  if (!data) return;
-  const weekday = selectedDate.toLocaleDateString('no-NO', { weekday: 'long' });
-  const dateStrDisplay = selectedDate.toLocaleDateString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' });
-  const dateStr = formatDate(selectedDate); // ISO format for filtering
-  document.getElementById('selected-date').innerText = `${weekday} ${dateStrDisplay}`;
+}
 
-  // Assign a color per building (move to top so both sections use it)
-  const buildingColors = [
-    '#e74c3c', // rød
-    '#3498db', // blå
-    '#27ae60', // grønn
-    '#f1c40f', // gul
-    '#9b59b6', // lilla
-    '#e67e22', // oransje
-    '#1abc9c', // turkis
-    '#34495e', // mørk blå
-    '#95a5a6', // grå
-    '#2ecc71'  // lys grønn
-  ];
-
-  // Overview: show first occupied time and last available time
+function renderOverview(data, dateStr) {
   let overviewHtml = '<div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">';
   data.buildings.forEach((building, bIdx) => {
     const color = buildingColors[bIdx % buildingColors.length];
-    // Gather all bookings for all rooms in this building for the selected date
     let allBookings = [];
     building.rooms.forEach(room => {
       const bookings = room.bookings.filter(b => b.start.startsWith(dateStr) && b.id);
       allBookings = allBookings.concat(bookings);
     });
-    let boxHtml = `<div style="background:${color};color:#fff;padding:18px 12px;border-radius:10px;min-width:180px;flex:1 1 180px;max-width:220px;box-shadow:0 2px 8px #0002;display:flex;flex-direction:column;align-items:center;">`;
-    boxHtml += `<div style="font-size:1.1em;font-weight:bold;margin-bottom:8px;">${building.buildingName}</div>`;
-    if (allBookings.length > 0) {
-      const sorted = allBookings.sort((a, b) => new Date(a.start) - new Date(b.start));
-      const firstOccupied = sorted[0];
-      const lastOccupied = sorted[sorted.length - 1];
-      boxHtml += `<div>Første: <span style="font-weight:bold;">${formatTime(firstOccupied.start)}</span></div>`;
-      boxHtml += `<div>Siste: <span style="font-weight:bold;">${formatTime(lastOccupied.end)}</span></div>`;
-    } else {
-      boxHtml += `<div style="margin-top:8px;">Ledig hele dagen</div>`;
-    }
-    boxHtml += '</div>';
-    overviewHtml += boxHtml;
+    overviewHtml += renderOverviewBox(building, allBookings, color);
   });
   overviewHtml += '</div>';
-  document.getElementById('overview').innerHTML = overviewHtml;
+  return overviewHtml;
+}
 
-  // Details: graphical timeline for each room, 07:00-22:00
+function renderOverviewBox(building, allBookings, color) {
+  let boxHtml = `<div style="background:${color};color:#fff;padding:18px 12px;border-radius:10px;min-width:180px;flex:1 1 180px;max-width:220px;box-shadow:0 2px 8px #0002;display:flex;flex-direction:column;align-items:center;">`;
+  boxHtml += `<div style="font-size:1.1em;font-weight:bold;margin-bottom:8px;">${building.buildingName}</div>`;
+  if (allBookings.length > 0) {
+    const sorted = allBookings.sort((a, b) => new Date(a.start) - new Date(b.start));
+    const firstOccupied = sorted[0];
+    const lastOccupied = sorted[sorted.length - 1];
+    boxHtml += `<div>Første: <span style="font-weight:bold;">${formatTime(firstOccupied.start)}</span></div>`;
+    boxHtml += `<div>Siste: <span style="font-weight:bold;">${formatTime(lastOccupied.end)}</span></div>`;
+  } else {
+    boxHtml += `<div style="margin-top:8px;">Ledig hele dagen</div>`;
+  }
+  boxHtml += '</div>';
+  return boxHtml;
+}
+
+function renderDetails(data, dateStr) {
   let detailsHtml = '';
   data.buildings.forEach((building, bIdx) => {
     const color = buildingColors[bIdx % buildingColors.length];
     building.rooms.forEach(room => {
       const bookings = room.bookings.filter(b => b.start.startsWith(dateStr) && b.id);
-      // Timeline logic
-      const timelineStart = 7; // 07:00
-      const timelineEnd = 22; // 22:00
-      const timelineWidth = 100; // percent width for responsive design
-      let blocks = [];
-      // Build occupied blocks
-      const minGap = 1 / 60; // 1 minute gap between bookings
-      let lastEnd = null;
-      bookings.forEach(b => {
-        const startHour = parseInt(b.start.slice(11, 13), 10);
-        const startMin = parseInt(b.start.slice(14, 16), 10);
-        const endHour = parseInt(b.end.slice(11, 13), 10);
-        const endMin = parseInt(b.end.slice(14, 16), 10);
-        let start = Math.max(timelineStart, startHour + startMin / 60);
-        let end = Math.min(timelineEnd, endHour + endMin / 60);
-        if (lastEnd !== null && start < lastEnd + minGap) {
-          start = lastEnd + minGap;
-        }
-        if (end > start) {
-          blocks.push({
-            start,
-            end,
-            title: b.title || '',
-            info: `${formatTime(b.start)} - ${formatTime(b.end)}`,
-            renterName: b.renterName || ''
-          });
-          lastEnd = end;
-        }
-      });
-      // Build timeline HTML
-      let timelineLabels = '<div class="timeline-labels" style="position:relative;width:100%;margin-bottom:18px;">';
-      for (let h = timelineStart; h <= timelineEnd; h++) {
-        let style = '';
-        if (h === timelineStart) {
-          style = `position:absolute;left:0;font-size:0.8em;text-align:left;`;
-        } else if (h === timelineEnd) {
-          style = `position:absolute;right:0;font-size:0.8em;text-align:right;`;
-        } else {
-          const left = ((h - timelineStart) / (timelineEnd - timelineStart)) * 100;
-          style = `position:absolute;left:${left}%;transform:translateX(-50%);font-size:0.8em;`;
-        }
-        timelineLabels += `<span style="${style}">${h.toString().padStart(2, '0')}</span>`;
-      }
-      timelineLabels += '</div>';
-      let timelineHtml = timelineLabels;
-      timelineHtml += `<div class="timeline" style="position:relative;width:100%;height:32px;background:#fff;border:1px solid #ccc;border-radius:6px;margin-bottom:8px;">`;
-      // No vertical 15-min lines
-      // Add occupied blocks with mouse-over tooltip
-      blocks.forEach(block => {
-        const left = ((block.start - timelineStart) / (timelineEnd - timelineStart)) * 100;
-        const width = ((block.end - block.start) / (timelineEnd - timelineStart)) * 100;
-        let tooltip = `Fra: ${block.info.split(' - ')[0]}\nTil: ${block.info.split(' - ')[1]}`;
-        if (block.title) tooltip += `\n${block.title}`;
-        if (block.renterName) tooltip += `\nLeietaker: ${block.renterName}`;
-        timelineHtml += `<div class=\"timeline-block\" style=\"position:absolute;left:${left}%;width:${width}%;height:32px;background:${color};border-radius:6px;z-index:2;\" title=\"${tooltip}\"></div>`;
-      });
-      timelineHtml += `</div>`;
-      // Room label and timeline only
-      detailsHtml += `<div class=\"booking\"><span class=\"room\" style=\"color:${color};font-weight:bold;\">${room.roomName}</span><br>${timelineHtml}</div>`;
+      detailsHtml += renderRoomTimeline(room, bookings, color);
     });
   });
-  document.getElementById('details').innerHTML = detailsHtml || 'Ingen bookinger.';
+  return detailsHtml;
+}
+
+function renderRoomTimeline(room, bookings, color) {
+  const timelineStart = 8; // 08:00
+  const timelineEnd = 22; // 22:00
+  const blocks = getTimelineBlocks(bookings, timelineStart, timelineEnd);
+  const timelineLabels = buildTimelineLabels(timelineStart, timelineEnd);
+  let timelineHtml = timelineLabels;
+  timelineHtml += `<div class="timeline" style="position:relative;width:100%;height:32px;background:#fff;border:1px solid #ccc;border-radius:6px;margin-bottom:8px;">`;
+  blocks.forEach(block => {
+    const left = ((block.start - timelineStart) / (timelineEnd - timelineStart)) * 100;
+    const width = ((block.end - block.start) / (timelineEnd - timelineStart)) * 100;
+    let tooltip = `Fra: ${block.info.split(' - ')[0]}\nTil: ${block.info.split(' - ')[1]}`;
+    if (block.title) tooltip += `\n${block.title}`;
+    if (block.renterName) tooltip += `\nLeietaker: ${block.renterName}`;
+    timelineHtml += `<div class=\"timeline-block\" style=\"position:absolute;left:${left}%;width:${width}%;height:32px;background:${color};border-radius:6px;z-index:2;\" title=\"${tooltip}\"></div>`;
+  });
+  timelineHtml += `</div>`;
+  return `<div class=\"booking\"><span class=\"room\" style=\"color:${color};font-weight:bold;\">${room.roomName}</span><br>${timelineHtml}</div>`;
+}
+
+function getTimelineBlocks(bookings, timelineStart, timelineEnd) {
+  const minGap = 1 / 60; // 1 minute gap between bookings
+  let lastEnd = null;
+  let blocks = [];
+  bookings.forEach(b => {
+    const startHour = parseInt(b.start.slice(11, 13), 10);
+    const startMin = parseInt(b.start.slice(14, 16), 10);
+    const endHour = parseInt(b.end.slice(11, 13), 10);
+    const endMin = parseInt(b.end.slice(14, 16), 10);
+    let start = Math.max(timelineStart, startHour + startMin / 60);
+    let end = Math.min(timelineEnd, endHour + endMin / 60);
+    if (lastEnd !== null && start < lastEnd + minGap) {
+      start = lastEnd + minGap;
+    }
+    if (end > start) {
+      blocks.push({
+        start,
+        end,
+        title: b.title || '',
+        info: `${formatTime(b.start)} - ${formatTime(b.end)}`,
+        renterName: b.renterName || ''
+      });
+      lastEnd = end;
+    }
+  });
+  return blocks;
+}
+
+function buildTimelineLabels(timelineStart, timelineEnd) {
+  let timelineLabels = '<div class="timeline-labels" style="position:relative;width:100%;margin-bottom:18px;">';
+  for (let h = timelineStart; h <= timelineEnd; h++) {
+    let style = '';
+    if (h === timelineStart) {
+      style = `position:absolute;left:0;font-size:0.8em;text-align:left;`;
+    } else if (h === timelineEnd) {
+      style = `position:absolute;right:0;font-size:0.8em;text-align:right;`;
+    } else {
+      const left = ((h - timelineStart) / (timelineEnd - timelineStart)) * 100;
+      style = `position:absolute;left:${left}%;transform:translateX(-50%);font-size:0.8em;`;
+    }
+    timelineLabels += `<span style="${style}">${h.toString().padStart(2, '0')}</span>`;
+  }
+  timelineLabels += '</div>';
+  return timelineLabels;
 }
 
 function changeDate(offset) {
