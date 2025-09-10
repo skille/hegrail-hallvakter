@@ -106,14 +106,13 @@ function renderOverview(data, dateStr) {
 
 function renderOverviewBox(building, allBookings, color, bIdx) {
   const isSelected = filteredBuildingIdxs.includes(bIdx);
-  let boxHtml = `<div style="background:${color};color:#fff;padding:18px 12px;border-radius:10px;min-width:180px;flex:1 1 180px;max-width:220px;box-shadow:0 2px 8px #0002;display:flex;flex-direction:column;align-items:center;cursor:pointer;${isSelected ? 'outline: 4px solid #222; outline-offset: 2px; box-shadow:0 0 0 6px #fff, 0 2px 8px #0002;' : ''}" onclick="toggleBuildingFilter(${bIdx})">`;
+  let boxHtml = `<div style="background:${isSelected ? color : '#f7f7f7'};color:${isSelected ? '#fff' : '#888'};padding:18px 12px;border-radius:10px;min-width:180px;flex:1 1 180px;max-width:220px;box-shadow:0 2px 8px #0002;display:flex;flex-direction:column;align-items:center;cursor:pointer;${isSelected ? 'outline: 4px solid #222; outline-offset: 2px; box-shadow:0 0 0 6px #fff, 0 2px 8px #0002;' : ''}" onclick="toggleBuildingFilter(${bIdx})">`;
   boxHtml += `<div style="font-size:1.1em;font-weight:bold;margin-bottom:8px;">${building.buildingName}</div>`;
   if (allBookings.length > 0) {
     const sorted = allBookings.sort((a, b) => new Date(a.start) - new Date(b.start));
     const firstOccupied = sorted[0];
     const lastOccupied = sorted[sorted.length - 1];
-    boxHtml += `<div>Første: <span style="font-weight:bold;">${formatTime(firstOccupied.start)}</span></div>`;
-    boxHtml += `<div>Siste: <span style="font-weight:bold;">${formatTime(lastOccupied.end)}</span></div>`;
+    boxHtml += `<div style=\"font-size:1.2em;font-weight:bold;\">${formatTime(firstOccupied.start)} - ${formatTime(lastOccupied.end)}</div>`;
   } else {
     boxHtml += `<div style="margin-top:8px;">Ledig hele dagen</div>`;
   }
