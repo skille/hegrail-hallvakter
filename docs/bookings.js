@@ -13,6 +13,7 @@ function getBookingsPath(date) {
 
 let weekStart = null;
 let selectedDate = new Date();
+let filteredBuildingIdxs = []; // array of selected building indices
 
 /**
  * Calculates the ISO week number for a given date.
@@ -67,9 +68,14 @@ function renderPage() {
   const weekday = selectedDate.toLocaleDateString('no-NO', { weekday: 'long' });
   const dateStrDisplay = selectedDate.toLocaleDateString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' });
   const dateStr = formatDate(selectedDate); // ISO format for filtering
+  // Always preselect buildings with bookings if filter is empty (except if user deselected all)
+  if (filteredBuildingIdxs.length === 0) {
+    filteredBuildingIdxs = getBuildingsWithBookings(data, dateStr);
+  }
+  const hasAnyBooking = filteredBuildingIdxs.length > 0;
   document.getElementById('selected-date').innerText = `${weekday} ${dateStrDisplay}`;
   document.getElementById('overview').innerHTML = renderOverview(data, dateStr);
-  document.getElementById('details').innerHTML = renderDetails(data, dateStr) || 'Ingen bookinger.';
+  document.getElementById('details').innerHTML = hasAnyBooking ? renderDetails(data, dateStr, filteredBuildingIdxs) : '';
 }
 
 function showHideSections() {
@@ -91,14 +97,15 @@ function renderOverview(data, dateStr) {
       const bookings = room.bookings.filter(b => b.start.startsWith(dateStr) && b.id);
       allBookings = allBookings.concat(bookings);
     });
-    overviewHtml += renderOverviewBox(building, allBookings, color);
+    overviewHtml += renderOverviewBox(building, allBookings, color, bIdx);
   });
   overviewHtml += '</div>';
   return overviewHtml;
 }
 
-function renderOverviewBox(building, allBookings, color) {
-  let boxHtml = `<div style="background:${color};color:#fff;padding:18px 12px;border-radius:10px;min-width:180px;flex:1 1 180px;max-width:220px;box-shadow:0 2px 8px #0002;display:flex;flex-direction:column;align-items:center;">`;
+function renderOverviewBox(building, allBookings, color, bIdx) {
+  const isSelected = filteredBuildingIdxs.includes(bIdx);
+  let boxHtml = `<div style="background:${color};color:#fff;padding:18px 12px;border-radius:10px;min-width:180px;flex:1 1 180px;max-width:220px;box-shadow:0 2px 8px #0002;display:flex;flex-direction:column;align-items:center;cursor:pointer;${isSelected ? 'outline: 4px solid #222; outline-offset: 2px; box-shadow:0 0 0 6px #fff, 0 2px 8px #0002;' : ''}" onclick="toggleBuildingFilter(${bIdx})">`;
   boxHtml += `<div style="font-size:1.1em;font-weight:bold;margin-bottom:8px;">${building.buildingName}</div>`;
   if (allBookings.length > 0) {
     const sorted = allBookings.sort((a, b) => new Date(a.start) - new Date(b.start));
@@ -113,9 +120,10 @@ function renderOverviewBox(building, allBookings, color) {
   return boxHtml;
 }
 
-function renderDetails(data, dateStr) {
+function renderDetails(data, dateStr, buildingIdxs) {
   let detailsHtml = '';
   data.buildings.forEach((building, bIdx) => {
+    if (buildingIdxs.length > 0 && !buildingIdxs.includes(bIdx)) return;
     const color = buildingColors[bIdx % buildingColors.length];
     building.rooms.forEach(room => {
       const bookings = room.bookings.filter(b => b.start.startsWith(dateStr) && b.id);
@@ -191,11 +199,8 @@ function buildTimelineLabels(timelineStart, timelineEnd) {
 }
 
 function changeDate(offset) {
-  // Use weekStart and weekEnd from loaded data for navigation boundaries
-  // Use weekStart and weekEnd from loaded data for navigation boundaries
   const data = window.bookingsData;
   if (!data) return;
-  // Compare only date part (YYYY-MM-DD)
   function toDateOnly(d) {
     return new Date(d.getFullYear(), d.getMonth(), d.getDate());
   }
@@ -204,11 +209,42 @@ function changeDate(offset) {
   const newDate = new Date(selectedDate);
   newDate.setDate(newDate.getDate() + offset);
   const newDateOnly = toDateOnly(newDate);
-  // Restrict navigation to current week only (inclusive)
   if (newDateOnly >= currentWeekStart && newDateOnly <= currentWeekEnd) {
     selectedDate = newDate;
+    // Always preselect buildings with bookings for new date
+    const dateStr = formatDate(selectedDate);
+    filteredBuildingIdxs = getBuildingsWithBookings(window.bookingsData, dateStr);
     renderPage();
   }
+}
+
+function toggleBuildingFilter(bIdx) {
+  const idx = filteredBuildingIdxs.indexOf(bIdx);
+  if (idx === -1) {
+    filteredBuildingIdxs.push(bIdx);
+  } else {
+    filteredBuildingIdxs.splice(idx, 1);
+  }
+  renderPage();
+}
+
+function clearFilter() {
+  filteredBuildingIdxs = [];
+  renderPage();
+}
+
+function getBuildingsWithBookings(data, dateStr) {
+  let indices = [];
+  data.buildings.forEach((building, bIdx) => {
+    let hasBooking = false;
+    building.rooms.forEach(room => {
+      if (room.bookings.some(b => b.start.startsWith(dateStr) && b.id)) {
+        hasBooking = true;
+      }
+    });
+    if (hasBooking) indices.push(bIdx);
+  });
+  return indices;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
