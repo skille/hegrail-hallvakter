@@ -53,6 +53,15 @@ h2 {
   margin-top: 2em;
   color: #34495e;
 }
+#selected-date {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s ease;
+}
+#selected-date:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
 #overview, #details {
   margin-top: 1em;
 }

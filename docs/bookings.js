@@ -33,6 +33,78 @@ function formatDate(date) {
   return date.toISOString().slice(0, 10);
 }
 
+// Format a Date for an <input type="date"> value in local time
+function formatDateInputLocal(date) {
+  const tzOff = date.getTimezoneOffset();
+  const local = new Date(date.getTime() - tzOff * 60000);
+  return local.toISOString().slice(0, 10);
+}
+
+let datePickerEl = null;
+
+function ensureDatePicker() {
+  if (!datePickerEl) {
+    datePickerEl = document.createElement('input');
+    datePickerEl.type = 'date';
+    datePickerEl.style.position = 'fixed';
+    datePickerEl.style.opacity = '0';
+    datePickerEl.style.pointerEvents = 'none';
+    datePickerEl.tabIndex = -1;
+    datePickerEl.addEventListener('change', () => {
+      if (!datePickerEl.value) return;
+      // Parse picked date (use noon to avoid TZ shifts)
+      const picked = new Date(datePickerEl.value + 'T12:00:00');
+      // Update selectedDate and either render or load a new week file
+      const data = window.bookingsData;
+      selectedDate = picked;
+      if (!data) {
+        loadBookings(selectedDate);
+        return;
+      }
+      const toDateOnly = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+      const currentWeekStart = toDateOnly(new Date(data.weekStart));
+      const currentWeekEnd = toDateOnly(new Date(data.weekEnd));
+      const newDateOnly = toDateOnly(picked);
+      if (newDateOnly < currentWeekStart || newDateOnly > currentWeekEnd) {
+        filteredBuildingIdxs = [];
+        userClearedFilter = false;
+        loadBookings(selectedDate);
+      } else {
+        userClearedFilter = false;
+        const dateStr = formatDate(selectedDate);
+        filteredBuildingIdxs = getBuildingsWithBookings(window.bookingsData, dateStr);
+        renderPage();
+      }
+    });
+    document.body.appendChild(datePickerEl);
+  }
+  return datePickerEl;
+}
+
+function openDatePicker() {
+  const input = ensureDatePicker();
+  input.value = formatDateInputLocal(selectedDate);
+  // Place the input near the selected date element so the picker opens around user's focus
+  const anchor = document.getElementById('selected-date');
+  if (anchor) {
+    const rect = anchor.getBoundingClientRect();
+    input.style.left = rect.left + 'px';
+    input.style.top = (rect.bottom + 4) + 'px';
+  }
+  // Temporarily enable pointer events and focus, then open picker on next frame for stable layout
+  input.style.pointerEvents = 'auto';
+  input.focus({ preventScroll: true });
+  requestAnimationFrame(() => {
+    if (typeof input.showPicker === 'function') {
+      try { input.showPicker(); } catch (_) { input.click(); }
+    } else {
+      input.click();
+    }
+    // Restore invisibility behavior
+    setTimeout(() => { input.style.pointerEvents = 'none'; }, 0);
+  });
+}
+
 function loadBookings(dateForWeek = null) {
   // Load bookings for the week that contains the given date (or current selectedDate)
   const date = dateForWeek ? new Date(dateForWeek) : selectedDate;
@@ -351,4 +423,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.getElementById('next-day');
   if (prevBtn) prevBtn.onclick = () => changeDate(-1);
   if (nextBtn) nextBtn.onclick = () => changeDate(1);
+  const selectedDateSpan = document.getElementById('selected-date');
+  if (selectedDateSpan) selectedDateSpan.onclick = () => openDatePicker();
 });
