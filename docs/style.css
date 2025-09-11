@@ -5,6 +5,7 @@
   text-align: center;
   word-break: break-word;
   white-space: normal;
+  width: 100%;
 }
 
 @media (max-width: 600px) {
