@@ -40,6 +40,12 @@ function loadBookings(weekStartStr) {
     .then(data => {
       window.bookingsData = data;
       weekStart = new Date(data.weekStart);
+      // Update booking overview description with current week number
+      let bookingOverviewDescElem = document.getElementById('booking-overview-desc');
+      if (bookingOverviewDescElem && weekStart) {
+        const weekNumber = getWeekNumber(weekStart);
+        bookingOverviewDescElem.innerText = `Hallvakter uke ${weekNumber}`;
+      }
       renderPage();
     })
     .catch(() => {
