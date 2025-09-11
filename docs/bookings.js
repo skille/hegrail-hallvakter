@@ -88,7 +88,7 @@ function renderPage() {
   let lastUpdateElem = document.getElementById('last-update');
   if (lastUpdateElem && data.lastUpdate) {
     const dt = new Date(data.lastUpdate);
-  lastUpdateElem.innerHTML = `Datagrunnlag hentet fra <a href=\"https://www.bookup.no/\" target=\"_blank\">bookup.no</a>. <br> Sist oppdatert: ${dt.toLocaleString('no-NO', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}`;
+  lastUpdateElem.innerHTML = `Datagrunnlag hentet fra <a href=\"https://www.bookup.no/\" target=\"_blank\">bookup.no</a>. <br> Sist oppdatert: ${dt.toLocaleString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' })}`;
   }
 
   // 
