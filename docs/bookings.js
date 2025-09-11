@@ -33,15 +33,17 @@ function formatDate(date) {
   return date.toISOString().slice(0, 10);
 }
 
-function loadBookings(weekStartStr) {
-  // Load using selectedDate, but weekStart will be set from JSON
-  fetch(getBookingsPath(selectedDate))
+function loadBookings(dateForWeek = null) {
+  // Load bookings for the week that contains the given date (or current selectedDate)
+  const date = dateForWeek ? new Date(dateForWeek) : selectedDate;
+  fetch(getBookingsPath(date))
     .then(res => res.json())
     .then(data => {
       window.bookingsData = data;
       weekStart = new Date(data.weekStart);
+      // Do not reset selectedDate; keep user's chosen day
       // Update booking overview description with current week number
-      let bookingOverviewDescElem = document.getElementById('booking-overview-desc');
+      const bookingOverviewDescElem = document.getElementById('booking-overview-desc');
       if (bookingOverviewDescElem && weekStart) {
         const weekNumber = getWeekNumber(weekStart);
         bookingOverviewDescElem.innerText = `Hallvakter uke ${weekNumber}`;
@@ -276,20 +278,30 @@ function buildTimelineLabels(timelineStart, timelineEnd) {
 
 function changeDate(offset) {
   const data = window.bookingsData;
-  if (!data) return;
   function toDateOnly(d) {
     return new Date(d.getFullYear(), d.getMonth(), d.getDate());
   }
-  const currentWeekStart = toDateOnly(new Date(data.weekStart));
-  const currentWeekEnd = toDateOnly(new Date(data.weekEnd));
   const newDate = new Date(selectedDate);
   newDate.setDate(newDate.getDate() + offset);
-  const newDateOnly = toDateOnly(newDate);
-  if (newDateOnly >= currentWeekStart && newDateOnly <= currentWeekEnd) {
+  // If we don't have data yet, just update state and try load now
+  if (!data) {
     selectedDate = newDate;
-    // Reset userClearedFilter on date change
+    filteredBuildingIdxs = [];
     userClearedFilter = false;
-    // Always preselect buildings with bookings for new date
+    loadBookings(selectedDate);
+    return;
+  }
+  const currentWeekStart = toDateOnly(new Date(data.weekStart));
+  const currentWeekEnd = toDateOnly(new Date(data.weekEnd));
+  const newDateOnly = toDateOnly(newDate);
+  selectedDate = newDate;
+  // Crossing week boundary? Load new file
+  if (newDateOnly < currentWeekStart || newDateOnly > currentWeekEnd) {
+    filteredBuildingIdxs = [];
+    userClearedFilter = false;
+    loadBookings(selectedDate);
+  } else {
+    userClearedFilter = false;
     const dateStr = formatDate(selectedDate);
     filteredBuildingIdxs = getBuildingsWithBookings(window.bookingsData, dateStr);
     renderPage();
@@ -334,7 +346,9 @@ function getBuildingsWithBookings(data, dateStr) {
 
 document.addEventListener('DOMContentLoaded', () => {
   selectedDate = new Date();
-  loadBookings();
-  document.getElementById('prev-day').onclick = () => changeDate(-1);
-  document.getElementById('next-day').onclick = () => changeDate(1);
+  loadBookings(selectedDate);
+  const prevBtn = document.getElementById('prev-day');
+  const nextBtn = document.getElementById('next-day');
+  if (prevBtn) prevBtn.onclick = () => changeDate(-1);
+  if (nextBtn) nextBtn.onclick = () => changeDate(1);
 });
