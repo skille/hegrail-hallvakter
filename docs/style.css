@@ -1,3 +1,18 @@
+/* Responsive heading for mobile */
+.responsive-heading {
+  margin: 0;
+  font-size: 2.2em;
+  text-align: center;
+  word-break: break-word;
+  white-space: normal;
+}
+
+@media (max-width: 600px) {
+  .responsive-heading {
+    font-size: 1.3em;
+    line-height: 1.2;
+  }
+}
 body {
   font-family: Arial, sans-serif;
   background: #f7f7f7;
