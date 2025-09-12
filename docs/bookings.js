@@ -121,7 +121,7 @@ function loadBookings(dateForWeek = null) {
       const bookingOverviewDescElem = document.getElementById('booking-overview-desc');
       if (bookingOverviewDescElem && weekStart) {
         const weekNumber = getWeekNumber(weekStart);
-        bookingOverviewDescElem.innerText = `Hallvakter uke ${weekNumber}`;
+        bookingOverviewDescElem.innerText = `Uke ${weekNumber}`;
       }
       renderPage();
     })
@@ -133,7 +133,6 @@ function loadBookings(dateForWeek = null) {
           <h3 style="margin:0 0 8px 0;color:#2c3e50;">Ingen bookingdata funnet</h3>
           <p style="margin:6px 0;">Det finnes ingen data for valgt dato: <strong>${dt}</strong>.</p>
           <p style="margin:6px 0;">Denne tjenesten viser kun data for inneværende uke og neste uke, samt historikk for tidligere uker. Velg en dato i disse ukene for å se hallvakter.</p>
-          <p style="margin:6px 0;">Mistenker du at det er en feil? Ta kontakt med Trond Skille.</p>
           <div style=\"margin-top:12px;\">
             <button id=\"today-btn\" title=\"Gå til dagens dato\" style=\"background:#2980b9;color:#fff;border:none;padding:8px 14px;border-radius:6px;cursor:pointer;\">Gå til dagens dato</button>
           </div>
@@ -441,4 +440,87 @@ document.addEventListener('DOMContentLoaded', () => {
   if (nextBtn) nextBtn.onclick = () => changeDate(1);
   const selectedDateSpan = document.getElementById('selected-date');
   if (selectedDateSpan) selectedDateSpan.onclick = () => openDatePicker();
+  const infoBtn = document.getElementById('info-btn');
+  if (infoBtn) infoBtn.onclick = () => showInfoPopup();
 });
+
+function showInfoPopup() {
+  // Remove if already open
+  const existing = document.getElementById('info-popup');
+  if (existing) existing.remove();
+
+  const wrap = document.createElement('div');
+  wrap.id = 'info-popup';
+  wrap.style.position = 'fixed';
+  wrap.style.inset = '0';
+  wrap.style.display = 'flex';
+  wrap.style.alignItems = 'center';
+  wrap.style.justifyContent = 'center';
+  wrap.style.padding = '16px'; // leave tappable margin around the card for outside-click
+  wrap.style.background = 'rgba(0,0,0,0.25)';
+  wrap.style.zIndex = '10000'; // ensure above other popups
+
+  const card = document.createElement('div');
+  card.setAttribute('role', 'dialog');
+  card.setAttribute('aria-labelledby', 'info-title');
+  card.setAttribute('aria-modal', 'true');
+  card.style.background = '#fff';
+  card.style.color = '#333';
+  card.style.border = '1px solid #e0e0e0';
+  card.style.borderRadius = '10px';
+  card.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
+  card.style.maxWidth = '720px';
+  card.style.width = 'min(92vw, 720px)';
+  card.style.padding = '18px 20px';
+  card.style.maxHeight = '85vh';
+  card.style.overflowY = 'auto';
+
+  card.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <h3 id="info-title" style="margin:0;color:#2c3e50;">Om denne siden</h3>
+      <button id="info-close" aria-label="Lukk" style="border:none;background:transparent;font-size:1.2em;cursor:pointer;color:#777;">×</button>
+    </div>
+  <div style="font-size:0.98em;line-height:1.5;color:#555;padding-bottom:24px;">
+      <p><strong>Hva finner du her?</strong><br>
+      En oversikt over bookinger i Hegrahallen per dag og rom.</p>
+
+      <p><strong>Hvordan bruker jeg siden?</strong><br>
+      Bruk «Forrige»/«Neste» for å navigere mellom datoer.</p>
+
+      <p><strong>Hvor ofte oppdateres bookinger?</strong><br>
+      Data hentes automatisk hver time for bookinger inneværende og neste uke.</p>
+
+      <p><strong>Ingen bookingdata funnet</strong><br>
+      Dette kommer som en feilmelding hvis du navigerer til en dato uten bookingdata.<br>
+      Typisk skyldes dette at man prøver å vise bookinger for en dato utenfor inneværende eller neste uke.</p>
+
+      <p><strong>Tips</strong><br>
+      - Klikk på boksene for å filtrere visningen av bookinger.<br>
+      - Klikk på en booking oppføring for å se mer informasjon.<br>
+      - Klikk på datoen for å velge ønsket dato direkte.<br>
+      - "Sist oppdatert" i bunntekst viser når data sist ble hentet fra bookup.no.</p>
+
+      <p><strong>Tilbakemeldinger</strong><br>
+      Har du forslag til forbedringer eller oppdager feil? Ta kontakt med Trond Skille.</p>
+    </div>
+    <div style="position:sticky;bottom:12px;display:flex;justify-content:flex-end;background:transparent;padding:0;margin:0;pointer-events:none;z-index:1;">
+      <button id="info-close-bottom" style="background:#2980b9;color:#fff;border:none;padding:10px 14px;border-radius:6px;cursor:pointer;pointer-events:auto;z-index:2;">Lukk</button>
+    </div>
+  `;
+
+  wrap.appendChild(card);
+  document.body.appendChild(wrap);
+  // Prevent background scroll while modal is open (mobile friendly)
+  const prevBodyOverflow = document.body.style.overflow;
+  document.body.style.overflow = 'hidden';
+
+  const close = () => {
+    wrap.remove();
+    document.body.style.overflow = prevBodyOverflow;
+  };
+  card.querySelector('#info-close').addEventListener('click', close);
+  const bottomClose = card.querySelector('#info-close-bottom');
+  if (bottomClose) bottomClose.addEventListener('click', close);
+  wrap.addEventListener('click', (e) => { if (e.target === wrap) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); }, { once: true });
+}
