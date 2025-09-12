@@ -143,7 +143,7 @@ function loadBookings(dateForWeek = null) {
         <div style="background:#fff;border:1px solid #eee;border-radius:10px;padding:16px;box-shadow:0 2px 8px #0001;max-width:720px;margin:0 auto;text-align:center;color:#555;">
           <h3 style="margin:0 0 8px 0;color:#2c3e50;">Ingen bookingdata funnet</h3>
           <p style="margin:6px 0;">Det finnes ingen data for valgt dato: <strong>${dt}</strong>.</p>
-          <p style="margin:6px 0;">Denne tjenesten viser kun data for inneværende uke og neste uke, samt historikk for tidligere uker. Velg en dato i disse ukene for å se hallvakter.</p>
+          <p style="margin:6px 0;">Denne tjenesten viser kun data for inneværende uke og neste uke, samt historikk for tidligere uker. Velg en dato i disse ukene for å se bookinger.</p>
           <div style=\"margin-top:12px;\">
             <button id=\"today-btn\" title=\"Gå til dagens dato\" style=\"background:#2980b9;color:#fff;border:none;padding:8px 14px;border-radius:6px;cursor:pointer;\">Gå til dagens dato</button>
           </div>
