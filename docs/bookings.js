@@ -128,6 +128,17 @@ function loadBookings(dateForWeek = null) {
     .catch(() => {
       const ov = document.getElementById('overview');
       const dt = selectedDate.toLocaleDateString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' });
+      // Keep the header date in sync with the selected target date even if loading fails
+      const selectedDateLabel = document.getElementById('selected-date');
+      if (selectedDateLabel) {
+        const weekday = selectedDate.toLocaleDateString('no-NO', { weekday: 'long' });
+        selectedDateLabel.innerText = `${weekday} ${dt}`;
+      }
+      const bookingOverviewDescElem = document.getElementById('booking-overview-desc');
+      if (bookingOverviewDescElem) {
+        const weekNumber = getWeekNumber(selectedDate);
+        bookingOverviewDescElem.innerText = `Uke ${weekNumber}`;
+      }
       ov.innerHTML = `
         <div style="background:#fff;border:1px solid #eee;border-radius:10px;padding:16px;box-shadow:0 2px 8px #0001;max-width:720px;margin:0 auto;text-align:center;color:#555;">
           <h3 style="margin:0 0 8px 0;color:#2c3e50;">Ingen bookingdata funnet</h3>
