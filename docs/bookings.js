@@ -186,7 +186,7 @@ function renderPage() {
   let lastUpdateElem = document.getElementById('last-update');
   if (lastUpdateElem && data.lastUpdate) {
     const dt = new Date(data.lastUpdate);
-  lastUpdateElem.innerHTML = `Datagrunnlag hentet fra <a href=\"https://www.bookup.no/\" target=\"_blank\">bookup.no</a>. <br> Sist oppdatert: ${dt.toLocaleString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' })}`;
+    lastUpdateElem.innerHTML = `Datagrunnlag hentet fra <a href=\"https://www.bookup.no/\" target=\"_blank\">bookup.no</a>. <br> Sist oppdatert: ${dt.toLocaleString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' })}`;
   }
 
   // 
@@ -442,6 +442,76 @@ document.addEventListener('DOMContentLoaded', () => {
   if (nextBtn) nextBtn.onclick = () => changeDate(1);
   const selectedDateSpan = document.getElementById('selected-date');
   if (selectedDateSpan) selectedDateSpan.onclick = () => openDatePicker();
+
+  const infoBtn = document.getElementById('info-btn');
+  if (infoBtn) infoBtn.onclick = () => showInfoModal();
 });
+
+function showInfoModal() {
+  // Create modal elements
+  const modal = document.createElement('div');
+  modal.className = 'info-modal';
+  modal.id = 'info-modal';
+
+  const content = document.createElement('div');
+  content.className = 'info-content';
+
+  content.innerHTML = `
+    <div class="info-header">
+      <h3 class="info-title">Om denne siden</h3>
+      <button class="close-btn" id="close-info">&times;</button>
+    </div>
+    <div class="info-text">
+      <p><strong>Hva finner du her?</strong><br>
+      En oversikt over bookinger i Hegrahallen per dag og rom.</p>
+      
+      <p><strong>Hvordan bruker jeg siden?</strong><br>
+      Bruk «Forrige»/«Neste» for å navigere mellom datoer, eller klikk på datoen for å velge en spesifikk dato.</p>
+      
+      <p><strong>Hvor ofte oppdateres bookinger?</strong><br>
+      Data hentes automatisk hver time for bookinger inneværende og neste uke.
+      Se "Sist oppdatert" i bunntekst for når data sist ble hentet for aktuell dato.</p>
+
+      <p><strong>Tips</strong><br>
+      - Klikk på boksene for å filtrere visningen av bookinger.<br>
+      - Klikk på en booking oppføring for å se mer informasjon.<br>
+      - Klikk på datoen for å velge ønsket dato direkte.<br>
+      
+      <p><strong>Kontakt:</strong><br>
+      Har du oppdaget en feil, har forslag til forbedringer eller spørsmål? Ta kontakt med <a href="mailto:trond.skille@gmail.com">Trond Skille</a>.<br>
+      </div>
+  `;
+
+  modal.appendChild(content);
+  document.body.appendChild(modal);
+
+  // Add event listeners for closing
+  const closeBtn = document.getElementById('close-info');
+  closeBtn.onclick = () => closeInfoModal();
+
+  // Close when clicking outside content
+  modal.onclick = (e) => {
+    if (e.target === modal) {
+      closeInfoModal();
+    }
+  };
+
+  // Close with Escape key
+  document.addEventListener('keydown', handleEscapeKey);
+}
+
+function closeInfoModal() {
+  const modal = document.getElementById('info-modal');
+  if (modal) {
+    modal.remove();
+    document.removeEventListener('keydown', handleEscapeKey);
+  }
+}
+
+function handleEscapeKey(e) {
+  if (e.key === 'Escape') {
+    closeInfoModal();
+  }
+}
 
 
