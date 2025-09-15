@@ -205,7 +205,7 @@ function showHideSections() {
 }
 
 function renderOverview(data, dateStr) {
-  let overviewHtml = '<div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">';
+  let overviewHtml = '<div class="overview-grid">';
   data.buildings.forEach((building, bIdx) => {
     const color = buildingColors[bIdx % buildingColors.length];
     let allBookings = [];
@@ -221,15 +221,16 @@ function renderOverview(data, dateStr) {
 
 function renderOverviewBox(building, allBookings, color, bIdx) {
   const isSelected = filteredBuildingIdxs.includes(bIdx);
-  let boxHtml = `<div style="background:${isSelected ? color : '#f7f7f7'};color:${isSelected ? '#fff' : '#888'};padding:18px 12px;border-radius:10px;min-width:180px;flex:1 1 180px;max-width:220px;box-shadow:0 2px 8px #0002;display:flex;flex-direction:column;align-items:center;cursor:pointer;${isSelected ? 'outline: 4px solid #222; outline-offset: 2px; box-shadow:0 0 0 6px #fff, 0 2px 8px #0002;' : ''}" onclick="toggleBuildingFilter(${bIdx})">`;
-  boxHtml += `<div style="font-size:1.1em;font-weight:bold;margin-bottom:8px;">${building.buildingName}</div>`;
+  const style = isSelected ? ` style="background:${color}"` : '';
+  let boxHtml = `<div class="overview-card${isSelected ? ' selected' : ''}"${style} onclick="toggleBuildingFilter(${bIdx})">`;
+  boxHtml += `<div class="title">${building.buildingName}</div>`;
   if (allBookings.length > 0) {
     const sorted = allBookings.sort((a, b) => new Date(a.start) - new Date(b.start));
     const firstOccupied = sorted[0];
     const lastOccupied = sorted[sorted.length - 1];
-    boxHtml += `<div style=\"font-size:1.2em;font-weight:bold;\">${formatTime(firstOccupied.start)} - ${formatTime(lastOccupied.end)}</div>`;
+    boxHtml += `<div class="hours">${formatTime(firstOccupied.start)} - ${formatTime(lastOccupied.end)}</div>`;
   } else {
-    boxHtml += `<div style="margin-top:8px;">Ledig hele dagen</div>`;
+    boxHtml += `<div class="free-label">Ledig hele dagen</div>`;
   }
   boxHtml += '</div>';
   return boxHtml;
@@ -256,12 +257,12 @@ function renderRoomTimeline(room, bookings, color) {
   const blocks = getTimelineBlocks(bookings, timelineStart, timelineEnd);
   const timelineLabels = buildTimelineLabels(timelineStart, timelineEnd);
   let timelineHtml = timelineLabels;
-  timelineHtml += `<div class=\"timeline\" style=\"position:relative;width:100%;height:32px;background:#fff;border:1px solid #ccc;border-radius:6px;margin-bottom:8px;\">`;
+  timelineHtml += `<div class=\"timeline\">`;
   blocks.forEach((block, idx) => {
     const left = ((block.start - timelineStart) / (timelineEnd - timelineStart)) * 100;
     const width = ((block.end - block.start) / (timelineEnd - timelineStart)) * 100;
     // Add click handler to show popup
-    timelineHtml += `<div class=\"timeline-block\" style=\"position:absolute;left:${left}%;width:${width}%;height:32px;background:${color};border-radius:6px;z-index:2;cursor:pointer;\" onclick=\"showBookingPopup(event, '${escapeBookingInfo(block)}')\"></div>`;
+    timelineHtml += `<div class=\"timeline-block\" style=\"left:${left}%;width:${width}%;background:${color};\" onclick=\"showBookingPopup(event, '${escapeBookingInfo(block)}')\"></div>`;
   });
   timelineHtml += `</div>`;
   return `<div class=\"booking\"><span class=\"room\" style=\"color:${color};font-weight:bold;\">${room.roomName}</span><br>${timelineHtml}</div>`;
@@ -280,16 +281,6 @@ function showBookingPopup(e, infoHtml) {
   const popup = document.createElement('div');
   popup.className = 'booking-popup';
   popup.innerHTML = infoHtml;
-  popup.style.position = 'fixed';
-  popup.style.zIndex = '9999';
-  popup.style.background = '#fff';
-  popup.style.color = '#222';
-  popup.style.border = '1px solid #ccc';
-  popup.style.borderRadius = '8px';
-  popup.style.boxShadow = '0 2px 12px #0003';
-  popup.style.padding = '14px 18px';
-  popup.style.fontSize = '1em';
-  popup.style.maxWidth = '80vw';
   // Calculate position
   const x = (e.touches ? e.touches[0].clientX : e.clientX) + 10;
   const y = (e.touches ? e.touches[0].clientY : e.clientY) + 10;
@@ -451,87 +442,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (nextBtn) nextBtn.onclick = () => changeDate(1);
   const selectedDateSpan = document.getElementById('selected-date');
   if (selectedDateSpan) selectedDateSpan.onclick = () => openDatePicker();
-  const infoBtn = document.getElementById('info-btn');
-  if (infoBtn) infoBtn.onclick = () => showInfoPopup();
 });
 
-function showInfoPopup() {
-  // Remove if already open
-  const existing = document.getElementById('info-popup');
-  if (existing) existing.remove();
 
-  const wrap = document.createElement('div');
-  wrap.id = 'info-popup';
-  wrap.style.position = 'fixed';
-  wrap.style.inset = '0';
-  wrap.style.display = 'flex';
-  wrap.style.alignItems = 'center';
-  wrap.style.justifyContent = 'center';
-  wrap.style.padding = '16px'; // leave tappable margin around the card for outside-click
-  wrap.style.background = 'rgba(0,0,0,0.25)';
-  wrap.style.zIndex = '10000'; // ensure above other popups
-
-  const card = document.createElement('div');
-  card.setAttribute('role', 'dialog');
-  card.setAttribute('aria-labelledby', 'info-title');
-  card.setAttribute('aria-modal', 'true');
-  card.style.background = '#fff';
-  card.style.color = '#333';
-  card.style.border = '1px solid #e0e0e0';
-  card.style.borderRadius = '10px';
-  card.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
-  card.style.maxWidth = '720px';
-  card.style.width = 'min(92vw, 720px)';
-  card.style.padding = '18px 20px';
-  card.style.maxHeight = '85vh';
-  card.style.overflowY = 'auto';
-
-  card.innerHTML = `
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-      <h3 id="info-title" style="margin:0;color:#2c3e50;">Om denne siden</h3>
-      <button id="info-close" aria-label="Lukk" style="border:none;background:transparent;font-size:1.2em;cursor:pointer;color:#777;">×</button>
-    </div>
-  <div style="font-size:0.98em;line-height:1.5;color:#555;padding-bottom:24px;">
-      <p><strong>Hva finner du her?</strong><br>
-      En oversikt over bookinger i Hegrahallen per dag og rom.</p>
-
-      <p><strong>Hvordan bruker jeg siden?</strong><br>
-      Bruk «Forrige»/«Neste» for å navigere mellom datoer.</p>
-
-      <p><strong>Hvor ofte oppdateres bookinger?</strong><br>
-      Data hentes automatisk hver time for bookinger inneværende og neste uke.</p>
-
-      <p><strong>Ingen bookingdata funnet</strong><br>
-      Dette kommer som en feilmelding hvis du navigerer til en dato uten bookingdata.<br>
-      Typisk skyldes dette at man prøver å vise bookinger for en dato utenfor inneværende eller neste uke.</p>
-
-      <p><strong>Tips</strong><br>
-      - Klikk på boksene for å filtrere visningen av bookinger.<br>
-      - Klikk på en booking oppføring for å se mer informasjon.<br>
-      - Klikk på datoen for å velge ønsket dato direkte.<br>
-      - "Sist oppdatert" i bunntekst viser når data sist ble hentet fra bookup.no.</p>
-
-      <p><strong>Tilbakemeldinger</strong><br>
-      Har du forslag til forbedringer eller oppdager feil? Ta kontakt med Trond Skille.</p>
-    </div>
-    <div style="position:sticky;bottom:12px;display:flex;justify-content:flex-end;background:transparent;padding:0;margin:0;pointer-events:none;z-index:1;">
-      <button id="info-close-bottom" style="background:#2980b9;color:#fff;border:none;padding:10px 14px;border-radius:6px;cursor:pointer;pointer-events:auto;z-index:2;">Lukk</button>
-    </div>
-  `;
-
-  wrap.appendChild(card);
-  document.body.appendChild(wrap);
-  // Prevent background scroll while modal is open (mobile friendly)
-  const prevBodyOverflow = document.body.style.overflow;
-  document.body.style.overflow = 'hidden';
-
-  const close = () => {
-    wrap.remove();
-    document.body.style.overflow = prevBodyOverflow;
-  };
-  card.querySelector('#info-close').addEventListener('click', close);
-  const bottomClose = card.querySelector('#info-close-bottom');
-  if (bottomClose) bottomClose.addEventListener('click', close);
-  wrap.addEventListener('click', (e) => { if (e.target === wrap) close(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); }, { once: true });
-}
