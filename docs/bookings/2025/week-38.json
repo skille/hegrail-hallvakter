@@ -296,17 +296,6 @@
               "renterName": "4H TRØNDELAG",
               "partNr": 0,
               "partLabel": null
-            },
-            {
-              "start": "2025-09-21T00:00:00",
-              "end": "2025-09-21T09:30:00",
-              "id": "1298576",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": null,
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
             }
           ]
         },
@@ -588,17 +577,6 @@
               "renterName": "4H TRØNDELAG",
               "partNr": 0,
               "partLabel": null
-            },
-            {
-              "start": "2025-09-21T00:00:00",
-              "end": "2025-09-21T09:30:00",
-              "id": "1298576",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": null,
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
             }
           ]
         },
@@ -878,17 +856,6 @@
               "borderColor": null,
               "title": null,
               "renterName": "4H TRØNDELAG",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2025-09-21T00:00:00",
-              "end": "2025-09-21T09:30:00",
-              "id": "1298576",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": null,
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             }
