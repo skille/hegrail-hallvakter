@@ -896,6 +896,17 @@
             {
               "start": "2025-09-21T13:00:00",
               "end": "2025-09-21T14:30:00",
+              "id": "1321448",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
+            },
+            {
+              "start": "2025-09-21T13:00:00",
+              "end": "2025-09-21T14:30:00",
               "id": "1321438",
               "color": "#da697a",
               "borderColor": "#fff",
