@@ -861,6 +861,17 @@
               "partLabel": "Squash bane 1"
             },
             {
+              "start": "2025-10-01T10:00:00",
+              "end": "2025-10-01T11:30:00",
+              "id": "1331413",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "",
+              "renterName": "Privat",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
+            },
+            {
               "start": "2025-10-03T18:00:00",
               "end": "2025-10-03T19:00:00",
               "id": "1315479",
