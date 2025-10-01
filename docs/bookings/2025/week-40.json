@@ -872,6 +872,17 @@
               "partLabel": "Squash bane 2"
             },
             {
+              "start": "2025-10-01T21:30:00",
+              "end": "2025-10-01T22:00:00",
+              "id": "1332061",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Andreas Evenhus",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2025-10-03T18:00:00",
               "end": "2025-10-03T19:00:00",
               "id": "1315479",
@@ -896,6 +907,17 @@
               "borderColor": "#fff",
               "title": "Trening",
               "renterName": "Runar Holen",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2025-10-01T21:30:00",
+              "end": "2025-10-01T22:00:00",
+              "id": "1332061",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Andreas Evenhus",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             },
