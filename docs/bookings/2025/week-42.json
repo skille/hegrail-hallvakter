@@ -989,6 +989,17 @@
               "partLabel": null
             },
             {
+              "start": "2025-10-15T19:30:00",
+              "end": "2025-10-15T20:00:00",
+              "id": "1338504",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Møte J11 håndball",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2025-10-18T09:00:00",
               "end": "2025-10-18T20:00:00",
               "id": "1299490",
