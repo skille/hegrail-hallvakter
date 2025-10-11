@@ -967,6 +967,17 @@
           "roomName": "Møterom / Kjøkken",
           "bookings": [
             {
+              "start": "2025-10-14T19:00:00",
+              "end": "2025-10-14T19:30:00",
+              "id": "1339756",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Foreldremøte j/G9 håndball",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2025-10-15T08:00:00",
               "end": "2025-10-15T11:00:00",
               "id": "1241575",
