@@ -927,6 +927,17 @@
               "partLabel": "Squash bane 1"
             },
             {
+              "start": "2025-10-13T20:00:00",
+              "end": "2025-10-13T22:00:00",
+              "id": "1340819",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Remi Guittaut",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2025-10-17T10:30:00",
               "end": "2025-10-17T12:00:00",
               "id": "1340763",
@@ -962,6 +973,17 @@
               "borderColor": "#fff",
               "title": "Trening",
               "renterName": "Einar Ellingsen",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2025-10-13T20:00:00",
+              "end": "2025-10-13T22:00:00",
+              "id": "1340819",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Remi Guittaut",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             },
