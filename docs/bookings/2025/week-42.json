@@ -938,6 +938,17 @@
               "partLabel": "Squash bane 1"
             },
             {
+              "start": "2025-10-14T18:00:00",
+              "end": "2025-10-14T19:00:00",
+              "id": "1341499",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2025-10-17T10:30:00",
               "end": "2025-10-17T12:00:00",
               "id": "1340763",
@@ -984,6 +995,17 @@
               "borderColor": "#fff",
               "title": "Trening",
               "renterName": "Remi Guittaut",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2025-10-14T18:00:00",
+              "end": "2025-10-14T19:00:00",
+              "id": "1341499",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             },
