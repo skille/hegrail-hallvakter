@@ -178,17 +178,6 @@
             },
             {
               "start": "2025-10-22T20:30:00",
-              "end": "2025-10-22T21:30:00",
-              "id": "1225509",
-              "color": "#da697a",
-              "borderColor": "#fff",
-              "title": "Gutter 15 og Gutter 16",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 2,
-              "partLabel": "2/3 Bane inkl garderobe "
-            },
-            {
-              "start": "2025-10-22T20:30:00",
               "end": "2025-10-22T22:00:00",
               "id": "1225252",
               "color": "#da697a",
@@ -197,6 +186,17 @@
               "renterName": "IDRETTSLAGET DALEBRAND",
               "partNr": 1,
               "partLabel": "1/3 Bane inkl garderobe "
+            },
+            {
+              "start": "2025-10-22T20:30:00",
+              "end": "2025-10-22T21:30:00",
+              "id": "1225509",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Gutter 15 og Gutter 16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 2,
+              "partLabel": "2/3 Bane inkl garderobe "
             },
             {
               "start": "2025-10-23T09:20:00",
