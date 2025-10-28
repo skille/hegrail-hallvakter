@@ -806,6 +806,17 @@
           "roomName": "Squashbane 1",
           "bookings": [
             {
+              "start": "2025-10-28T17:00:00",
+              "end": "2025-10-28T18:00:00",
+              "id": "1350196",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2025-10-31T18:00:00",
               "end": "2025-10-31T19:00:00",
               "id": "1315479",
@@ -822,6 +833,17 @@
           "roomId": 1,
           "roomName": "Squashbane 2",
           "bookings": [
+            {
+              "start": "2025-10-28T17:00:00",
+              "end": "2025-10-28T18:00:00",
+              "id": "1350196",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
             {
               "start": "2025-10-31T18:00:00",
               "end": "2025-10-31T19:00:00",
