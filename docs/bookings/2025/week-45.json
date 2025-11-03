@@ -309,6 +309,17 @@
               "partLabel": null
             },
             {
+              "start": "2025-11-07T20:30:00",
+              "end": "2025-11-07T22:00:00",
+              "id": "1354605",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra il fotball futsal",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2025-11-08T09:00:00",
               "end": "2025-11-08T20:00:00",
               "id": "1299505",
@@ -634,6 +645,17 @@
               "partLabel": null
             },
             {
+              "start": "2025-11-07T20:30:00",
+              "end": "2025-11-07T22:00:00",
+              "id": "1354605",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra il fotball futsal",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2025-11-08T09:00:00",
               "end": "2025-11-08T20:00:00",
               "id": "1299505",
@@ -955,6 +977,17 @@
               "borderColor": null,
               "title": "Kamp -J16-Hegra-Rapp ( 19.00-20.05 )",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-11-07T20:30:00",
+              "end": "2025-11-07T22:00:00",
+              "id": "1354605",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra il fotball futsal",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
               "partNr": 0,
               "partLabel": null
             },
