@@ -936,6 +936,17 @@
               "renterName": "Privat",
               "partNr": 1,
               "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2025-12-07T15:00:00",
+              "end": "2025-12-07T17:00:00",
+              "id": "1380065",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Squash",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
             }
           ]
         },
