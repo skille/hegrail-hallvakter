@@ -938,6 +938,17 @@
           "roomName": "Squashbane 1",
           "bookings": [
             {
+              "start": "2025-12-09T19:00:00",
+              "end": "2025-12-09T20:00:00",
+              "id": "1382666",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Runar Holen",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2025-12-10T11:00:00",
               "end": "2025-12-10T12:30:00",
               "id": "1379144",
@@ -965,6 +976,17 @@
           "roomId": 1,
           "roomName": "Squashbane 2",
           "bookings": [
+            {
+              "start": "2025-12-09T19:00:00",
+              "end": "2025-12-09T20:00:00",
+              "id": "1382666",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Runar Holen",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
             {
               "start": "2025-12-12T18:00:00",
               "end": "2025-12-12T19:00:00",
