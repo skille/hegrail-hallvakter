@@ -960,6 +960,17 @@
               "partLabel": "Squash bane 2"
             },
             {
+              "start": "2025-12-10T20:00:00",
+              "end": "2025-12-10T21:30:00",
+              "id": "1384084",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Svette",
+              "renterName": "Knut Smågård",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2025-12-12T18:00:00",
               "end": "2025-12-12T19:00:00",
               "id": "1315479",
@@ -984,6 +995,17 @@
               "borderColor": "#fff",
               "title": "Trening",
               "renterName": "Runar Holen",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2025-12-10T20:00:00",
+              "end": "2025-12-10T21:30:00",
+              "id": "1384084",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Svette",
+              "renterName": "Knut Smågård",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             },
