@@ -10,17 +10,922 @@
         {
           "roomId": 0,
           "roomName": "Hele hallen",
-          "bookings": []
+          "bookings": [
+            {
+              "start": "2025-12-15T12:05:00",
+              "end": "2025-12-15T14:00:00",
+              "id": "1291044",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T16:00:00",
+              "end": "2025-12-15T17:30:00",
+              "id": "1204786",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Håndball jenter 13 og jenter 14",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T17:30:00",
+              "end": "2025-12-15T19:00:00",
+              "id": "1204790",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 13  Hegra /STj.blink 2 lag",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T19:00:00",
+              "end": "2025-12-15T20:30:00",
+              "id": "1204792",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 12 / J10 kl. 19-20",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T20:30:00",
+              "end": "2025-12-15T22:00:00",
+              "id": "1204794",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 15 og gutter 16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T09:20:00",
+              "end": "2025-12-16T14:00:00",
+              "id": "1291048",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T16:00:00",
+              "end": "2025-12-16T17:30:00",
+              "id": "1204795",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 11 og Gutter 12",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T17:30:00",
+              "end": "2025-12-16T19:00:00",
+              "id": "1204800",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 12 / Mini 2017 kl. 1730-1830",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T19:00:00",
+              "end": "2025-12-16T20:00:00",
+              "id": "1204802",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 9 og Gutter 9",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T20:00:00",
+              "end": "2025-12-16T22:00:00",
+              "id": "1204803",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "jenter 16- 2 lag",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T08:10:00",
+              "end": "2025-12-17T10:20:00",
+              "id": "1291051",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T12:05:00",
+              "end": "2025-12-17T14:00:00",
+              "id": "1291054",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T16:00:00",
+              "end": "2025-12-17T17:30:00",
+              "id": "1204804",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 11 og Jenter 13",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T17:30:00",
+              "end": "2025-12-17T18:30:00",
+              "id": "1212411",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Allidrett Hegra IL",
+              "renterName": "Hegra IL Allidrett",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T18:30:00",
+              "end": "2025-12-17T20:30:00",
+              "id": "1204807",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 15 og Gutter 16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T20:30:00",
+              "end": "2025-12-17T22:00:00",
+              "id": "1225252",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": null,
+              "renterName": "IDRETTSLAGET DALEBRAND",
+              "partNr": 1,
+              "partLabel": "1/3 Bane inkl garderobe "
+            },
+            {
+              "start": "2025-12-17T20:30:00",
+              "end": "2025-12-17T21:30:00",
+              "id": "1225509",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Gutter 15 og Gutter 16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 2,
+              "partLabel": "2/3 Bane inkl garderobe "
+            },
+            {
+              "start": "2025-12-18T09:20:00",
+              "end": "2025-12-18T14:00:00",
+              "id": "1291048",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T16:00:00",
+              "end": "2025-12-18T17:30:00",
+              "id": "1204808",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 12 / G11 kl. 1630-1800",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T17:30:00",
+              "end": "2025-12-18T19:00:00",
+              "id": "1204812",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "jenter 11 og jenter 10",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T19:00:00",
+              "end": "2025-12-18T20:30:00",
+              "id": "1204817",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 16 / J14 kl. 1830-2000",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T20:30:00",
+              "end": "2025-12-18T22:00:00",
+              "id": "1204818",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kvinner 5.div",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T08:10:00",
+              "end": "2025-12-19T14:00:00",
+              "id": "1291060",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": null,
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T16:00:00",
+              "end": "2025-12-19T17:30:00",
+              "id": "1204820",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Fellesøkt posisjonstrening håndball",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T17:30:00",
+              "end": "2025-12-19T20:00:00",
+              "id": "1204819",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Ungdomstrening felles 15-16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T20:00:00",
+              "end": "2025-12-19T21:00:00",
+              "id": "1383831",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra il futsal",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-20T10:00:00",
+              "end": "2025-12-20T17:00:00",
+              "id": "1303337",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kamper",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-21T18:00:00",
+              "end": "2025-12-21T20:00:00",
+              "id": "1292988",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra il Fotball Futsal",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
+            }
+          ]
         },
         {
           "roomId": 1,
           "roomName": "1/3 Hallen",
-          "bookings": []
+          "bookings": [
+            {
+              "start": "2025-12-15T12:05:00",
+              "end": "2025-12-15T14:00:00",
+              "id": "1291044",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T16:00:00",
+              "end": "2025-12-15T17:30:00",
+              "id": "1204786",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Håndball jenter 13 og jenter 14",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T17:30:00",
+              "end": "2025-12-15T19:00:00",
+              "id": "1204790",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 13  Hegra /STj.blink 2 lag",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T19:00:00",
+              "end": "2025-12-15T20:30:00",
+              "id": "1204792",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 12 / J10 kl. 19-20",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T20:30:00",
+              "end": "2025-12-15T22:00:00",
+              "id": "1204794",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 15 og gutter 16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T09:20:00",
+              "end": "2025-12-16T14:00:00",
+              "id": "1291048",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T16:00:00",
+              "end": "2025-12-16T17:30:00",
+              "id": "1204795",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 11 og Gutter 12",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T17:30:00",
+              "end": "2025-12-16T19:00:00",
+              "id": "1204800",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 12 / Mini 2017 kl. 1730-1830",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T19:00:00",
+              "end": "2025-12-16T20:00:00",
+              "id": "1204802",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 9 og Gutter 9",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T20:00:00",
+              "end": "2025-12-16T22:00:00",
+              "id": "1204803",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "jenter 16- 2 lag",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T08:10:00",
+              "end": "2025-12-17T10:20:00",
+              "id": "1291051",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T12:05:00",
+              "end": "2025-12-17T14:00:00",
+              "id": "1291054",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T16:00:00",
+              "end": "2025-12-17T17:30:00",
+              "id": "1204804",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 11 og Jenter 13",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T17:30:00",
+              "end": "2025-12-17T18:30:00",
+              "id": "1212411",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Allidrett Hegra IL",
+              "renterName": "Hegra IL Allidrett",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T18:30:00",
+              "end": "2025-12-17T20:30:00",
+              "id": "1204807",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 15 og Gutter 16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T20:30:00",
+              "end": "2025-12-17T22:00:00",
+              "id": "1225252",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": null,
+              "renterName": "IDRETTSLAGET DALEBRAND",
+              "partNr": 1,
+              "partLabel": "1/3 Bane inkl garderobe "
+            },
+            {
+              "start": "2025-12-18T09:20:00",
+              "end": "2025-12-18T14:00:00",
+              "id": "1291048",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T16:00:00",
+              "end": "2025-12-18T17:30:00",
+              "id": "1204808",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 12 / G11 kl. 1630-1800",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T17:30:00",
+              "end": "2025-12-18T19:00:00",
+              "id": "1204812",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "jenter 11 og jenter 10",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T19:00:00",
+              "end": "2025-12-18T20:30:00",
+              "id": "1204817",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 16 / J14 kl. 1830-2000",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T20:30:00",
+              "end": "2025-12-18T22:00:00",
+              "id": "1204818",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kvinner 5.div",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T08:10:00",
+              "end": "2025-12-19T14:00:00",
+              "id": "1291060",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": null,
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T16:00:00",
+              "end": "2025-12-19T17:30:00",
+              "id": "1204820",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Fellesøkt posisjonstrening håndball",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T17:30:00",
+              "end": "2025-12-19T20:00:00",
+              "id": "1204819",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Ungdomstrening felles 15-16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T20:00:00",
+              "end": "2025-12-19T21:00:00",
+              "id": "1383831",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra il futsal",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-20T10:00:00",
+              "end": "2025-12-20T17:00:00",
+              "id": "1303337",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kamper",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-21T18:00:00",
+              "end": "2025-12-21T20:00:00",
+              "id": "1292988",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra il Fotball Futsal",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
+            }
+          ]
         },
         {
           "roomId": 2,
           "roomName": "2/3 Hallen",
-          "bookings": []
+          "bookings": [
+            {
+              "start": "2025-12-15T12:05:00",
+              "end": "2025-12-15T14:00:00",
+              "id": "1291044",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T16:00:00",
+              "end": "2025-12-15T17:30:00",
+              "id": "1204786",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Håndball jenter 13 og jenter 14",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T17:30:00",
+              "end": "2025-12-15T19:00:00",
+              "id": "1204790",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 13  Hegra /STj.blink 2 lag",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T19:00:00",
+              "end": "2025-12-15T20:30:00",
+              "id": "1204792",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 12 / J10 kl. 19-20",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-15T20:30:00",
+              "end": "2025-12-15T22:00:00",
+              "id": "1204794",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 15 og gutter 16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T09:20:00",
+              "end": "2025-12-16T14:00:00",
+              "id": "1291048",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T16:00:00",
+              "end": "2025-12-16T17:30:00",
+              "id": "1204795",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 11 og Gutter 12",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T17:30:00",
+              "end": "2025-12-16T19:00:00",
+              "id": "1204800",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 12 / Mini 2017 kl. 1730-1830",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T19:00:00",
+              "end": "2025-12-16T20:00:00",
+              "id": "1204802",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 9 og Gutter 9",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-16T20:00:00",
+              "end": "2025-12-16T22:00:00",
+              "id": "1204803",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "jenter 16- 2 lag",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T08:10:00",
+              "end": "2025-12-17T10:20:00",
+              "id": "1291051",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T12:05:00",
+              "end": "2025-12-17T14:00:00",
+              "id": "1291054",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T16:00:00",
+              "end": "2025-12-17T17:30:00",
+              "id": "1204804",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 11 og Jenter 13",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T17:30:00",
+              "end": "2025-12-17T18:30:00",
+              "id": "1212411",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Allidrett Hegra IL",
+              "renterName": "Hegra IL Allidrett",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T18:30:00",
+              "end": "2025-12-17T20:30:00",
+              "id": "1204807",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 15 og Gutter 16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T20:30:00",
+              "end": "2025-12-17T21:30:00",
+              "id": "1225509",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Gutter 15 og Gutter 16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 2,
+              "partLabel": "2/3 Bane inkl garderobe "
+            },
+            {
+              "start": "2025-12-18T09:20:00",
+              "end": "2025-12-18T14:00:00",
+              "id": "1291048",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T16:00:00",
+              "end": "2025-12-18T17:30:00",
+              "id": "1204808",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Gutter 12 / G11 kl. 1630-1800",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T17:30:00",
+              "end": "2025-12-18T19:00:00",
+              "id": "1204812",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "jenter 11 og jenter 10",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T19:00:00",
+              "end": "2025-12-18T20:30:00",
+              "id": "1204817",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Jenter 16 / J14 kl. 1830-2000",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T20:30:00",
+              "end": "2025-12-18T22:00:00",
+              "id": "1204818",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kvinner 5.div",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T08:10:00",
+              "end": "2025-12-19T14:00:00",
+              "id": "1291060",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": null,
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T16:00:00",
+              "end": "2025-12-19T17:30:00",
+              "id": "1204820",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Fellesøkt posisjonstrening håndball",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T17:30:00",
+              "end": "2025-12-19T20:00:00",
+              "id": "1204819",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Ungdomstrening felles 15-16",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-19T20:00:00",
+              "end": "2025-12-19T21:00:00",
+              "id": "1383831",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra il futsal",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-20T10:00:00",
+              "end": "2025-12-20T17:00:00",
+              "id": "1303337",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kamper",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-21T18:00:00",
+              "end": "2025-12-21T20:00:00",
+              "id": "1292988",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra il Fotball Futsal",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
+            }
+          ]
         }
       ]
     },
@@ -31,12 +936,36 @@
         {
           "roomId": 0,
           "roomName": "Squashbane 1",
-          "bookings": []
+          "bookings": [
+            {
+              "start": "2025-12-19T18:00:00",
+              "end": "2025-12-19T19:00:00",
+              "id": "1315479",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "",
+              "renterName": "Privat",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            }
+          ]
         },
         {
           "roomId": 1,
           "roomName": "Squashbane 2",
-          "bookings": []
+          "bookings": [
+            {
+              "start": "2025-12-19T18:00:00",
+              "end": "2025-12-19T19:00:00",
+              "id": "1315479",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "",
+              "renterName": "Privat",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            }
+          ]
         }
       ]
     },
@@ -47,7 +976,63 @@
         {
           "roomId": 0,
           "roomName": "Møterom / Kjøkken",
-          "bookings": []
+          "bookings": [
+            {
+              "start": "2025-12-15T17:00:00",
+              "end": "2025-12-15T18:30:00",
+              "id": "1383809",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kveldsmat håndball j14",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T08:00:00",
+              "end": "2025-12-17T11:00:00",
+              "id": "1241575",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Skjelstadmark skole",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-17T18:30:00",
+              "end": "2025-12-17T20:30:00",
+              "id": "1374727",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Håndball kveldsmat",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-18T18:00:00",
+              "end": "2025-12-18T19:30:00",
+              "id": "1383808",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kveldsmat g11 håndball",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2025-12-20T10:00:00",
+              "end": "2025-12-20T17:00:00",
+              "id": "1303338",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kamper",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            }
+          ]
         }
       ]
     },
