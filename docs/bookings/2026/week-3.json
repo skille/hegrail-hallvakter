@@ -982,6 +982,17 @@
               "partLabel": "Squash bane 2"
             },
             {
+              "start": "2026-01-13T11:00:00",
+              "end": "2026-01-13T12:30:00",
+              "id": "1410410",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "",
+              "renterName": "Privat",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-01-16T18:00:00",
               "end": "2026-01-16T19:00:00",
               "id": "1401698",
@@ -1006,6 +1017,17 @@
               "borderColor": "#fff",
               "title": "Trening",
               "renterName": "Erik Torp",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-01-13T11:00:00",
+              "end": "2026-01-13T12:30:00",
+              "id": "1410410",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "",
+              "renterName": "Privat",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             },
