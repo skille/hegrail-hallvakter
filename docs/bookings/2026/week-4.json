@@ -914,6 +914,17 @@
               "renterName": "Privat",
               "partNr": 1,
               "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-01-25T16:30:00",
+              "end": "2026-01-25T18:00:00",
+              "id": "1421219",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
             }
           ]
         },
