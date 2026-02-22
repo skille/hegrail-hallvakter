@@ -861,6 +861,17 @@
               "partLabel": "Squash bane 2"
             },
             {
+              "start": "2026-02-24T18:30:00",
+              "end": "2026-02-24T20:00:00",
+              "id": "1443277",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Squash ",
+              "renterName": "Endre Oklevik",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-02-27T18:00:00",
               "end": "2026-02-27T19:00:00",
               "id": "1401698",
@@ -877,6 +888,17 @@
           "roomId": 1,
           "roomName": "Squashbane 2",
           "bookings": [
+            {
+              "start": "2026-02-24T18:30:00",
+              "end": "2026-02-24T20:00:00",
+              "id": "1443277",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Squash ",
+              "renterName": "Endre Oklevik",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
             {
               "start": "2026-02-27T18:00:00",
               "end": "2026-02-27T19:00:00",
