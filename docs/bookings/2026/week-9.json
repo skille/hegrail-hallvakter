@@ -923,6 +923,17 @@
           "roomName": "Møterom / Kjøkken",
           "bookings": [
             {
+              "start": "2026-02-23T17:00:00",
+              "end": "2026-02-23T20:00:00",
+              "id": "1444106",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Møter håndball",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2026-02-25T08:00:00",
               "end": "2026-02-25T11:00:00",
               "id": "1241575",
