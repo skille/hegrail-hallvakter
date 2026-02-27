@@ -178,17 +178,6 @@
             },
             {
               "start": "2026-02-25T20:30:00",
-              "end": "2026-02-25T22:00:00",
-              "id": "1225252",
-              "color": "#da697a",
-              "borderColor": "#fff",
-              "title": null,
-              "renterName": "IDRETTSLAGET DALEBRAND",
-              "partNr": 1,
-              "partLabel": "1/3 Bane inkl garderobe "
-            },
-            {
-              "start": "2026-02-25T20:30:00",
               "end": "2026-02-25T21:30:00",
               "id": "1225509",
               "color": "#da697a",
@@ -197,6 +186,17 @@
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 2,
               "partLabel": "2/3 Bane inkl garderobe "
+            },
+            {
+              "start": "2026-02-25T20:30:00",
+              "end": "2026-02-25T22:00:00",
+              "id": "1225252",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": null,
+              "renterName": "IDRETTSLAGET DALEBRAND",
+              "partNr": 1,
+              "partLabel": "1/3 Bane inkl garderobe "
             },
             {
               "start": "2026-02-26T09:20:00",
