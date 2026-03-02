@@ -296,6 +296,17 @@
               "renterName": "STJØRDAL MODELLFLYKLUBB",
               "partNr": 0,
               "partLabel": null
+            },
+            {
+              "start": "2026-03-08T19:30:00",
+              "end": "2026-03-08T21:00:00",
+              "id": "1451396",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Hegra fotball senior ",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
             }
           ]
         },
@@ -575,6 +586,17 @@
               "borderColor": null,
               "title": "SMFK indoor modellfly",
               "renterName": "STJØRDAL MODELLFLYKLUBB",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-03-08T19:30:00",
+              "end": "2026-03-08T21:00:00",
+              "id": "1451396",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Hegra fotball senior ",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
               "partNr": 0,
               "partLabel": null
             }
@@ -858,6 +880,17 @@
               "renterName": "STJØRDAL MODELLFLYKLUBB",
               "partNr": 0,
               "partLabel": null
+            },
+            {
+              "start": "2026-03-08T19:30:00",
+              "end": "2026-03-08T21:00:00",
+              "id": "1451396",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Hegra fotball senior ",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
             }
           ]
         }
@@ -892,6 +925,17 @@
               "renterName": "Marius Børseth",
               "partNr": 1,
               "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-03-03T19:00:00",
+              "end": "2026-03-03T20:30:00",
+              "id": "1451401",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "",
+              "renterName": "Privat",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
             },
             {
               "start": "2026-03-05T10:30:00",
