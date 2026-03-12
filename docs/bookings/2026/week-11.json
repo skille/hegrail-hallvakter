@@ -709,17 +709,6 @@
             {
               "start": "2026-03-10T17:30:00",
               "end": "2026-03-10T18:30:00",
-              "id": "1465431",
-              "color": "#da697a",
-              "borderColor": "#fff",
-              "title": "Squash",
-              "renterName": "Endre Oklevik",
-              "partNr": 2,
-              "partLabel": "Squash bane 2"
-            },
-            {
-              "start": "2026-03-10T17:30:00",
-              "end": "2026-03-10T18:30:00",
               "id": "1463531",
               "color": "#da697a",
               "borderColor": "#fff",
@@ -727,6 +716,17 @@
               "renterName": "Marius Børseth",
               "partNr": 1,
               "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-03-10T17:30:00",
+              "end": "2026-03-10T18:30:00",
+              "id": "1465431",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Squash",
+              "renterName": "Endre Oklevik",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
             },
             {
               "start": "2026-03-10T18:30:00",
