@@ -850,6 +850,28 @@
               "partLabel": "Squash bane 1"
             },
             {
+              "start": "2026-03-18T19:00:00",
+              "end": "2026-03-18T20:00:00",
+              "id": "1471291",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-03-19T19:30:00",
+              "end": "2026-03-19T21:00:00",
+              "id": "1471292",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-03-20T18:00:00",
               "end": "2026-03-20T19:00:00",
               "id": "1401698",
@@ -873,6 +895,28 @@
               "color": "#da697a",
               "borderColor": "#fff",
               "title": "Trening ",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-03-18T19:00:00",
+              "end": "2026-03-18T20:00:00",
+              "id": "1471291",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-03-19T19:30:00",
+              "end": "2026-03-19T21:00:00",
+              "id": "1471292",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
               "renterName": "Marius Børseth",
               "partNr": 1,
               "partLabel": "Squash bane 1"
