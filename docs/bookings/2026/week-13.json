@@ -868,6 +868,28 @@
           "roomName": "Møterom / Kjøkken",
           "bookings": [
             {
+              "start": "2026-03-23T18:30:00",
+              "end": "2026-03-23T20:30:00",
+              "id": "1475722",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Håndball G13",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-03-24T18:00:00",
+              "end": "2026-03-24T19:00:00",
+              "id": "1475720",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Håndball J/G 9",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2026-03-25T08:00:00",
               "end": "2026-03-25T11:00:00",
               "id": "1241575",
@@ -875,6 +897,17 @@
               "borderColor": null,
               "title": "Skjelstadmark skole",
               "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-03-25T19:00:00",
+              "end": "2026-03-25T20:30:00",
+              "id": "1475721",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Håndball J11",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             }
