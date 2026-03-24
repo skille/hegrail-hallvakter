@@ -861,6 +861,17 @@
               "partLabel": "Squash bane 1"
             },
             {
+              "start": "2026-03-27T16:00:00",
+              "end": "2026-03-27T17:00:00",
+              "id": "1482605",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening squash",
+              "renterName": "Mats Husby",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-03-27T18:00:00",
               "end": "2026-03-27T19:00:00",
               "id": "1401698",
@@ -907,6 +918,17 @@
               "borderColor": "#fff",
               "title": "Trening",
               "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-03-27T16:00:00",
+              "end": "2026-03-27T17:00:00",
+              "id": "1482605",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening squash",
+              "renterName": "Mats Husby",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             },
