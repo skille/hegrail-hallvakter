@@ -23,23 +23,12 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-07T16:00:00",
-              "end": "2026-04-07T17:30:00",
-              "id": "1204795",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Gutter 11 og Gutter 12",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-07T17:30:00",
+              "start": "2026-04-07T17:00:00",
               "end": "2026-04-07T19:00:00",
-              "id": "1204800",
+              "id": "1487041",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Jenter 12 / Mini 2017 kl. 1730-1830",
+              "title": "J12 / Mini 2017",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -51,17 +40,6 @@
               "color": "#da697a",
               "borderColor": null,
               "title": "Jenter 9 og Gutter 9",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-07T20:00:00",
-              "end": "2026-04-07T22:00:00",
-              "id": "1204803",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "jenter 16- 2 lag",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -129,28 +107,6 @@
               "borderColor": null,
               "title": "Hegra U",
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-09T16:00:00",
-              "end": "2026-04-09T17:30:00",
-              "id": "1204808",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Gutter 12 / G11 kl. 1630-1800",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-09T17:30:00",
-              "end": "2026-04-09T19:00:00",
-              "id": "1204812",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "jenter 11 og jenter 10",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             },
@@ -205,23 +161,12 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-07T16:00:00",
-              "end": "2026-04-07T17:30:00",
-              "id": "1204795",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Gutter 11 og Gutter 12",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-07T17:30:00",
+              "start": "2026-04-07T17:00:00",
               "end": "2026-04-07T19:00:00",
-              "id": "1204800",
+              "id": "1487041",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Jenter 12 / Mini 2017 kl. 1730-1830",
+              "title": "J12 / Mini 2017",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -233,17 +178,6 @@
               "color": "#da697a",
               "borderColor": null,
               "title": "Jenter 9 og Gutter 9",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-07T20:00:00",
-              "end": "2026-04-07T22:00:00",
-              "id": "1204803",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "jenter 16- 2 lag",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -315,28 +249,6 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-09T16:00:00",
-              "end": "2026-04-09T17:30:00",
-              "id": "1204808",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Gutter 12 / G11 kl. 1630-1800",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-09T17:30:00",
-              "end": "2026-04-09T19:00:00",
-              "id": "1204812",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "jenter 11 og jenter 10",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
               "start": "2026-04-09T19:00:00",
               "end": "2026-04-09T20:30:00",
               "id": "1204817",
@@ -387,23 +299,12 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-07T16:00:00",
-              "end": "2026-04-07T17:30:00",
-              "id": "1204795",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Gutter 11 og Gutter 12",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-07T17:30:00",
+              "start": "2026-04-07T17:00:00",
               "end": "2026-04-07T19:00:00",
-              "id": "1204800",
+              "id": "1487041",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Jenter 12 / Mini 2017 kl. 1730-1830",
+              "title": "J12 / Mini 2017",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -415,17 +316,6 @@
               "color": "#da697a",
               "borderColor": null,
               "title": "Jenter 9 og Gutter 9",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-07T20:00:00",
-              "end": "2026-04-07T22:00:00",
-              "id": "1204803",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "jenter 16- 2 lag",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -482,28 +372,6 @@
               "borderColor": null,
               "title": "Hegra U",
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-09T16:00:00",
-              "end": "2026-04-09T17:30:00",
-              "id": "1204808",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Gutter 12 / G11 kl. 1630-1800",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-09T17:30:00",
-              "end": "2026-04-09T19:00:00",
-              "id": "1204812",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "jenter 11 og jenter 10",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             },
