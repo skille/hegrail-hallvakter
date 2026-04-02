@@ -55,6 +55,17 @@
               "partLabel": "Squash bane 1"
             },
             {
+              "start": "2026-04-02T19:30:00",
+              "end": "2026-04-02T21:00:00",
+              "id": "1488395",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Jorg Squash",
+              "renterName": "Jorg Walter",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
+            },
+            {
               "start": "2026-04-03T18:00:00",
               "end": "2026-04-03T19:00:00",
               "id": "1401698",
