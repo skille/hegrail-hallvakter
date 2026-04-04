@@ -75,6 +75,17 @@
               "renterName": "Privat",
               "partNr": 1,
               "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-04-04T15:00:00",
+              "end": "2026-04-04T17:00:00",
+              "id": "1488580",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening ",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
             }
           ]
         },
@@ -101,6 +112,17 @@
               "borderColor": "#fff",
               "title": "",
               "renterName": "Privat",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-04-04T15:00:00",
+              "end": "2026-04-04T17:00:00",
+              "id": "1488580",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening ",
+              "renterName": "Marius Børseth",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             }
