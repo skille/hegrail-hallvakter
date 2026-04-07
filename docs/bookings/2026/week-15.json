@@ -476,6 +476,17 @@
               "partLabel": "Squash bane 1"
             },
             {
+              "start": "2026-04-08T09:30:00",
+              "end": "2026-04-08T10:30:00",
+              "id": "1491352",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Practice",
+              "renterName": "Jorg Walter",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
+            },
+            {
               "start": "2026-04-08T17:00:00",
               "end": "2026-04-08T18:30:00",
               "id": "1491313",
