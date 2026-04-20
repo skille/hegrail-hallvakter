@@ -1,7 +1,7 @@
 {
   "lastUpdate": "2026-04-20T00:00:00+00:00",
-  "weekStart": "2026-04-20T00:00:00+00:00",
-  "weekEnd": "2026-04-26T00:00:00+00:00",
+  "weekStart": "2026-04-27T00:00:00+00:00",
+  "weekEnd": "2026-05-03T00:00:00+00:00",
   "buildings": [
     {
       "buildingId": 632,
@@ -12,8 +12,8 @@
           "roomName": "Hele hallen",
           "bookings": [
             {
-              "start": "2026-04-20T12:05:00",
-              "end": "2026-04-20T14:00:00",
+              "start": "2026-04-27T12:05:00",
+              "end": "2026-04-27T14:00:00",
               "id": "1291044",
               "color": "#da697a",
               "borderColor": null,
@@ -23,8 +23,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-21T09:20:00",
-              "end": "2026-04-21T14:00:00",
+              "start": "2026-04-28T09:20:00",
+              "end": "2026-04-28T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -34,8 +34,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-21T17:00:00",
-              "end": "2026-04-21T19:00:00",
+              "start": "2026-04-28T17:00:00",
+              "end": "2026-04-28T19:00:00",
               "id": "1487041",
               "color": "#da697a",
               "borderColor": null,
@@ -45,19 +45,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-21T19:00:00",
-              "end": "2026-04-21T20:00:00",
-              "id": "1204802",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Jenter 9 og Gutter 9",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-22T08:10:00",
-              "end": "2026-04-22T10:20:00",
+              "start": "2026-04-29T08:10:00",
+              "end": "2026-04-29T10:20:00",
               "id": "1291051",
               "color": "#da697a",
               "borderColor": null,
@@ -67,8 +56,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T12:05:00",
-              "end": "2026-04-22T14:00:00",
+              "start": "2026-04-29T12:05:00",
+              "end": "2026-04-29T14:00:00",
               "id": "1291054",
               "color": "#da697a",
               "borderColor": null,
@@ -78,8 +67,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T16:00:00",
-              "end": "2026-04-22T17:30:00",
+              "start": "2026-04-29T16:00:00",
+              "end": "2026-04-29T17:30:00",
               "id": "1204804",
               "color": "#da697a",
               "borderColor": null,
@@ -89,8 +78,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T17:30:00",
-              "end": "2026-04-22T18:30:00",
+              "start": "2026-04-29T17:30:00",
+              "end": "2026-04-29T18:30:00",
               "id": "1212411",
               "color": "#da697a",
               "borderColor": null,
@@ -100,8 +89,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T20:30:00",
-              "end": "2026-04-22T22:00:00",
+              "start": "2026-04-29T20:30:00",
+              "end": "2026-04-29T22:00:00",
               "id": "1225252",
               "color": "#da697a",
               "borderColor": "#fff",
@@ -111,8 +100,8 @@
               "partLabel": "1/3 Bane inkl garderobe "
             },
             {
-              "start": "2026-04-23T09:20:00",
-              "end": "2026-04-23T14:00:00",
+              "start": "2026-04-30T09:20:00",
+              "end": "2026-04-30T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -122,24 +111,13 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-23T19:00:00",
-              "end": "2026-04-23T20:30:00",
+              "start": "2026-04-30T19:00:00",
+              "end": "2026-04-30T20:30:00",
               "id": "1204817",
               "color": "#da697a",
               "borderColor": null,
               "title": "Jenter 16 / J14 kl. 1830-2000",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-24T08:10:00",
-              "end": "2026-04-24T14:00:00",
-              "id": "1291060",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": null,
-              "renterName": "",
               "partNr": 0,
               "partLabel": null
             }
@@ -150,8 +128,8 @@
           "roomName": "1/3 Hallen",
           "bookings": [
             {
-              "start": "2026-04-20T12:05:00",
-              "end": "2026-04-20T14:00:00",
+              "start": "2026-04-27T12:05:00",
+              "end": "2026-04-27T14:00:00",
               "id": "1291044",
               "color": "#da697a",
               "borderColor": null,
@@ -161,8 +139,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-21T09:20:00",
-              "end": "2026-04-21T14:00:00",
+              "start": "2026-04-28T09:20:00",
+              "end": "2026-04-28T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -172,8 +150,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-21T17:00:00",
-              "end": "2026-04-21T19:00:00",
+              "start": "2026-04-28T17:00:00",
+              "end": "2026-04-28T19:00:00",
               "id": "1487041",
               "color": "#da697a",
               "borderColor": null,
@@ -183,19 +161,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-21T19:00:00",
-              "end": "2026-04-21T20:00:00",
-              "id": "1204802",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Jenter 9 og Gutter 9",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-22T08:10:00",
-              "end": "2026-04-22T10:20:00",
+              "start": "2026-04-29T08:10:00",
+              "end": "2026-04-29T10:20:00",
               "id": "1291051",
               "color": "#da697a",
               "borderColor": null,
@@ -205,8 +172,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T12:05:00",
-              "end": "2026-04-22T14:00:00",
+              "start": "2026-04-29T12:05:00",
+              "end": "2026-04-29T14:00:00",
               "id": "1291054",
               "color": "#da697a",
               "borderColor": null,
@@ -216,8 +183,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T16:00:00",
-              "end": "2026-04-22T17:30:00",
+              "start": "2026-04-29T16:00:00",
+              "end": "2026-04-29T17:30:00",
               "id": "1204804",
               "color": "#da697a",
               "borderColor": null,
@@ -227,8 +194,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T17:30:00",
-              "end": "2026-04-22T18:30:00",
+              "start": "2026-04-29T17:30:00",
+              "end": "2026-04-29T18:30:00",
               "id": "1212411",
               "color": "#da697a",
               "borderColor": null,
@@ -238,8 +205,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T20:30:00",
-              "end": "2026-04-22T22:00:00",
+              "start": "2026-04-29T20:30:00",
+              "end": "2026-04-29T22:00:00",
               "id": "1225252",
               "color": "#da697a",
               "borderColor": "#fff",
@@ -249,8 +216,8 @@
               "partLabel": "1/3 Bane inkl garderobe "
             },
             {
-              "start": "2026-04-23T09:20:00",
-              "end": "2026-04-23T14:00:00",
+              "start": "2026-04-30T09:20:00",
+              "end": "2026-04-30T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -260,24 +227,13 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-23T19:00:00",
-              "end": "2026-04-23T20:30:00",
+              "start": "2026-04-30T19:00:00",
+              "end": "2026-04-30T20:30:00",
               "id": "1204817",
               "color": "#da697a",
               "borderColor": null,
               "title": "Jenter 16 / J14 kl. 1830-2000",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-24T08:10:00",
-              "end": "2026-04-24T14:00:00",
-              "id": "1291060",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": null,
-              "renterName": "",
               "partNr": 0,
               "partLabel": null
             }
@@ -288,8 +244,8 @@
           "roomName": "2/3 Hallen",
           "bookings": [
             {
-              "start": "2026-04-20T12:05:00",
-              "end": "2026-04-20T14:00:00",
+              "start": "2026-04-27T12:05:00",
+              "end": "2026-04-27T14:00:00",
               "id": "1291044",
               "color": "#da697a",
               "borderColor": null,
@@ -299,8 +255,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-21T09:20:00",
-              "end": "2026-04-21T14:00:00",
+              "start": "2026-04-28T09:20:00",
+              "end": "2026-04-28T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -310,8 +266,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-21T17:00:00",
-              "end": "2026-04-21T19:00:00",
+              "start": "2026-04-28T17:00:00",
+              "end": "2026-04-28T19:00:00",
               "id": "1487041",
               "color": "#da697a",
               "borderColor": null,
@@ -321,19 +277,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-21T19:00:00",
-              "end": "2026-04-21T20:00:00",
-              "id": "1204802",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Jenter 9 og Gutter 9",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-22T08:10:00",
-              "end": "2026-04-22T10:20:00",
+              "start": "2026-04-29T08:10:00",
+              "end": "2026-04-29T10:20:00",
               "id": "1291051",
               "color": "#da697a",
               "borderColor": null,
@@ -343,8 +288,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T12:05:00",
-              "end": "2026-04-22T14:00:00",
+              "start": "2026-04-29T12:05:00",
+              "end": "2026-04-29T14:00:00",
               "id": "1291054",
               "color": "#da697a",
               "borderColor": null,
@@ -354,8 +299,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T16:00:00",
-              "end": "2026-04-22T17:30:00",
+              "start": "2026-04-29T16:00:00",
+              "end": "2026-04-29T17:30:00",
               "id": "1204804",
               "color": "#da697a",
               "borderColor": null,
@@ -365,8 +310,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-22T17:30:00",
-              "end": "2026-04-22T18:30:00",
+              "start": "2026-04-29T17:30:00",
+              "end": "2026-04-29T18:30:00",
               "id": "1212411",
               "color": "#da697a",
               "borderColor": null,
@@ -376,8 +321,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-23T09:20:00",
-              "end": "2026-04-23T14:00:00",
+              "start": "2026-04-30T09:20:00",
+              "end": "2026-04-30T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -387,24 +332,13 @@
               "partLabel": null
             },
             {
-              "start": "2026-04-23T19:00:00",
-              "end": "2026-04-23T20:30:00",
+              "start": "2026-04-30T19:00:00",
+              "end": "2026-04-30T20:30:00",
               "id": "1204817",
               "color": "#da697a",
               "borderColor": null,
               "title": "Jenter 16 / J14 kl. 1830-2000",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-04-24T08:10:00",
-              "end": "2026-04-24T14:00:00",
-              "id": "1291060",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": null,
-              "renterName": "",
               "partNr": 0,
               "partLabel": null
             }
@@ -421,8 +355,8 @@
           "roomName": "Squashbane 1",
           "bookings": [
             {
-              "start": "2026-04-21T17:30:00",
-              "end": "2026-04-21T18:30:00",
+              "start": "2026-04-28T17:30:00",
+              "end": "2026-04-28T18:30:00",
               "id": "1463531",
               "color": "#da697a",
               "borderColor": "#fff",
@@ -432,8 +366,8 @@
               "partLabel": "Squash bane 1"
             },
             {
-              "start": "2026-04-24T18:00:00",
-              "end": "2026-04-24T19:00:00",
+              "start": "2026-05-01T18:00:00",
+              "end": "2026-05-01T19:00:00",
               "id": "1401698",
               "color": "#da697a",
               "borderColor": "#fff",
@@ -449,8 +383,8 @@
           "roomName": "Squashbane 2",
           "bookings": [
             {
-              "start": "2026-04-21T17:30:00",
-              "end": "2026-04-21T18:30:00",
+              "start": "2026-04-28T17:30:00",
+              "end": "2026-04-28T18:30:00",
               "id": "1463531",
               "color": "#da697a",
               "borderColor": "#fff",
@@ -460,8 +394,8 @@
               "partLabel": "Squash bane 1"
             },
             {
-              "start": "2026-04-24T18:00:00",
-              "end": "2026-04-24T19:00:00",
+              "start": "2026-05-01T18:00:00",
+              "end": "2026-05-01T19:00:00",
               "id": "1401698",
               "color": "#da697a",
               "borderColor": "#fff",
@@ -483,8 +417,8 @@
           "roomName": "Møterom / Kjøkken",
           "bookings": [
             {
-              "start": "2026-04-22T08:00:00",
-              "end": "2026-04-22T11:00:00",
+              "start": "2026-04-29T08:00:00",
+              "end": "2026-04-29T11:00:00",
               "id": "1241575",
               "color": "#da697a",
               "borderColor": null,
