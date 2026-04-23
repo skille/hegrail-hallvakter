@@ -443,6 +443,17 @@
               "partLabel": "Squash bane 1"
             },
             {
+              "start": "2026-04-23T13:00:00",
+              "end": "2026-04-23T15:00:00",
+              "id": "1508445",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening ",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-04-24T18:00:00",
               "end": "2026-04-24T19:00:00",
               "id": "1401698",
@@ -477,6 +488,17 @@
               "color": "#da697a",
               "borderColor": "#fff",
               "title": "Trening",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-04-23T13:00:00",
+              "end": "2026-04-23T15:00:00",
+              "id": "1508445",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening ",
               "renterName": "Marius Børseth",
               "partNr": 1,
               "partLabel": "Squash bane 1"
