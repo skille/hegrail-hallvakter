@@ -485,6 +485,17 @@
               "renterName": "Privat",
               "partNr": 2,
               "partLabel": "Squash bane 2"
+            },
+            {
+              "start": "2026-04-25T18:00:00",
+              "end": "2026-04-25T19:30:00",
+              "id": "1510615",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Squash",
+              "renterName": "Jorg Walter",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
             }
           ]
         },
