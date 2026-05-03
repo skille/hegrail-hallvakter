@@ -432,6 +432,17 @@
           "roomName": "Squashbane 1",
           "bookings": [
             {
+              "start": "2026-05-06T11:00:00",
+              "end": "2026-05-06T12:30:00",
+              "id": "1518413",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "",
+              "renterName": "Privat",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
+            },
+            {
               "start": "2026-05-08T18:00:00",
               "end": "2026-05-08T19:00:00",
               "id": "1401698",
