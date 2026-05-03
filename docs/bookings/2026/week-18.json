@@ -441,6 +441,17 @@
               "renterName": "Marius Børseth",
               "partNr": 1,
               "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-05-03T16:00:00",
+              "end": "2026-05-03T17:30:00",
+              "id": "1518318",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "",
+              "renterName": "Privat",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
             }
           ]
         },
