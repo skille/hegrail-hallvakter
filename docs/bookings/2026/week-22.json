@@ -24,11 +24,11 @@
             },
             {
               "start": "2026-05-26T17:00:00",
-              "end": "2026-05-26T19:00:00",
-              "id": "1505696",
+              "end": "2026-05-26T18:30:00",
+              "id": "1487034",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Treningsturnering J16",
+              "title": "Jenter 12 / Mini 2017 kl. 1730-1830",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -56,13 +56,24 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T17:00:00",
-              "end": "2026-05-27T22:00:00",
-              "id": "1487051",
+              "start": "2026-05-27T16:00:00",
+              "end": "2026-05-27T17:30:00",
+              "id": "1204804",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Treningsturnering J16",
+              "title": "Jenter 11 og Jenter 13",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-05-27T17:30:00",
+              "end": "2026-05-27T18:30:00",
+              "id": "1212411",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Allidrett Hegra IL",
+              "renterName": "Hegra IL Allidrett",
               "partNr": 0,
               "partLabel": null
             },
@@ -78,12 +89,12 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-28T17:00:00",
-              "end": "2026-05-28T22:00:00",
-              "id": "1487051",
+              "start": "2026-05-28T19:00:00",
+              "end": "2026-05-28T20:30:00",
+              "id": "1204817",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Treningsturnering J16",
+              "title": "Jenter 16 / J14 kl. 1830-2000",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -96,17 +107,6 @@
               "borderColor": null,
               "title": null,
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-05-29T17:00:00",
-              "end": "2026-05-29T22:00:00",
-              "id": "1487051",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningsturnering J16",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             }
@@ -129,11 +129,11 @@
             },
             {
               "start": "2026-05-26T17:00:00",
-              "end": "2026-05-26T19:00:00",
-              "id": "1505696",
+              "end": "2026-05-26T18:30:00",
+              "id": "1487034",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Treningsturnering J16",
+              "title": "Jenter 12 / Mini 2017 kl. 1730-1830",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -161,13 +161,24 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T17:00:00",
-              "end": "2026-05-27T22:00:00",
-              "id": "1487051",
+              "start": "2026-05-27T16:00:00",
+              "end": "2026-05-27T17:30:00",
+              "id": "1204804",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Treningsturnering J16",
+              "title": "Jenter 11 og Jenter 13",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-05-27T17:30:00",
+              "end": "2026-05-27T18:30:00",
+              "id": "1212411",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Allidrett Hegra IL",
+              "renterName": "Hegra IL Allidrett",
               "partNr": 0,
               "partLabel": null
             },
@@ -183,12 +194,12 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-28T17:00:00",
-              "end": "2026-05-28T22:00:00",
-              "id": "1487051",
+              "start": "2026-05-28T19:00:00",
+              "end": "2026-05-28T20:30:00",
+              "id": "1204817",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Treningsturnering J16",
+              "title": "Jenter 16 / J14 kl. 1830-2000",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -201,17 +212,6 @@
               "borderColor": null,
               "title": null,
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-05-29T17:00:00",
-              "end": "2026-05-29T22:00:00",
-              "id": "1487051",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningsturnering J16",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             }
@@ -234,11 +234,11 @@
             },
             {
               "start": "2026-05-26T17:00:00",
-              "end": "2026-05-26T19:00:00",
-              "id": "1505696",
+              "end": "2026-05-26T18:30:00",
+              "id": "1487034",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Treningsturnering J16",
+              "title": "Jenter 12 / Mini 2017 kl. 1730-1830",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -266,13 +266,24 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T17:00:00",
-              "end": "2026-05-27T22:00:00",
-              "id": "1487051",
+              "start": "2026-05-27T16:00:00",
+              "end": "2026-05-27T17:30:00",
+              "id": "1204804",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Treningsturnering J16",
+              "title": "Jenter 11 og Jenter 13",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-05-27T17:30:00",
+              "end": "2026-05-27T18:30:00",
+              "id": "1212411",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Allidrett Hegra IL",
+              "renterName": "Hegra IL Allidrett",
               "partNr": 0,
               "partLabel": null
             },
@@ -288,12 +299,12 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-28T17:00:00",
-              "end": "2026-05-28T22:00:00",
-              "id": "1487051",
+              "start": "2026-05-28T19:00:00",
+              "end": "2026-05-28T20:30:00",
+              "id": "1204817",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Treningsturnering J16",
+              "title": "Jenter 16 / J14 kl. 1830-2000",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -306,17 +317,6 @@
               "borderColor": null,
               "title": null,
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-05-29T17:00:00",
-              "end": "2026-05-29T22:00:00",
-              "id": "1487051",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningsturnering J16",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             }
