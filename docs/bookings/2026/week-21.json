@@ -432,6 +432,17 @@
           "roomName": "Squashbane 1",
           "bookings": [
             {
+              "start": "2026-05-20T19:00:00",
+              "end": "2026-05-20T20:00:00",
+              "id": "1533205",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Per Tore Stokke",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-05-22T18:00:00",
               "end": "2026-05-22T19:00:00",
               "id": "1401698",
@@ -448,6 +459,17 @@
           "roomId": 1,
           "roomName": "Squashbane 2",
           "bookings": [
+            {
+              "start": "2026-05-20T19:00:00",
+              "end": "2026-05-20T20:00:00",
+              "id": "1533205",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Per Tore Stokke",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
             {
               "start": "2026-05-22T18:00:00",
               "end": "2026-05-22T19:00:00",
