@@ -56,17 +56,6 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T16:00:00",
-              "end": "2026-05-27T17:30:00",
-              "id": "1204804",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Jenter 11 og Jenter 13",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
               "start": "2026-05-27T17:30:00",
               "end": "2026-05-27T18:30:00",
               "id": "1212411",
@@ -161,17 +150,6 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T16:00:00",
-              "end": "2026-05-27T17:30:00",
-              "id": "1204804",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Jenter 11 og Jenter 13",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
               "start": "2026-05-27T17:30:00",
               "end": "2026-05-27T18:30:00",
               "id": "1212411",
@@ -262,17 +240,6 @@
               "borderColor": null,
               "title": "Hegra U",
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-05-27T16:00:00",
-              "end": "2026-05-27T17:30:00",
-              "id": "1204804",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Jenter 11 og Jenter 13",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             },
