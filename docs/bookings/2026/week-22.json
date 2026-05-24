@@ -349,6 +349,17 @@
               "renterName": "",
               "partNr": 0,
               "partLabel": null
+            },
+            {
+              "start": "2026-05-27T18:00:00",
+              "end": "2026-05-27T19:30:00",
+              "id": "1538923",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Årsmøte Smedhaugen velforening ",
+              "renterName": "SMEDHAUGEN VELFORENING",
+              "partNr": 0,
+              "partLabel": null
             }
           ]
         }
