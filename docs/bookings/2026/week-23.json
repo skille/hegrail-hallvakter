@@ -1,7 +1,7 @@
 {
   "lastUpdate": "2026-05-25T00:00:00+00:00",
-  "weekStart": "2026-05-25T00:00:00+00:00",
-  "weekEnd": "2026-05-31T00:00:00+00:00",
+  "weekStart": "2026-06-01T00:00:00+00:00",
+  "weekEnd": "2026-06-07T00:00:00+00:00",
   "buildings": [
     {
       "buildingId": 632,
@@ -12,8 +12,19 @@
           "roomName": "Hele hallen",
           "bookings": [
             {
-              "start": "2026-05-26T09:20:00",
-              "end": "2026-05-26T14:00:00",
+              "start": "2026-06-01T12:05:00",
+              "end": "2026-06-01T14:00:00",
+              "id": "1291044",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-06-02T09:20:00",
+              "end": "2026-06-02T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -23,8 +34,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-26T17:00:00",
-              "end": "2026-05-26T18:30:00",
+              "start": "2026-06-02T17:00:00",
+              "end": "2026-06-02T18:30:00",
               "id": "1487034",
               "color": "#da697a",
               "borderColor": null,
@@ -34,8 +45,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T08:10:00",
-              "end": "2026-05-27T10:20:00",
+              "start": "2026-06-03T08:10:00",
+              "end": "2026-06-03T10:20:00",
               "id": "1291051",
               "color": "#da697a",
               "borderColor": null,
@@ -45,8 +56,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T12:05:00",
-              "end": "2026-05-27T14:00:00",
+              "start": "2026-06-03T12:05:00",
+              "end": "2026-06-03T14:00:00",
               "id": "1291054",
               "color": "#da697a",
               "borderColor": null,
@@ -56,8 +67,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T17:30:00",
-              "end": "2026-05-27T18:30:00",
+              "start": "2026-06-03T17:30:00",
+              "end": "2026-06-03T18:30:00",
               "id": "1212411",
               "color": "#da697a",
               "borderColor": null,
@@ -67,8 +78,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-28T09:20:00",
-              "end": "2026-05-28T14:00:00",
+              "start": "2026-06-04T09:20:00",
+              "end": "2026-06-04T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -78,8 +89,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-28T19:00:00",
-              "end": "2026-05-28T20:30:00",
+              "start": "2026-06-04T19:00:00",
+              "end": "2026-06-04T20:30:00",
               "id": "1204817",
               "color": "#da697a",
               "borderColor": null,
@@ -89,8 +100,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-29T08:10:00",
-              "end": "2026-05-29T14:00:00",
+              "start": "2026-06-05T08:10:00",
+              "end": "2026-06-05T14:00:00",
               "id": "1291060",
               "color": "#da697a",
               "borderColor": null,
@@ -106,8 +117,19 @@
           "roomName": "1/3 Hallen",
           "bookings": [
             {
-              "start": "2026-05-26T09:20:00",
-              "end": "2026-05-26T14:00:00",
+              "start": "2026-06-01T12:05:00",
+              "end": "2026-06-01T14:00:00",
+              "id": "1291044",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-06-02T09:20:00",
+              "end": "2026-06-02T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -117,8 +139,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-26T17:00:00",
-              "end": "2026-05-26T18:30:00",
+              "start": "2026-06-02T17:00:00",
+              "end": "2026-06-02T18:30:00",
               "id": "1487034",
               "color": "#da697a",
               "borderColor": null,
@@ -128,8 +150,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T08:10:00",
-              "end": "2026-05-27T10:20:00",
+              "start": "2026-06-03T08:10:00",
+              "end": "2026-06-03T10:20:00",
               "id": "1291051",
               "color": "#da697a",
               "borderColor": null,
@@ -139,8 +161,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T12:05:00",
-              "end": "2026-05-27T14:00:00",
+              "start": "2026-06-03T12:05:00",
+              "end": "2026-06-03T14:00:00",
               "id": "1291054",
               "color": "#da697a",
               "borderColor": null,
@@ -150,8 +172,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T17:30:00",
-              "end": "2026-05-27T18:30:00",
+              "start": "2026-06-03T17:30:00",
+              "end": "2026-06-03T18:30:00",
               "id": "1212411",
               "color": "#da697a",
               "borderColor": null,
@@ -161,8 +183,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-28T09:20:00",
-              "end": "2026-05-28T14:00:00",
+              "start": "2026-06-04T09:20:00",
+              "end": "2026-06-04T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -172,8 +194,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-28T19:00:00",
-              "end": "2026-05-28T20:30:00",
+              "start": "2026-06-04T19:00:00",
+              "end": "2026-06-04T20:30:00",
               "id": "1204817",
               "color": "#da697a",
               "borderColor": null,
@@ -183,8 +205,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-29T08:10:00",
-              "end": "2026-05-29T14:00:00",
+              "start": "2026-06-05T08:10:00",
+              "end": "2026-06-05T14:00:00",
               "id": "1291060",
               "color": "#da697a",
               "borderColor": null,
@@ -200,8 +222,19 @@
           "roomName": "2/3 Hallen",
           "bookings": [
             {
-              "start": "2026-05-26T09:20:00",
-              "end": "2026-05-26T14:00:00",
+              "start": "2026-06-01T12:05:00",
+              "end": "2026-06-01T14:00:00",
+              "id": "1291044",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Hegra U",
+              "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-06-02T09:20:00",
+              "end": "2026-06-02T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -211,8 +244,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-26T17:00:00",
-              "end": "2026-05-26T18:30:00",
+              "start": "2026-06-02T17:00:00",
+              "end": "2026-06-02T18:30:00",
               "id": "1487034",
               "color": "#da697a",
               "borderColor": null,
@@ -222,8 +255,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T08:10:00",
-              "end": "2026-05-27T10:20:00",
+              "start": "2026-06-03T08:10:00",
+              "end": "2026-06-03T10:20:00",
               "id": "1291051",
               "color": "#da697a",
               "borderColor": null,
@@ -233,8 +266,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T12:05:00",
-              "end": "2026-05-27T14:00:00",
+              "start": "2026-06-03T12:05:00",
+              "end": "2026-06-03T14:00:00",
               "id": "1291054",
               "color": "#da697a",
               "borderColor": null,
@@ -244,8 +277,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-27T17:30:00",
-              "end": "2026-05-27T18:30:00",
+              "start": "2026-06-03T17:30:00",
+              "end": "2026-06-03T18:30:00",
               "id": "1212411",
               "color": "#da697a",
               "borderColor": null,
@@ -255,8 +288,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-28T09:20:00",
-              "end": "2026-05-28T14:00:00",
+              "start": "2026-06-04T09:20:00",
+              "end": "2026-06-04T14:00:00",
               "id": "1291048",
               "color": "#da697a",
               "borderColor": null,
@@ -266,8 +299,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-28T19:00:00",
-              "end": "2026-05-28T20:30:00",
+              "start": "2026-06-04T19:00:00",
+              "end": "2026-06-04T20:30:00",
               "id": "1204817",
               "color": "#da697a",
               "borderColor": null,
@@ -277,8 +310,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-05-29T08:10:00",
-              "end": "2026-05-29T14:00:00",
+              "start": "2026-06-05T08:10:00",
+              "end": "2026-06-05T14:00:00",
               "id": "1291060",
               "color": "#da697a",
               "borderColor": null,
@@ -300,8 +333,8 @@
           "roomName": "Squashbane 1",
           "bookings": [
             {
-              "start": "2026-05-29T18:00:00",
-              "end": "2026-05-29T19:00:00",
+              "start": "2026-06-05T18:00:00",
+              "end": "2026-06-05T19:00:00",
               "id": "1401698",
               "color": "#da697a",
               "borderColor": "#fff",
@@ -317,8 +350,8 @@
           "roomName": "Squashbane 2",
           "bookings": [
             {
-              "start": "2026-05-29T18:00:00",
-              "end": "2026-05-29T19:00:00",
+              "start": "2026-06-05T18:00:00",
+              "end": "2026-06-05T19:00:00",
               "id": "1401698",
               "color": "#da697a",
               "borderColor": "#fff",
@@ -340,24 +373,13 @@
           "roomName": "Møterom / Kjøkken",
           "bookings": [
             {
-              "start": "2026-05-27T08:00:00",
-              "end": "2026-05-27T11:00:00",
+              "start": "2026-06-03T08:00:00",
+              "end": "2026-06-03T11:00:00",
               "id": "1241575",
               "color": "#da697a",
               "borderColor": null,
               "title": "Skjelstadmark skole",
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-05-27T18:00:00",
-              "end": "2026-05-27T19:30:00",
-              "id": "1538923",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Årsmøte Smedhaugen velforening ",
-              "renterName": "SMEDHAUGEN VELFORENING",
               "partNr": 0,
               "partLabel": null
             }
