@@ -311,6 +311,28 @@
               "partLabel": "Squash bane 2"
             },
             {
+              "start": "2026-05-26T20:00:00",
+              "end": "2026-05-26T21:30:00",
+              "id": "1540193",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-05-27T20:00:00",
+              "end": "2026-05-27T21:30:00",
+              "id": "1540192",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-05-29T18:00:00",
               "end": "2026-05-29T19:00:00",
               "id": "1401698",
@@ -327,6 +349,28 @@
           "roomId": 1,
           "roomName": "Squashbane 2",
           "bookings": [
+            {
+              "start": "2026-05-26T20:00:00",
+              "end": "2026-05-26T21:30:00",
+              "id": "1540193",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-05-27T20:00:00",
+              "end": "2026-05-27T21:30:00",
+              "id": "1540192",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
             {
               "start": "2026-05-29T18:00:00",
               "end": "2026-05-29T19:00:00",
