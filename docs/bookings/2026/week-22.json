@@ -333,6 +333,17 @@
               "partLabel": "Squash bane 2"
             },
             {
+              "start": "2026-05-29T13:00:00",
+              "end": "2026-05-29T15:00:00",
+              "id": "1543161",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening ",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-05-29T18:00:00",
               "end": "2026-05-29T19:00:00",
               "id": "1401698",
@@ -357,6 +368,17 @@
               "borderColor": "#fff",
               "title": "Fyfo",
               "renterName": "Ivar Vigdenes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-05-29T13:00:00",
+              "end": "2026-05-29T15:00:00",
+              "id": "1543161",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening ",
+              "renterName": "Marius Børseth",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             },
