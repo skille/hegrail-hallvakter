@@ -892,13 +892,36 @@
               "renterName": "Jens Ivar Barane",
               "partNr": 2,
               "partLabel": "Squash bane 2"
+            },
+            {
+              "start": "2026-08-29T14:00:00",
+              "end": "2026-08-29T17:00:00",
+              "id": "1606801",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Remi Guittaut",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
             }
           ]
         },
         {
           "roomId": 1,
           "roomName": "Squashbane 2",
-          "bookings": []
+          "bookings": [
+            {
+              "start": "2026-08-29T14:00:00",
+              "end": "2026-08-29T17:00:00",
+              "id": "1606801",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Remi Guittaut",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            }
+          ]
         }
       ]
     },
