@@ -870,13 +870,36 @@
               "renterName": "Privat",
               "partNr": 2,
               "partLabel": "Squash bane 2"
+            },
+            {
+              "start": "2026-08-31T18:00:00",
+              "end": "2026-08-31T19:00:00",
+              "id": "1608210",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Spille squash",
+              "renterName": "Aud-Helen Warnes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
             }
           ]
         },
         {
           "roomId": 1,
           "roomName": "Squashbane 2",
-          "bookings": []
+          "bookings": [
+            {
+              "start": "2026-08-31T18:00:00",
+              "end": "2026-08-31T19:00:00",
+              "id": "1608210",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Spille squash",
+              "renterName": "Aud-Helen Warnes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            }
+          ]
         }
       ]
     },
