@@ -892,6 +892,17 @@
               "renterName": "Per Tore Stokke",
               "partNr": 1,
               "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-09-02T20:00:00",
+              "end": "2026-09-02T22:00:00",
+              "id": "1610875",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Remi Guittaut",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
             }
           ]
         },
