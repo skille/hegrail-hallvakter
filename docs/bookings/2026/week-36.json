@@ -274,17 +274,6 @@
               "renterName": "",
               "partNr": 0,
               "partLabel": null
-            },
-            {
-              "start": "2026-09-04T17:00:00",
-              "end": "2026-09-04T19:00:00",
-              "id": "1532282",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Fellesøkt håndball ",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
             }
           ]
         },
@@ -555,17 +544,6 @@
               "renterName": "",
               "partNr": 0,
               "partLabel": null
-            },
-            {
-              "start": "2026-09-04T17:00:00",
-              "end": "2026-09-04T19:00:00",
-              "id": "1532282",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Fellesøkt håndball ",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
             }
           ]
         },
@@ -834,17 +812,6 @@
               "borderColor": null,
               "title": "Hegra U",
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-04T17:00:00",
-              "end": "2026-09-04T19:00:00",
-              "id": "1532282",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Fellesøkt håndball ",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             }
