@@ -859,6 +859,17 @@
               "renterName": "Per Tore Stokke",
               "partNr": 1,
               "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-09-06T12:30:00",
+              "end": "2026-09-06T14:30:00",
+              "id": "1613360",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Tr",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
             }
           ]
         },
@@ -885,6 +896,17 @@
               "borderColor": "#fff",
               "title": "Trening",
               "renterName": "Per Tore Stokke",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-09-06T12:30:00",
+              "end": "2026-09-06T14:30:00",
+              "id": "1613360",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Tr",
+              "renterName": "Marius Børseth",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             }
