@@ -861,6 +861,17 @@
           "roomName": "Squashbane 1",
           "bookings": [
             {
+              "start": "2026-09-07T17:00:00",
+              "end": "2026-09-07T18:30:00",
+              "id": "1614917",
+              "color": "#ff9900",
+              "borderColor": "#fff",
+              "title": "trening",
+              "renterName": "Alexander Baklie",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
+            },
+            {
               "start": "2026-09-09T19:00:00",
               "end": "2026-09-09T20:00:00",
               "id": "1614419",
