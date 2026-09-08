@@ -905,6 +905,17 @@
               "partLabel": "Squash bane 1"
             },
             {
+              "start": "2026-09-10T11:30:00",
+              "end": "2026-09-10T13:00:00",
+              "id": "1616540",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-09-10T17:00:00",
               "end": "2026-09-10T18:30:00",
               "id": "1615432",
@@ -929,6 +940,17 @@
               "borderColor": "#fff",
               "title": "",
               "renterName": "Privat",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-09-10T11:30:00",
+              "end": "2026-09-10T13:00:00",
+              "id": "1616540",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             }
