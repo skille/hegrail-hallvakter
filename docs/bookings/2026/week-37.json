@@ -872,6 +872,17 @@
               "partLabel": "Squash bane 2"
             },
             {
+              "start": "2026-09-08T11:00:00",
+              "end": "2026-09-08T12:30:00",
+              "id": "1615343",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Jens Ivar Barane",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
+            },
+            {
               "start": "2026-09-09T19:00:00",
               "end": "2026-09-09T20:00:00",
               "id": "1614419",
