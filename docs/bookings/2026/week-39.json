@@ -1,7 +1,7 @@
 {
   "lastUpdate": "2026-09-14T00:00:00+00:00",
-  "weekStart": "2026-09-14T00:00:00+00:00",
-  "weekEnd": "2026-09-20T00:00:00+00:00",
+  "weekStart": "2026-09-21T00:00:00+00:00",
+  "weekEnd": "2026-09-27T00:00:00+00:00",
   "buildings": [
     {
       "buildingId": 632,
@@ -12,8 +12,8 @@
           "roomName": "Hele hallen",
           "bookings": [
             {
-              "start": "2026-09-14T09:00:00",
-              "end": "2026-09-14T14:00:00",
+              "start": "2026-09-21T09:00:00",
+              "end": "2026-09-21T14:00:00",
               "id": "1597455",
               "color": "#da697a",
               "borderColor": null,
@@ -23,8 +23,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T16:00:00",
-              "end": "2026-09-14T17:30:00",
+              "start": "2026-09-21T16:00:00",
+              "end": "2026-09-21T17:30:00",
               "id": "1532257",
               "color": "#da697a",
               "borderColor": null,
@@ -34,8 +34,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T17:30:00",
-              "end": "2026-09-14T18:30:00",
+              "start": "2026-09-21T17:30:00",
+              "end": "2026-09-21T18:30:00",
               "id": "1532259",
               "color": "#da697a",
               "borderColor": null,
@@ -45,8 +45,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T18:30:00",
-              "end": "2026-09-14T19:00:00",
+              "start": "2026-09-21T18:30:00",
+              "end": "2026-09-21T19:00:00",
               "id": "1532260",
               "color": "#da697a",
               "borderColor": null,
@@ -56,8 +56,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T19:00:00",
-              "end": "2026-09-14T20:30:00",
+              "start": "2026-09-21T19:00:00",
+              "end": "2026-09-21T20:30:00",
               "id": "1532261",
               "color": "#da697a",
               "borderColor": null,
@@ -67,8 +67,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T20:30:00",
-              "end": "2026-09-14T22:00:00",
+              "start": "2026-09-21T20:30:00",
+              "end": "2026-09-21T22:00:00",
               "id": "1532262",
               "color": "#da697a",
               "borderColor": null,
@@ -78,8 +78,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T08:00:00",
-              "end": "2026-09-15T14:00:00",
+              "start": "2026-09-22T08:00:00",
+              "end": "2026-09-22T14:00:00",
               "id": "1597458",
               "color": "#da697a",
               "borderColor": null,
@@ -89,8 +89,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T16:30:00",
-              "end": "2026-09-15T17:30:00",
+              "start": "2026-09-22T16:30:00",
+              "end": "2026-09-22T17:30:00",
               "id": "1532263",
               "color": "#da697a",
               "borderColor": null,
@@ -100,8 +100,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T17:30:00",
-              "end": "2026-09-15T18:00:00",
+              "start": "2026-09-22T17:30:00",
+              "end": "2026-09-22T18:00:00",
               "id": "1532264",
               "color": "#da697a",
               "borderColor": null,
@@ -111,8 +111,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T18:00:00",
-              "end": "2026-09-15T19:00:00",
+              "start": "2026-09-22T18:00:00",
+              "end": "2026-09-22T19:00:00",
               "id": "1532265",
               "color": "#da697a",
               "borderColor": null,
@@ -122,8 +122,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T19:00:00",
-              "end": "2026-09-15T19:30:00",
+              "start": "2026-09-22T19:00:00",
+              "end": "2026-09-22T19:30:00",
               "id": "1532266",
               "color": "#da697a",
               "borderColor": null,
@@ -133,8 +133,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T19:30:00",
-              "end": "2026-09-15T21:00:00",
+              "start": "2026-09-22T19:30:00",
+              "end": "2026-09-22T21:00:00",
               "id": "1532267",
               "color": "#da697a",
               "borderColor": null,
@@ -144,8 +144,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T21:00:00",
-              "end": "2026-09-15T22:00:00",
+              "start": "2026-09-22T21:00:00",
+              "end": "2026-09-22T22:00:00",
               "id": "1532268",
               "color": "#da697a",
               "borderColor": null,
@@ -155,8 +155,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T08:00:00",
-              "end": "2026-09-16T14:00:00",
+              "start": "2026-09-23T08:00:00",
+              "end": "2026-09-23T14:00:00",
               "id": "1597459",
               "color": "#da697a",
               "borderColor": null,
@@ -166,8 +166,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T16:00:00",
-              "end": "2026-09-16T17:30:00",
+              "start": "2026-09-23T16:00:00",
+              "end": "2026-09-23T17:30:00",
               "id": "1532270",
               "color": "#da697a",
               "borderColor": null,
@@ -177,8 +177,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T17:30:00",
-              "end": "2026-09-16T18:30:00",
+              "start": "2026-09-23T17:30:00",
+              "end": "2026-09-23T18:30:00",
               "id": "1531011",
               "color": "#da697a",
               "borderColor": null,
@@ -188,8 +188,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T18:30:00",
-              "end": "2026-09-16T20:30:00",
+              "start": "2026-09-23T18:30:00",
+              "end": "2026-09-23T20:30:00",
               "id": "1532271",
               "color": "#da697a",
               "borderColor": null,
@@ -199,8 +199,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T20:30:00",
-              "end": "2026-09-16T22:00:00",
+              "start": "2026-09-23T20:30:00",
+              "end": "2026-09-23T22:00:00",
               "id": "1530704",
               "color": "#da697a",
               "borderColor": null,
@@ -210,8 +210,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T08:00:00",
-              "end": "2026-09-17T14:00:00",
+              "start": "2026-09-24T08:00:00",
+              "end": "2026-09-24T14:00:00",
               "id": "1597460",
               "color": "#da697a",
               "borderColor": null,
@@ -221,8 +221,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T16:30:00",
-              "end": "2026-09-17T17:30:00",
+              "start": "2026-09-24T16:30:00",
+              "end": "2026-09-24T17:30:00",
               "id": "1532275",
               "color": "#da697a",
               "borderColor": null,
@@ -232,8 +232,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T17:30:00",
-              "end": "2026-09-17T19:00:00",
+              "start": "2026-09-24T17:30:00",
+              "end": "2026-09-24T19:00:00",
               "id": "1532277",
               "color": "#da697a",
               "borderColor": null,
@@ -243,8 +243,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T19:00:00",
-              "end": "2026-09-17T20:00:00",
+              "start": "2026-09-24T19:00:00",
+              "end": "2026-09-24T20:00:00",
               "id": "1532278",
               "color": "#da697a",
               "borderColor": null,
@@ -254,8 +254,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T20:00:00",
-              "end": "2026-09-17T21:30:00",
+              "start": "2026-09-24T20:00:00",
+              "end": "2026-09-24T21:30:00",
               "id": "1532280",
               "color": "#da697a",
               "borderColor": null,
@@ -265,68 +265,13 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-18T08:00:00",
-              "end": "2026-09-18T14:00:00",
+              "start": "2026-09-25T08:00:00",
+              "end": "2026-09-25T14:00:00",
               "id": "1597461",
               "color": "#da697a",
               "borderColor": null,
               "title": "Hegra U",
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T17:00:00",
-              "end": "2026-09-18T19:00:00",
-              "id": "1532282",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Fellesøkt håndball ",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T19:00:00",
-              "end": "2026-09-18T21:00:00",
-              "id": "1557725",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningshelg",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T21:00:00",
-              "end": "2026-09-18T23:59:00",
-              "id": "1589508",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Nattcup",
-              "renterName": "4H TRØNDELAG",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-19T00:00:00",
-              "end": "2026-09-19T10:00:00",
-              "id": "1589509",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Nattcup",
-              "renterName": "4H TRØNDELAG",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-19T10:00:00",
-              "end": "2026-09-19T18:00:00",
-              "id": "1557720",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningshelg",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             }
@@ -337,8 +282,8 @@
           "roomName": "1/3 Hallen",
           "bookings": [
             {
-              "start": "2026-09-14T09:00:00",
-              "end": "2026-09-14T14:00:00",
+              "start": "2026-09-21T09:00:00",
+              "end": "2026-09-21T14:00:00",
               "id": "1597455",
               "color": "#da697a",
               "borderColor": null,
@@ -348,8 +293,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T16:00:00",
-              "end": "2026-09-14T17:30:00",
+              "start": "2026-09-21T16:00:00",
+              "end": "2026-09-21T17:30:00",
               "id": "1532257",
               "color": "#da697a",
               "borderColor": null,
@@ -359,8 +304,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T17:30:00",
-              "end": "2026-09-14T18:30:00",
+              "start": "2026-09-21T17:30:00",
+              "end": "2026-09-21T18:30:00",
               "id": "1532259",
               "color": "#da697a",
               "borderColor": null,
@@ -370,8 +315,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T18:30:00",
-              "end": "2026-09-14T19:00:00",
+              "start": "2026-09-21T18:30:00",
+              "end": "2026-09-21T19:00:00",
               "id": "1532260",
               "color": "#da697a",
               "borderColor": null,
@@ -381,8 +326,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T19:00:00",
-              "end": "2026-09-14T20:30:00",
+              "start": "2026-09-21T19:00:00",
+              "end": "2026-09-21T20:30:00",
               "id": "1532261",
               "color": "#da697a",
               "borderColor": null,
@@ -392,8 +337,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T20:30:00",
-              "end": "2026-09-14T22:00:00",
+              "start": "2026-09-21T20:30:00",
+              "end": "2026-09-21T22:00:00",
               "id": "1532262",
               "color": "#da697a",
               "borderColor": null,
@@ -403,8 +348,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T08:00:00",
-              "end": "2026-09-15T14:00:00",
+              "start": "2026-09-22T08:00:00",
+              "end": "2026-09-22T14:00:00",
               "id": "1597458",
               "color": "#da697a",
               "borderColor": null,
@@ -414,8 +359,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T16:30:00",
-              "end": "2026-09-15T17:30:00",
+              "start": "2026-09-22T16:30:00",
+              "end": "2026-09-22T17:30:00",
               "id": "1532263",
               "color": "#da697a",
               "borderColor": null,
@@ -425,8 +370,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T17:30:00",
-              "end": "2026-09-15T18:00:00",
+              "start": "2026-09-22T17:30:00",
+              "end": "2026-09-22T18:00:00",
               "id": "1532264",
               "color": "#da697a",
               "borderColor": null,
@@ -436,8 +381,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T18:00:00",
-              "end": "2026-09-15T19:00:00",
+              "start": "2026-09-22T18:00:00",
+              "end": "2026-09-22T19:00:00",
               "id": "1532265",
               "color": "#da697a",
               "borderColor": null,
@@ -447,8 +392,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T19:00:00",
-              "end": "2026-09-15T19:30:00",
+              "start": "2026-09-22T19:00:00",
+              "end": "2026-09-22T19:30:00",
               "id": "1532266",
               "color": "#da697a",
               "borderColor": null,
@@ -458,8 +403,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T19:30:00",
-              "end": "2026-09-15T21:00:00",
+              "start": "2026-09-22T19:30:00",
+              "end": "2026-09-22T21:00:00",
               "id": "1532267",
               "color": "#da697a",
               "borderColor": null,
@@ -469,8 +414,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T21:00:00",
-              "end": "2026-09-15T22:00:00",
+              "start": "2026-09-22T21:00:00",
+              "end": "2026-09-22T22:00:00",
               "id": "1532268",
               "color": "#da697a",
               "borderColor": null,
@@ -480,8 +425,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T08:00:00",
-              "end": "2026-09-16T14:00:00",
+              "start": "2026-09-23T08:00:00",
+              "end": "2026-09-23T14:00:00",
               "id": "1597459",
               "color": "#da697a",
               "borderColor": null,
@@ -491,8 +436,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T16:00:00",
-              "end": "2026-09-16T17:30:00",
+              "start": "2026-09-23T16:00:00",
+              "end": "2026-09-23T17:30:00",
               "id": "1532270",
               "color": "#da697a",
               "borderColor": null,
@@ -502,8 +447,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T17:30:00",
-              "end": "2026-09-16T18:30:00",
+              "start": "2026-09-23T17:30:00",
+              "end": "2026-09-23T18:30:00",
               "id": "1531011",
               "color": "#da697a",
               "borderColor": null,
@@ -513,8 +458,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T18:30:00",
-              "end": "2026-09-16T20:30:00",
+              "start": "2026-09-23T18:30:00",
+              "end": "2026-09-23T20:30:00",
               "id": "1532271",
               "color": "#da697a",
               "borderColor": null,
@@ -524,8 +469,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T20:30:00",
-              "end": "2026-09-16T22:00:00",
+              "start": "2026-09-23T20:30:00",
+              "end": "2026-09-23T22:00:00",
               "id": "1530704",
               "color": "#da697a",
               "borderColor": null,
@@ -535,8 +480,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T08:00:00",
-              "end": "2026-09-17T14:00:00",
+              "start": "2026-09-24T08:00:00",
+              "end": "2026-09-24T14:00:00",
               "id": "1597460",
               "color": "#da697a",
               "borderColor": null,
@@ -546,8 +491,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T16:30:00",
-              "end": "2026-09-17T17:30:00",
+              "start": "2026-09-24T16:30:00",
+              "end": "2026-09-24T17:30:00",
               "id": "1532275",
               "color": "#da697a",
               "borderColor": null,
@@ -557,8 +502,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T17:30:00",
-              "end": "2026-09-17T19:00:00",
+              "start": "2026-09-24T17:30:00",
+              "end": "2026-09-24T19:00:00",
               "id": "1532277",
               "color": "#da697a",
               "borderColor": null,
@@ -568,8 +513,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T19:00:00",
-              "end": "2026-09-17T20:00:00",
+              "start": "2026-09-24T19:00:00",
+              "end": "2026-09-24T20:00:00",
               "id": "1532278",
               "color": "#da697a",
               "borderColor": null,
@@ -579,8 +524,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T20:00:00",
-              "end": "2026-09-17T21:30:00",
+              "start": "2026-09-24T20:00:00",
+              "end": "2026-09-24T21:30:00",
               "id": "1532280",
               "color": "#da697a",
               "borderColor": null,
@@ -590,68 +535,13 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-18T08:00:00",
-              "end": "2026-09-18T14:00:00",
+              "start": "2026-09-25T08:00:00",
+              "end": "2026-09-25T14:00:00",
               "id": "1597461",
               "color": "#da697a",
               "borderColor": null,
               "title": "Hegra U",
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T17:00:00",
-              "end": "2026-09-18T19:00:00",
-              "id": "1532282",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Fellesøkt håndball ",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T19:00:00",
-              "end": "2026-09-18T21:00:00",
-              "id": "1557725",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningshelg",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T21:00:00",
-              "end": "2026-09-18T23:59:00",
-              "id": "1589508",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Nattcup",
-              "renterName": "4H TRØNDELAG",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-19T00:00:00",
-              "end": "2026-09-19T10:00:00",
-              "id": "1589509",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Nattcup",
-              "renterName": "4H TRØNDELAG",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-19T10:00:00",
-              "end": "2026-09-19T18:00:00",
-              "id": "1557720",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningshelg",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             }
@@ -662,8 +552,8 @@
           "roomName": "2/3 Hallen",
           "bookings": [
             {
-              "start": "2026-09-14T09:00:00",
-              "end": "2026-09-14T14:00:00",
+              "start": "2026-09-21T09:00:00",
+              "end": "2026-09-21T14:00:00",
               "id": "1597455",
               "color": "#da697a",
               "borderColor": null,
@@ -673,8 +563,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T16:00:00",
-              "end": "2026-09-14T17:30:00",
+              "start": "2026-09-21T16:00:00",
+              "end": "2026-09-21T17:30:00",
               "id": "1532257",
               "color": "#da697a",
               "borderColor": null,
@@ -684,8 +574,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T17:30:00",
-              "end": "2026-09-14T18:30:00",
+              "start": "2026-09-21T17:30:00",
+              "end": "2026-09-21T18:30:00",
               "id": "1532259",
               "color": "#da697a",
               "borderColor": null,
@@ -695,8 +585,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T18:30:00",
-              "end": "2026-09-14T19:00:00",
+              "start": "2026-09-21T18:30:00",
+              "end": "2026-09-21T19:00:00",
               "id": "1532260",
               "color": "#da697a",
               "borderColor": null,
@@ -706,8 +596,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T19:00:00",
-              "end": "2026-09-14T20:30:00",
+              "start": "2026-09-21T19:00:00",
+              "end": "2026-09-21T20:30:00",
               "id": "1532261",
               "color": "#da697a",
               "borderColor": null,
@@ -717,8 +607,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-14T20:30:00",
-              "end": "2026-09-14T22:00:00",
+              "start": "2026-09-21T20:30:00",
+              "end": "2026-09-21T22:00:00",
               "id": "1532262",
               "color": "#da697a",
               "borderColor": null,
@@ -728,8 +618,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T08:00:00",
-              "end": "2026-09-15T14:00:00",
+              "start": "2026-09-22T08:00:00",
+              "end": "2026-09-22T14:00:00",
               "id": "1597458",
               "color": "#da697a",
               "borderColor": null,
@@ -739,8 +629,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T16:30:00",
-              "end": "2026-09-15T17:30:00",
+              "start": "2026-09-22T16:30:00",
+              "end": "2026-09-22T17:30:00",
               "id": "1532263",
               "color": "#da697a",
               "borderColor": null,
@@ -750,8 +640,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T17:30:00",
-              "end": "2026-09-15T18:00:00",
+              "start": "2026-09-22T17:30:00",
+              "end": "2026-09-22T18:00:00",
               "id": "1532264",
               "color": "#da697a",
               "borderColor": null,
@@ -761,8 +651,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T18:00:00",
-              "end": "2026-09-15T19:00:00",
+              "start": "2026-09-22T18:00:00",
+              "end": "2026-09-22T19:00:00",
               "id": "1532265",
               "color": "#da697a",
               "borderColor": null,
@@ -772,8 +662,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T19:00:00",
-              "end": "2026-09-15T19:30:00",
+              "start": "2026-09-22T19:00:00",
+              "end": "2026-09-22T19:30:00",
               "id": "1532266",
               "color": "#da697a",
               "borderColor": null,
@@ -783,8 +673,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T19:30:00",
-              "end": "2026-09-15T21:00:00",
+              "start": "2026-09-22T19:30:00",
+              "end": "2026-09-22T21:00:00",
               "id": "1532267",
               "color": "#da697a",
               "borderColor": null,
@@ -794,8 +684,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-15T21:00:00",
-              "end": "2026-09-15T22:00:00",
+              "start": "2026-09-22T21:00:00",
+              "end": "2026-09-22T22:00:00",
               "id": "1532268",
               "color": "#da697a",
               "borderColor": null,
@@ -805,8 +695,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T08:00:00",
-              "end": "2026-09-16T14:00:00",
+              "start": "2026-09-23T08:00:00",
+              "end": "2026-09-23T14:00:00",
               "id": "1597459",
               "color": "#da697a",
               "borderColor": null,
@@ -816,8 +706,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T16:00:00",
-              "end": "2026-09-16T17:30:00",
+              "start": "2026-09-23T16:00:00",
+              "end": "2026-09-23T17:30:00",
               "id": "1532270",
               "color": "#da697a",
               "borderColor": null,
@@ -827,8 +717,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T17:30:00",
-              "end": "2026-09-16T18:30:00",
+              "start": "2026-09-23T17:30:00",
+              "end": "2026-09-23T18:30:00",
               "id": "1531011",
               "color": "#da697a",
               "borderColor": null,
@@ -838,8 +728,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T18:30:00",
-              "end": "2026-09-16T20:30:00",
+              "start": "2026-09-23T18:30:00",
+              "end": "2026-09-23T20:30:00",
               "id": "1532271",
               "color": "#da697a",
               "borderColor": null,
@@ -849,8 +739,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-16T20:30:00",
-              "end": "2026-09-16T22:00:00",
+              "start": "2026-09-23T20:30:00",
+              "end": "2026-09-23T22:00:00",
               "id": "1530704",
               "color": "#da697a",
               "borderColor": null,
@@ -860,8 +750,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T08:00:00",
-              "end": "2026-09-17T14:00:00",
+              "start": "2026-09-24T08:00:00",
+              "end": "2026-09-24T14:00:00",
               "id": "1597460",
               "color": "#da697a",
               "borderColor": null,
@@ -871,8 +761,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T16:30:00",
-              "end": "2026-09-17T17:30:00",
+              "start": "2026-09-24T16:30:00",
+              "end": "2026-09-24T17:30:00",
               "id": "1532275",
               "color": "#da697a",
               "borderColor": null,
@@ -882,8 +772,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T17:30:00",
-              "end": "2026-09-17T19:00:00",
+              "start": "2026-09-24T17:30:00",
+              "end": "2026-09-24T19:00:00",
               "id": "1532277",
               "color": "#da697a",
               "borderColor": null,
@@ -893,8 +783,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T19:00:00",
-              "end": "2026-09-17T20:00:00",
+              "start": "2026-09-24T19:00:00",
+              "end": "2026-09-24T20:00:00",
               "id": "1532278",
               "color": "#da697a",
               "borderColor": null,
@@ -904,8 +794,8 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-17T20:00:00",
-              "end": "2026-09-17T21:30:00",
+              "start": "2026-09-24T20:00:00",
+              "end": "2026-09-24T21:30:00",
               "id": "1532280",
               "color": "#da697a",
               "borderColor": null,
@@ -915,68 +805,13 @@
               "partLabel": null
             },
             {
-              "start": "2026-09-18T08:00:00",
-              "end": "2026-09-18T14:00:00",
+              "start": "2026-09-25T08:00:00",
+              "end": "2026-09-25T14:00:00",
               "id": "1597461",
               "color": "#da697a",
               "borderColor": null,
               "title": "Hegra U",
               "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T17:00:00",
-              "end": "2026-09-18T19:00:00",
-              "id": "1532282",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Fellesøkt håndball ",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T19:00:00",
-              "end": "2026-09-18T21:00:00",
-              "id": "1557725",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningshelg",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T21:00:00",
-              "end": "2026-09-18T23:59:00",
-              "id": "1589508",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Nattcup",
-              "renterName": "4H TRØNDELAG",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-19T00:00:00",
-              "end": "2026-09-19T10:00:00",
-              "id": "1589509",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Nattcup",
-              "renterName": "4H TRØNDELAG",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-19T10:00:00",
-              "end": "2026-09-19T18:00:00",
-              "id": "1557720",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningshelg",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
             }
@@ -991,36 +826,12 @@
         {
           "roomId": 0,
           "roomName": "Squashbane 1",
-          "bookings": [
-            {
-              "start": "2026-09-18T17:00:00",
-              "end": "2026-09-18T19:00:00",
-              "id": "1612723",
-              "color": "#da697a",
-              "borderColor": "#fff",
-              "title": "Trening",
-              "renterName": "Marius Børseth",
-              "partNr": 1,
-              "partLabel": "Squash bane 1"
-            }
-          ]
+          "bookings": []
         },
         {
           "roomId": 1,
           "roomName": "Squashbane 2",
-          "bookings": [
-            {
-              "start": "2026-09-18T17:00:00",
-              "end": "2026-09-18T19:00:00",
-              "id": "1612723",
-              "color": "#da697a",
-              "borderColor": "#fff",
-              "title": "Trening",
-              "renterName": "Marius Børseth",
-              "partNr": 1,
-              "partLabel": "Squash bane 1"
-            }
-          ]
+          "bookings": []
         }
       ]
     },
@@ -1033,67 +844,23 @@
           "roomName": "Møterom / Kjøkken",
           "bookings": [
             {
-              "start": "2026-09-14T08:00:00",
-              "end": "2026-09-14T14:30:00",
-              "id": "1562818",
+              "start": "2026-09-23T08:00:00",
+              "end": "2026-09-23T11:00:00",
+              "id": "1553969",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Hegra ungdomsskole",
+              "title": "Skjelstadmark oppvekstsenter",
               "renterName": "",
               "partNr": 0,
               "partLabel": null
             },
             {
-              "start": "2026-09-16T08:00:00",
-              "end": "2026-09-16T14:00:00",
-              "id": "1374294",
+              "start": "2026-09-23T17:00:00",
+              "end": "2026-09-23T18:00:00",
+              "id": "1600195",
               "color": "#da697a",
               "borderColor": null,
-              "title": "Hegra Ungdomsskole - skolefotografering",
-              "renterName": "",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T17:00:00",
-              "end": "2026-09-18T21:00:00",
-              "id": "1557732",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningshelg",
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-18T21:00:00",
-              "end": "2026-09-18T23:59:00",
-              "id": "1589514",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Nattcup",
-              "renterName": "4H TRØNDELAG",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-19T00:00:00",
-              "end": "2026-09-19T10:00:00",
-              "id": "1589516",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Nattcup",
-              "renterName": "4H TRØNDELAG",
-              "partNr": 0,
-              "partLabel": null
-            },
-            {
-              "start": "2026-09-19T10:00:00",
-              "end": "2026-09-19T18:00:00",
-              "id": "1557734",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": "Treningshelg",
+              "title": "dommerkurs",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
