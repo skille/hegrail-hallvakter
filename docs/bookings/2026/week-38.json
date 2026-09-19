@@ -969,6 +969,17 @@
               "renterName": "Privat",
               "partNr": 2,
               "partLabel": "Squash bane 2"
+            },
+            {
+              "start": "2026-09-19T11:00:00",
+              "end": "2026-09-19T12:30:00",
+              "id": "1624755",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Alexander Baklie",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
             }
           ]
         },
