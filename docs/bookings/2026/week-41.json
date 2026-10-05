@@ -113,6 +113,17 @@
               "partLabel": "Squash bane 1"
             },
             {
+              "start": "2026-10-05T20:00:00",
+              "end": "2026-10-05T22:00:00",
+              "id": "1636777",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Remi Guittaut",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-10-09T18:00:00",
               "end": "2026-10-09T19:00:00",
               "id": "1623417",
@@ -148,6 +159,17 @@
               "borderColor": "#fff",
               "title": "Trening",
               "renterName": "Marianne Bremseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
+              "start": "2026-10-05T20:00:00",
+              "end": "2026-10-05T22:00:00",
+              "id": "1636777",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening",
+              "renterName": "Remi Guittaut",
               "partNr": 1,
               "partLabel": "Squash bane 1"
             },
