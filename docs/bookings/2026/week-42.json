@@ -287,6 +287,17 @@
               "partLabel": null
             },
             {
+              "start": "2026-10-17T09:00:00",
+              "end": "2026-10-17T14:30:00",
+              "id": "1636245",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kamper",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2026-10-18T10:30:00",
               "end": "2026-10-18T17:00:00",
               "id": "1589849",
@@ -574,6 +585,17 @@
               "color": "#da697a",
               "borderColor": null,
               "title": "Fellesøkt håndball ",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-10-17T09:00:00",
+              "end": "2026-10-17T14:30:00",
+              "id": "1636245",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kamper",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
@@ -871,6 +893,17 @@
               "partLabel": null
             },
             {
+              "start": "2026-10-17T09:00:00",
+              "end": "2026-10-17T14:30:00",
+              "id": "1636245",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kamper",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2026-10-18T10:30:00",
               "end": "2026-10-18T17:00:00",
               "id": "1589849",
@@ -936,6 +969,17 @@
               "start": "2026-10-15T17:00:00",
               "end": "2026-10-15T21:30:00",
               "id": "1607999",
+              "color": "#da697a",
+              "borderColor": null,
+              "title": "Kamper",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-10-17T09:00:00",
+              "end": "2026-10-17T14:30:00",
+              "id": "1636246",
               "color": "#da697a",
               "borderColor": null,
               "title": "Kamper",
