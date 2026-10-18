@@ -265,6 +265,17 @@
               "partLabel": null
             },
             {
+              "start": "2026-10-22T21:30:00",
+              "end": "2026-10-22T22:00:00",
+              "id": "1647570",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "trening",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2026-10-23T08:00:00",
               "end": "2026-10-23T14:00:00",
               "id": "1597461",
@@ -546,6 +557,17 @@
               "partLabel": null
             },
             {
+              "start": "2026-10-22T21:30:00",
+              "end": "2026-10-22T22:00:00",
+              "id": "1647570",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "trening",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2026-10-23T08:00:00",
               "end": "2026-10-23T14:00:00",
               "id": "1597461",
@@ -822,6 +844,17 @@
               "color": "#da697a",
               "borderColor": null,
               "title": "Håndball jenter 12 og jenter 13",
+              "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-10-22T21:30:00",
+              "end": "2026-10-22T22:00:00",
+              "id": "1647570",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "trening",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
