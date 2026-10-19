@@ -894,6 +894,17 @@
           "roomName": "Squashbane 1",
           "bookings": [
             {
+              "start": "2026-10-27T16:00:00",
+              "end": "2026-10-27T18:00:00",
+              "id": "1647869",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening ",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            },
+            {
               "start": "2026-10-30T18:00:00",
               "end": "2026-10-30T19:00:00",
               "id": "1623417",
@@ -909,7 +920,19 @@
         {
           "roomId": 1,
           "roomName": "Squashbane 2",
-          "bookings": []
+          "bookings": [
+            {
+              "start": "2026-10-27T16:00:00",
+              "end": "2026-10-27T18:00:00",
+              "id": "1647869",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Trening ",
+              "renterName": "Marius Børseth",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
+            }
+          ]
         }
       ]
     },
