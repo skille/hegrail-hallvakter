@@ -1006,17 +1006,6 @@
             {
               "start": "2026-10-25T16:00:00",
               "end": "2026-10-25T18:00:00",
-              "id": "1652582",
-              "color": "#da697a",
-              "borderColor": "#fff",
-              "title": "Fyfo",
-              "renterName": "Ivar Vigdenes",
-              "partNr": 1,
-              "partLabel": "Squash bane 1"
-            },
-            {
-              "start": "2026-10-25T16:00:00",
-              "end": "2026-10-25T18:00:00",
               "id": "1652736",
               "color": "#da697a",
               "borderColor": "#fff",
@@ -1024,6 +1013,17 @@
               "renterName": "Remi Guittaut",
               "partNr": 2,
               "partLabel": "Squash bane 2"
+            },
+            {
+              "start": "2026-10-25T16:00:00",
+              "end": "2026-10-25T18:00:00",
+              "id": "1652582",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "Fyfo",
+              "renterName": "Ivar Vigdenes",
+              "partNr": 1,
+              "partLabel": "Squash bane 1"
             }
           ]
         },
