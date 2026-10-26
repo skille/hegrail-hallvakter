@@ -307,6 +307,17 @@
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
+            },
+            {
+              "start": "2026-11-08T18:00:00",
+              "end": "2026-11-08T19:30:00",
+              "id": "1653440",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Hegra il Fotball",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
             }
           ]
         },
@@ -610,6 +621,17 @@
               "renterName": "HEGRA IDRETTSLAG.Håndball",
               "partNr": 0,
               "partLabel": null
+            },
+            {
+              "start": "2026-11-08T18:00:00",
+              "end": "2026-11-08T19:30:00",
+              "id": "1653440",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Hegra il Fotball",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
+              "partNr": 0,
+              "partLabel": null
             }
           ]
         },
@@ -911,6 +933,17 @@
               "borderColor": null,
               "title": "Kamper - G14 og 5 div damer",
               "renterName": "HEGRA IDRETTSLAG.Håndball",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-11-08T18:00:00",
+              "end": "2026-11-08T19:30:00",
+              "id": "1653440",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Hegra il Fotball",
+              "renterName": "HEGRA IDRETTSLAG FOTBALL",
               "partNr": 0,
               "partLabel": null
             }
