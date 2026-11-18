@@ -276,6 +276,17 @@
               "partLabel": null
             },
             {
+              "start": "2026-11-20T18:00:00",
+              "end": "2026-11-20T20:00:00",
+              "id": "1672143",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Trening ",
+              "renterName": "Ali Abukar Arif",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2026-11-21T10:30:00",
               "end": "2026-11-21T20:30:00",
               "id": "1589890",
@@ -579,6 +590,17 @@
               "partLabel": null
             },
             {
+              "start": "2026-11-20T18:00:00",
+              "end": "2026-11-20T20:00:00",
+              "id": "1672143",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Trening ",
+              "renterName": "Ali Abukar Arif",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
               "start": "2026-11-21T10:30:00",
               "end": "2026-11-21T20:30:00",
               "id": "1589890",
@@ -878,6 +900,17 @@
               "borderColor": null,
               "title": "Hegra U",
               "renterName": "",
+              "partNr": 0,
+              "partLabel": null
+            },
+            {
+              "start": "2026-11-20T18:00:00",
+              "end": "2026-11-20T20:00:00",
+              "id": "1672143",
+              "color": "#ff9900",
+              "borderColor": null,
+              "title": "Trening ",
+              "renterName": "Ali Abukar Arif",
               "partNr": 0,
               "partLabel": null
             },
