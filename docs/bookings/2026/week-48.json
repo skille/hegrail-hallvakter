@@ -976,17 +976,6 @@
               "renterName": "",
               "partNr": 0,
               "partLabel": null
-            },
-            {
-              "start": "2026-11-28T10:00:00",
-              "end": "2026-11-28T20:00:00",
-              "id": "1589902",
-              "color": "#da697a",
-              "borderColor": null,
-              "title": null,
-              "renterName": "HEGRA IDRETTSLAG.Håndball",
-              "partNr": 0,
-              "partLabel": null
             }
           ]
         }
