@@ -916,6 +916,17 @@
               "partLabel": "Squash bane 2"
             },
             {
+              "start": "2026-11-26T11:00:00",
+              "end": "2026-11-26T12:30:00",
+              "id": "1677456",
+              "color": "#da697a",
+              "borderColor": "#fff",
+              "title": "",
+              "renterName": "Privat",
+              "partNr": 2,
+              "partLabel": "Squash bane 2"
+            },
+            {
               "start": "2026-11-27T18:00:00",
               "end": "2026-11-27T19:00:00",
               "id": "1623417",
